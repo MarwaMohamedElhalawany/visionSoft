@@ -1,0 +1,78 @@
+<!-- <button class="d-flex align-items-center border border-1 border-gray-300 rounded-3 bg-white px-1"
+    style="height: 45px;" (click)="selectLanguage()">
+   
+    <span  class="fs-1 fw-bold mx-1" style="color: #333;" translate="HEADER.LANG"></span>
+  </button> -->
+  
+ 
+<form class=" form w-100 m-auto " [formGroup]="loginForm" novalidate="novalidate" id="kt_login_signin_form"
+  (ngSubmit)="submit()">
+ 
+  <!-- <div class="text-center mb-11">
+    <h1 class="text-dark fw-bolder mb-3"  translate="AUTH.LOGIN.BUTTON">
+    </h1>
+  </div> -->
+  <div class="row g-3 mb-9 mt-15 ">
+    <div class="col-md-12">
+      <div class=" fv-row mb-8">
+        <label class="form-label fs-6 fw-bolder text-dark" translate="AUTH.INPUT.EMAIL"></label>
+        <input class="form-control bg-transparent" type="userName" name="userName" formControlName="user_Name" autocomplete="off"
+          [ngClass]="{
+            'is-invalid': loginForm.controls['user_Name'].invalid,
+            'is-valid': loginForm.controls['user_Name'].valid
+          }" />
+       <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+        validation: 'required',
+        message: 'AUTH.LOGIN.REQUIRED_NAME' | translate ,
+        control: loginForm.controls['user_Name']
+    }"></ng-container>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class=" fv-row mb-3">
+        <label class="form-label fw-bolder text-dark fs-6 mb-0" translate="AUTH.INPUT.PASSWORD"></label>
+        <input class="form-control bg-transparent" type="password" name="user_Pass" autocomplete="off"
+          formControlName="user_Pass" [ngClass]="{
+            'is-invalid': loginForm.controls['user_Pass'].invalid,
+            'is-valid': loginForm.controls['user_Pass'].valid
+          }" />
+       <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+        validation: 'required',
+        message: 'AUTH.LOGIN.REQUIRED_PASS' | translate ,
+        control: loginForm.controls['user_Pass']
+    }"></ng-container>
+      </div>
+    </div>
+  </div>
+  
+  <div class="d-grid mb-10 mt-10">
+    <button type="submit" id="kt_sign_in_submit" class="btn btn-dark"  translate="AUTH.LOGIN.TITLE">
+      <ng-container *ngIf="isLoading$ | async">
+        <span class="indicator-progress" [style.display]="'block'">
+          Please wait...
+          <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+        </span>
+      </ng-container>
+      <ng-container *ngIf="(isLoading$ | async) === false">
+        <!-- <span class="indicator-label">Continue</span> -->
+      </ng-container>
+    </button>
+  </div>
+</form>
+<ng-template #formError let-control="control" let-message="message" let-validation="validation">
+    <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
+      <div class="fv-plugins-message-container">
+        <span role="alert">
+          {{ message }}
+        </span>
+      </div>
+    </ng-container>    
+  </ng-template>
+
+
+
+  
+
+
+  
+  

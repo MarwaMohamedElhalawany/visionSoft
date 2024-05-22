@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/sass/style.scss";
+// Replace above style with this css file to enable RTL styles
+// @import "./assets/css/style.rtl";
+@import './assets/sass/plugins.scss';
+// @import "./assets/css/style.rtl.css";
+@import "./assets/sass/style.angular.scss";
+
+// Keenicons - High quality and pixel perfect font icons available in 3 styles, duotone, outline and solid for Metronic elements
+@import "./assets/plugins/keenicons/duotone/style.css";
+@import "./assets/plugins/keenicons/outline/style.css";
+@import "./assets/plugins/keenicons/solid/style.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/saga-blue/theme.css';
+
+
+$bgColor:#ffffff;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,.6) ;
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+
+body
+{
+   background-color: $bgColor;
+   font-family: 'Cairo', sans-serif;
+//    direction: rtl;
+}
+
+body
+{
+    color: $secondFontColor;
+}
+
+table {
+    th,td
+    {
+        vertical-align: middle !important;
+    }
+}
+
+tr .userimage
+{
+    text-align: right !important;
+}
+
+.loaddd{
+
+  right: 0 !important;
+  left: 0 !important;
+  position: absolute !important;
+}

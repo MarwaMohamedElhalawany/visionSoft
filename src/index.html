@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Vision Soft</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="./assets/media/logo-circle.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
+  <!-- SPLASH SCREEN-->
+  <link rel="stylesheet" id="layout-styles-anchor" href="./assets/splash-screen.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link href="/your-path-to-uicons/css/uicons-regular-rounded.css" rel="stylesheet">
+
+</head>
+
+<body root id="kt_body" class="mat-typography">
+  <!-- <body root id="kt_body" class="mat-typography" direction="rtl" dir="rtl" style="direction: rtl"></body> -->
+  <!--begin::Theme mode setup on page load-->
+  <script>
+    if (document.documentElement) {
+      var defaultThemeMode = "system";
+
+      var hasKTName = document.body.hasAttribute("data-kt-name");
+      var lsKey = "kt_" + (hasKTName ? name + "_" : "") + "theme_mode_value"
+      var themeMode = localStorage.getItem(lsKey);
+      if (!themeMode) {
+        if (defaultThemeMode === "system") {
+          themeMode =
+            window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        } else {
+          themeMode = defaultThemeMode;
+        }
+      }
+
+      document.documentElement.setAttribute("data-bs-theme", themeMode);
+    }
+  </script>
+  <!--end::Theme mode setup on page load-->
+  <div class="home" style="  background: linear-gradient(#fff, #fff); height: 100vh;">
+
+    <div style="height: 50vh;justify-content: center;justify-self: center; justify-items: center; display: flex; text-align: center;
+    ">
+  
+      <!-- <img src="../../../assets/category/splash_discount.gif" alt="categories" class="h-100 w-100" /> -->
+      <img style="width: 35vh; height: 35vh; margin: auto;
+      display: block; border-radius: 18vh;" />
+  
+    </div>
+  
+    <div style="height: 50vh;justify-content: center;justify-self: center; justify-items: center; display: inline; text-align: center;">
+  
+  <div>
+    <div class="social-linkss">
+      <a href="https://apps.apple.com/sa/app/discount-%D8%AF%D9%8A%D8%B3%D9%83%D8%A7%D9%88%D9%86%D8%AA/id6470312190?l=ar" target="_blank" style="background: transparent; width: 350px;">
+        <img src="../../../assets/images/app-store.png" alt=""
+            style="width: 300px;max-width: 90%;height: auto;vertical-align: 
+            middle;border-style: none;">
+    </a>  
+    </div>
+  </div>
+  
+  <div>
+    <div class="social-linkss" style="margin-bottom: 30px;">
+  
+    <a  target="_blank" style="background: transparent; width: 350px;">
+      <img src="./assets/media/logo-circle-dark.png" alt=""
+          style="width: 300px;max-width: 90%;height: auto;vertical-align: 
+          middle;border-style: none;">
+  </a>
+    </div>
+  </div>
+    </div>
+    
+  
+  </div>
+  
+  <!-- <div id="splash-screen" class="splash-screen" style="background-color: #fff;">
+    <img src="./assets/media/logo-circle-dark.png" alt="Metronic logo" style="width: 150px; height: 150px;" />
+    <span>Loading ...</span>
+  </div> -->
+</body>
+
+</html>

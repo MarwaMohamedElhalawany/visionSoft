@@ -1,0 +1,161 @@
+.logo img
+{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+section
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   $bgColor:#131722;
+  }
+section .color
+{
+  position: absolute;
+  filter: blur(150px);
+}
+
+.box
+{
+  position: relative;
+}
+.box .square
+{
+  position: absolute;
+  backdrop-filter: blur(50px);
+  box-shadow: 1000px 1000px 1000px rgba(0 , 0 , 0 , 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255 , 255 , 255 , 0.1);
+  border-radius: 10px;
+  animation: animate 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+
+
+.container
+{
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  // background: #404354;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0 , 0 , 0 , 0.4);
+  border: 1px solid #fff;
+}
+.form
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+.form h2
+{
+  position: relative;
+  color: #404354;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  padding: 10px 0px;
+}
+.form h2::before
+{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: #404354;
+}
+.form .form-group
+{
+   width: 100%;
+   margin-top: 20px;
+   
+}
+.form .form-group input
+{
+  display:block;
+  width: 100%;
+  background: rgba(255, 255 , 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #404354;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.form .form-group input::placeholder
+{
+  color: #404354;
+}
+
+
+.form-group-log p
+{
+  border-radius: 35px;
+  padding: 10px 20px;
+  background: #404354;
+  color: #fff;
+}
+
+.form-group-log button
+{
+  border-radius: 35px;
+  padding: 10px 20px;
+  background: #404354;
+  color: #fff;
+}
+
+.close-2
+{
+  font-size: 25px;
+  color: #404354
+}
+
+.error-2
+{
+  display: none;
+  font-size: 15px;
+  color: #fff;
+}
+
+.login button{
+  background-color: #2c92ff;
+  color: #fff;
+  border: solid 1px #fff;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  width: 200px;
+  margin-top: 50px;
+}
+.my-txt{
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  color: #404354;
+
+}

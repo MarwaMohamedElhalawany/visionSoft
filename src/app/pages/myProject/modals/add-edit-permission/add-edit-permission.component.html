@@ -1,0 +1,440 @@
+<ng-template #modal>
+    <div class="modal-content ">
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_UcPermissions_LoaderProgress" style="display: none;" role="status"
+                aria-hidden="true">
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-header">
+            <h5 class="modal-title mb-2" translate="INITIALIZATION.POWERS_TEMPLATES.POWERS"></h5>
+            <i class="fa-solid fa-xmark" (click)="dismiss()"></i>
+        </div>
+        <div class="modal-body">
+            <div class="row">       
+                <div _ngcontent-ng-c3484842529="" class="card">
+                    <div _ngcontent-ng-c3484842529="" class="card-header border-0 pt-6">
+                      <div _ngcontent-ng-c3484842529="" class="card-title w-100 row">
+                        <div _ngcontent-ng-c3484842529="" class=" d-flex align-items-center justify-content-between position-relative my-1" >                  
+                          <input _ngcontent-ng-c3484842529="" type="text" data-action="filter"
+                            [placeholder]="'INITIALIZATION.POWERS_TEMPLATES.SEARCHPLACEHOLDER' | translate"
+                            class="form-control form-control-solid ms-2 col-md-12">
+                            <span _ngcontent-ng-c1433053698="" class="fs-3 ki-duotone ki-magnifier ms-5 "><span
+                              _ngcontent-ng-c1433053698="" class="path1"></span><span _ngcontent-ng-c1433053698="" class="path2"></span>
+                          </span>
+                        </div>
+                      </div>
+
+                  
+                      
+
+
+
+                      <!-- <div _ngcontent-ng-c3484842529="" class="card-toolbar">
+                        <div _ngcontent-ng-c3484842529="" class="d-flex justify-content-end"><button _ngcontent-ng-c3484842529=""
+                            type="button" data-action="create" class="btn btn-primary" translate="INITIALIZATION.POWERS_TEMPLATES.ADD">
+                          </button></div>
+                      </div> -->
+                    </div>
+                    <div _ngcontent-ng-c3484842529="" class="card-body pt-0">
+                      <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <table _ngcontent-ng-c682731963="" datatable=""
+                              class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="DataTables_Table_0"
+                              aria-describedby="DataTables_Table_0_info" style="width: 966px;">
+                              <thead _ngcontent-ng-c682731963="">
+                                <tr _ngcontent-ng-c682731963="" class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
+                                  <!-- <th _ngcontent-ng-c682731963="" class="sorting sorting_asc" tabindex="0"
+                                    aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending"
+                                    aria-label="Name: activate to sort column descending" style="width: 337px;"
+                                    translate="INITIALIZATION.POWERS_TEMPLATES.VALIDITYNAME"></th> -->
+                                  <!-- <th _ngcontent-ng-c682731963="" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Actions"
+                                    style="width: 83.25px;">Actions</th> -->
+                                </tr>
+                              </thead>
+                              <tbody _ngcontent-ng-c682731963="" class="fw-semibold text-gray-600">
+                                <tr class="odd">
+                                  <td class="d-flex align-items-center sorting_1">
+                                    <div class="symbol symbol-circle symbol-50px overflow-hidden me-3" data-action="view" data-id="265">
+                                      <a href="javascript:;">
+                  
+                                        <!-- <div class="symbol-label fs-3 bg-light-warning text-warning">
+                                          L
+                                        </div> -->
+                  
+                                      </a>
+                                    </div>
+                  
+                                    <div class="d-flex flex-column" data-action="view" data-id="265">
+                                      <a href="javascript:;" class="text-gray-800 text-hover-primary mb-1" translate="INITIALIZATION.POWERS_TEMPLATES.GENERALMANAGER"
+                                      ></a>
+                                    </div>
+                  
+                                  </td>
+                  
+                                  <td>
+                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-action="edit"
+                                      data-id="265">
+                                      <i class="ki-duotone ki-pencil fs-3"><span class="path1"></span><span class="path2"></span></i>
+                                    </button>
+                                    <!-- <button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-action="delete"
+                                      data-id="265">
+                                      <i class="ki-duotone ki-trash fs-3">
+                                        <span class="path1"></span><span class="path2"></span>
+                                        <span class="path3"></span><span class="path4"></span><span class="path5"></span>
+                                      </i>
+                                    </button> -->
+                                  </td>
+                                </tr>
+                                <tr class="even">
+                                  <td class="d-flex align-items-center sorting_1">
+                                    <div class="symbol symbol-circle symbol-50px overflow-hidden me-3" data-action="view" data-id="288">
+                                      <a href="javascript:;" >
+                  
+                                        <!-- <div class="symbol-label fs-3 bg-light-success text-success">
+                                          M
+                                        </div> -->
+                  
+                                      </a>
+                                    </div>
+                  
+                                    <div class="d-flex flex-column" data-action="view" data-id="288">
+                                      <a href="javascript:;" class="text-gray-800 text-hover-primary mb-1" translate="INITIALIZATION.POWERS_TEMPLATES.VICEPRESIDENT"></a>
+                                    </div>
+                  
+                                  </td>
+                                 
+                                  <td>
+                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-action="edit"
+                                      data-id="288">
+                                      <i class="ki-duotone ki-pencil fs-3"><span class="path1"></span><span class="path2"></span></i>
+                                    </button>
+                                    <!-- <button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-action="delete"
+                                      data-id="288">
+                                      <i class="ki-duotone ki-trash fs-3">
+                                        <span class="path1"></span><span class="path2"></span>
+                                        <span class="path3"></span><span class="path4"></span><span class="path5"></span>
+                                      </i>
+                                    </button> -->
+                                  </td>
+                                </tr>
+                                <tr class="odd">
+                                  <td class="d-flex align-items-center sorting_1">
+                                    <div class="symbol symbol-circle symbol-50px overflow-hidden me-3" data-action="view" data-id="291">
+                                      <a href="javascript:;">
+                  
+                                        <!-- <div class="symbol-label fs-3 bg-light-info text-info">
+                                          M
+                                        </div> -->
+                  
+                                      </a>
+                                    </div>
+                  
+                                    <div class="d-flex flex-column" data-action="view" data-id="291">
+                                      <a href="javascript:;" class="text-gray-800 text-hover-primary mb-1"  translate="INITIALIZATION.POWERS_TEMPLATES.BRANCHMANAGER"></a>
+                                    </div>
+                  
+                                  </td>
+                                
+                                  <td>
+                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-action="edit"
+                                      data-id="291">
+                                      <i class="ki-duotone ki-pencil fs-3"><span class="path1"></span><span class="path2"></span></i>
+                                    </button>
+                                    <!-- <button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-action="delete"
+                                      data-id="291">
+                                      <i class="ki-duotone ki-trash fs-3">
+                                        <span class="path1"></span><span class="path2"></span>
+                                        <span class="path3"></span><span class="path4"></span><span class="path5"></span>
+                                      </i>
+                                    </button> -->
+                                  </td>
+                                </tr>
+                                <tr class="even">
+                                  <td class="d-flex align-items-center sorting_1">
+                                    <div class="symbol symbol-circle symbol-50px overflow-hidden me-3" data-action="view" data-id="170">
+                                      <a href="javascript:;">
+                  
+                                        <!-- <div class="symbol-label fs-3 bg-light-warning text-warning">
+                                          M
+                                        </div> -->
+                  
+                                      </a>
+                                    </div>
+                  
+                                    <div class="d-flex flex-column" data-action="view" data-id="170">
+                                      <a href="javascript:;" class="text-gray-800 text-hover-primary mb-1" translate="INITIALIZATION.POWERS_TEMPLATES.CUSTOMERSSERVICE"></a>
+                                    </div>
+                  
+                                  </td>
+                                  
+                                  <td>
+                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-action="edit"
+                                      data-id="170">
+                                      <i class="ki-duotone ki-pencil fs-3"><span class="path1"></span><span class="path2"></span></i>
+                                    </button>
+                                    <!-- <button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-action="delete"
+                                      data-id="170">
+                                      <i class="ki-duotone ki-trash fs-3">
+                                        <span class="path1"></span><span class="path2"></span>
+                                        <span class="path3"></span><span class="path4"></span><span class="path5"></span>
+                                      </i>
+                                    </button> -->
+                                  </td>
+                                </tr>
+                                <tr class="odd">
+                                  <td class="d-flex align-items-center sorting_1">
+                                    <div class="symbol symbol-circle symbol-50px overflow-hidden me-3" data-action="view" data-id="220">
+                                      <a href="javascript:;">
+                  
+                                        <!-- <div class="symbol-label fs-3 bg-light-warning text-warning">
+                                          M
+                                        </div> -->
+                  
+                                      </a>
+                                    </div>
+                  
+                                    <div class="d-flex flex-column" data-action="view" data-id="220">
+                                      <a href="javascript:;" class="text-gray-800 text-hover-primary mb-1"  translate="INITIALIZATION.POWERS_TEMPLATES.ACCOUNTANT"></a>
+                                    </div>
+                  
+                                  </td>
+                                 
+                                  <td>
+                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-action="edit"
+                                      data-id="220">
+                                      <i class="ki-duotone ki-pencil fs-3"><span class="path1"></span><span class="path2"></span></i>
+                                    </button>
+                                    <!-- <button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-action="delete"
+                                      data-id="220">
+                                      <i class="ki-duotone ki-trash fs-3">
+                                        <span class="path1"></span><span class="path2"></span>
+                                        <span class="path3"></span><span class="path4"></span><span class="path5"></span>
+                                      </i>
+                                    </button> -->
+                                  </td>
+                                </tr>
+                                <tr class="even">
+                                  <td class="d-flex align-items-center sorting_1">
+                                    <div class="symbol symbol-circle symbol-50px overflow-hidden me-3" data-action="view" data-id="259">
+                                      <a href="javascript:;">
+                  
+                                        <!-- <div class="symbol-label fs-3 bg-light-danger text-danger">
+                                          M
+                                        </div> -->
+                  
+                                      </a>
+                                    </div>
+                  
+                                    <div class="d-flex flex-column" data-action="view" data-id="259">
+                                      <a href="javascript:;" class="text-gray-800 text-hover-primary mb-1" translate="INITIALIZATION.POWERS_TEMPLATES.STOREKEEPER"></a>
+                                    </div>
+                  
+                                  </td>
+                                 
+                                  <td>
+                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-action="edit"
+                                      data-id="259">
+                                      <i class="ki-duotone ki-pencil fs-3"><span class="path1"></span><span class="path2"></span></i>
+                                    </button>
+                                    <!-- <button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-action="delete"
+                                      data-id="259">
+                                      <i class="ki-duotone ki-trash fs-3">
+                                        <span class="path1"></span><span class="path2"></span>
+                                        <span class="path3"></span><span class="path4"></span><span class="path5"></span>
+                                      </i>
+                                    </button> -->
+                                  </td>
+                                </tr>
+                              
+                              </tbody>
+                            </table>
+                            <div id="DataTables_Table_0_processing" class="dataTables_processing card" role="status"
+                              style="display: none;"><span class="spinner-border spinner-border-sm align-middle"></span> Loading...<div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12 col-md-5">
+                            <!-- <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 10
+                              of 56 entries</div> -->
+                          </div>
+                          <div class="col-sm-12 col-md-12">
+                            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                              <ul class="pagination">
+                                <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a
+                                    aria-controls="DataTables_Table_0" aria-disabled="true" role="link" data-dt-idx="previous"
+                                    tabindex="-1" class="page-link" translate="INITIALIZATION.POWERS_TEMPLATES.PREVIOUS"></a></li>
+                                <li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" role="link"
+                                    aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a></li>
+                                <li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" role="link"
+                                    data-dt-idx="1" tabindex="0" class="page-link">2</a></li>
+                                <li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" role="link"
+                                    data-dt-idx="2" tabindex="0" class="page-link">3</a></li>
+                                <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#"
+                                    aria-controls="DataTables_Table_0" role="link" data-dt-idx="next" tabindex="0"
+                                    class="page-link" translate="INITIALIZATION.POWERS_TEMPLATES.NEXT"></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <div id="ArMainContent_UcPermissions_modaldelete" class="modal-body" style="display: none">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group" style="text-align: center">
+                                <div id="ArMainContent_UcPermissions_RemovAlert" class="note note-danger"
+                                    style="margin: 0px; padding: 4px; font-size: medium; color: #E43A45; border-radius: 10px!important">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" dir="ltr">
+                    <button type="button" class="btn btn-light-danger font-weight-bold" data-dismiss="modal"
+                        (click)="dismiss()" translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION"></button>
+
+                    <!-- <button class="d-flex align-items-center border border-1 border-gray-300 rounded-3 bg-white px-1"
+                        style="height: 45px;" (click)="selectLanguage()">
+                        <span class="fs-1 fw-bold mx-1" style="color: #333;" translate="HEADER.LANG"></span>
+                    </button> -->
+                    <div class="lang border border-gray rounded-2 p-1" style="width: 80px;" (click)="selectLanguage()">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                          <label class="form-check-label" for="flexSwitchCheckDefault" style="color: #333;" translate="HEADER.LANG"></label>
+                        </div>
+                      </div>
+                      
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ng-template>
+
+
+<!-- <div class="lang " (click)="selectLanguage()">
+<div class="form-check form-switch ">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" >
+    <label class="form-check-label" for="flexSwitchCheckDefault"  style="color: #333;" translate="HEADER.LANG"></label>
+  </div>
+</div> -->
+
+<!-- <div class="lang border border-gray rounded-2 p-1" style="width: 80px;" (click)="selectLanguage()">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault" style="color: #333;" translate="HEADER.LANG"></label>
+    </div>
+  </div> -->
+  
+   <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group  mb-5">
+                        <input type="search" class="form-control spinner input-circle "
+                            [placeholder]="'INITIALIZATION.POWERS_TEMPLATES.SEARCHPLACEHOLDER' | translate">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="table-responsive"
+                                style="overflow: auto; max-height: 300px; height: 300px; width: 100%">
+                                <div>
+                                    <table class="mGrid" cellspacing="0" rules="all" border="1"
+                                        id="ArMainContent_UcPermissions_GrdRolls"
+                                        style="width:100%;border-collapse:collapse; border: 1px solid #000;">
+                                        <tbody>
+                                            <tr class="bg-dark  text-white ">
+                                                <th scope="col" style="border: 1px solid #000;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.CODE"></th>
+                                                <th scope="col" style="width:85%; border: 1px solid #ddd;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.VALIDITYNAME"> </th>
+                                                <th scope="col" style="border: 1px solid #000;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.OPTIONS"></th>
+                                            </tr>
+
+                                        
+                                            <tr>
+                                                <td style="border: 1px solid #000;">1</td>
+                                                <td style="border: 1px solid #000;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.GENERALMANAGER"> </td>
+                                                <td style="border: 1px solid #000;">
+                                                    <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_0"
+                                                        class="btn btn-icon btn-outline-primary btn-sm"
+                                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl02$LnkDsplyRolls','')"><i
+                                                            class="fas fa-user-check "></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #000;">2</td>
+                                                <td style="border: 1px solid #000;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.VICEPRESIDENT"> </td>
+                                                <td style="border: 1px solid #000;">
+                                                    <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_1"
+                                                        class="btn btn-icon btn-outline-primary btn-sm"
+                                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl03$LnkDsplyRolls','')"><i
+                                                            class="fas fa-user-check "></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #000;">3</td>
+                                                <td style="border: 1px solid #000;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.BRANCHMANAGER"> </td>
+                                                <td style="border: 1px solid #000;">
+                                                    <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_2"
+                                                        class="btn btn-icon btn-outline-primary btn-sm"
+                                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl04$LnkDsplyRolls','')"><i
+                                                            class="fas fa-user-check "></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #000;">4</td>
+                                                <td style="border: 1px solid #000;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.CUSTOMERSSERVICE"> </td>
+                                                <td style="border: 1px solid #000;">
+                                                    <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_3"
+                                                        class="btn btn-icon btn-outline-primary btn-sm"
+                                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl05$LnkDsplyRolls','')"><i
+                                                            class="fas fa-user-check "></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #000;">7</td>
+                                                <td style="border: 1px solid #000;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.ACCOUNTANT"> </td>
+                                                <td style="border: 1px solid #000;">
+                                                    <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_4"
+                                                        class="btn btn-icon btn-outline-primary btn-sm"
+                                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl06$LnkDsplyRolls','')"><i
+                                                            class="fas fa-user-check "></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: 1px solid #000;">8</td>
+                                                <td style="border: 1px solid #000;"
+                                                    translate="INITIALIZATION.POWERS_TEMPLATES.STOREKEEPER"> </td>
+                                                <td style="border: 1px solid #000;">
+                                                    <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_5"
+                                                        class="btn btn-icon btn-outline-primary btn-sm"
+                                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl07$LnkDsplyRolls','')"><i
+                                                            class="fas fa-user-check "></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->

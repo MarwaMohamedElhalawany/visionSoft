@@ -1,0 +1,13 @@
+//
+// Transform
+//
+
+.transform-90 {
+  transform: rotate(90deg);
+  transform-origin: right top;
+
+[dir="rtl"] & {
+  transform: rotate(-90deg);
+  transform-origin: left top;
+}
+}

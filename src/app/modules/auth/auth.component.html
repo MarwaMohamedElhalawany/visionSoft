@@ -1,0 +1,131 @@
+
+<section dir="rtl">
+ 
+  <div class="color"></div>
+  <div class="color"></div>
+  <div class="color"></div>
+
+     <div class=" box">
+        <div class="square" style="--i:0;"></div>
+        <div class="square" style="--i:1;"></div>
+        <div class="square" style="--i:2;"></div>
+        <div class="square" style="--i:3;"></div>
+        <div class="square" style="--i:4;"></div>
+        <div class="square" style="--i:5;"></div>
+
+
+        <div class="container">
+
+       
+           <div class="form">
+              <div class="logo d-flex justify-content-center">
+                  <img src="../../assets/media/logo-circle-dark.png"  alt="">
+              </div>
+              <h2 class=" text-right" style="color: #404354;text-align: start;"> تسجيل الدخول</h2>
+
+              <form class=" py-1" [formGroup]='loginForm' >
+
+                <div class=" form-group form-group-log text-right">
+                    <label for="email" class=" my-txt" style="color: #404354;"> البريد الألكتروني</label>
+                    <input formControlName='email' class=" form-control" type="email" name="" id="email" style="margin-top: 10px;" >
+                    <!-- <div *ngIf="loginForm.get('email')?.errors != null && loginForm.get('email')?.touched" class=" alert  my-2">
+                        <p  *ngIf="loginForm.get('email')?.errors?.required" class=" my-2">البريد الألكتروني اجباري</p>
+                        <p *ngIf="loginForm.get('email')?.errors?.email"  class=" my-2">الايميل موجود مسبقا</p>
+           
+                       </div> -->
+        
+            <!-- <div *ngIf='error' class=" alert alert-danger">
+                <p>{{error}}</p>
+            </div> -->
+        
+                </div>
+        
+                <div class=" form-group form-group-log text-right">
+                    <label for="password" class=" my-txt" style="color: #404354;"> كلمة المرور</label>
+                    <input formControlName='password' class=" form-control" type="password" name="" id="password" style="margin-top: 10px;">
+                    <!-- <div *ngIf="loginForm.get('password')?.errors != null && loginForm.get('password')?.touched" class=" alert  my-2">
+                        <p  *ngIf="loginForm.get('password')?.errors?.required" class=" my-2">الرقم السري اجباري</p>
+                        <p *ngIf="loginForm.get('password')?.errors?.pattern"  class=" my-2">يجب ان يبدأ الرقم السري بحرف كابيتال</p>
+           
+                       </div> -->
+                </div>
+        
+                <div class="form-group-log text-right login">
+                   <button (click)="submitForm();loginButton=true" class=" btn " type="submit" >تسجيل الدخول</button>
+                   <p *ngIf="empty" class=" my-2" style="text-align: center; font-family: 'Cairo', sans-serif;font-size: 17px;">جميع الحقول مطلوبة</p>
+
+                   <div *ngIf='spinner' class="spinner-border text-light d-flex justify-content-center align-items-center m-auto" role="status">
+                      <span class="sr-only">جاري التحميل</span>
+                    </div>
+
+                    <p *ngIf="hasError" class=" my-2" style="text-align: center; background-color: red; font-family: 'Cairo', sans-serif; font-size: 17px;">خطأ في الايميل او الباسورد</p>
+                    <div class="error-2" >
+                      <span  class="bg-danger p-2 rounded my-2" style="font-family: 'Cairo', sans-serif;">خطأ في الايميل او الباسورد  <i class="fas fa-times-circle float-left close-2 mx-2"></i></span>
+                    </div>
+                </div>
+              
+        
+            </form>
+
+           </div>
+        </div>
+
+
+       
+     </div>
+
+
+</section>
+
+
+
+
+<!-- 
+          <div class=" container">
+
+          <div class="form">
+             
+              <h2 class=" text-right"> صفحة الدخول</h2>
+
+
+              <form class=" py-1" [formGroup]='valeditors' (ngSubmit)="submitForm()">
+
+                <div class=" form-group form-group-log text-right">
+                    <label for="email"> البريد الألكتروني</label>
+                    <input formControlName='email' class=" form-control" type="email" name="" id="email">
+                    <div *ngIf="valeditors.get('email')?.errors != null && valeditors.get('email')?.touched" class=" alert  my-2">
+                        <p  *ngIf="valeditors.get('email')?.errors?.required" class=" my-2">البريد الألكتروني اجباري</p>
+                        <p *ngIf="valeditors.get('email')?.errors?.email"  class=" my-2">الايميل موجود مسبقا</p>
+           
+                       </div>
+        
+            <div *ngIf='error' class=" alert alert-danger">
+                <p>{{error}}</p>
+            </div>
+        
+                </div>
+        
+                <div class=" form-group form-group-log text-right">
+                    <label for="password"> الرقم السري</label>
+                    <input formControlName='password' class=" form-control" type="password" name="" id="password">
+                    <div *ngIf="valeditors.get('password')?.errors != null && valeditors.get('password')?.touched" class=" alert  my-2">
+                        <p  *ngIf="valeditors.get('password')?.errors?.required" class=" my-2">الرقم السري اجباري</p>
+                        <p *ngIf="valeditors.get('password')?.errors?.pattern"  class=" my-2">يجب ان يبدأ الرقم السري بحرف كابيتال</p>
+           
+                       </div>
+                </div>
+        
+                <div class="form-group-log text-right">
+                   <button [disabled]= 'valeditors.invalid' class=" btn " type="submit">الدخول</button>
+                   <div *ngIf='spinner' class="spinner-border text-light d-flex justify-content-center align-items-center m-auto" role="status">
+                      <span class="sr-only">جاري التحميل</span>
+                    </div>
+                </div>
+              
+        
+            </form>
+
+           </div>
+
+        </div>
+ -->

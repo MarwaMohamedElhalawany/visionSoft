@@ -1,0 +1,253 @@
+// USA
+export const locale = {
+  lang: 'ar',
+  dir: 'rtl',
+  data: {
+    TRANSLATOR: {
+      SELECT: 'اختر لغتك',
+    },
+    MENU: {
+      NEW: 'جديد',
+      ACTIONS: 'الإجراءات',
+      CREATE_POST: 'إنشاء مشاركة جديدة',
+      PAGES: 'صفحات',
+      FEATURES: 'الميزات',
+      APPS: 'تطبيقات',
+      DASHBOARD: 'لوحة التحكم',
+    },
+    HEADER: {
+      LANG: 'EN',
+    },
+    AUTH: {
+      GENERAL: {
+        LOGO:'لخدمات الشحن والتوصيل' ,
+        OR: 'او باستخدام  الايميل',
+        SUBMIT_BUTTON: 'إرسال',
+        NO_ACCOUNT: 'ليس لديك حساب؟',
+        SIGNUP_BUTTON: 'التسجيل',
+        FORGOT_BUTTON: 'نسيت كلمة المرور',
+        BACK_BUTTON: 'رجوع',
+        PRIVACY: 'الخصوصية',
+        LEGAL: 'قانوني',
+        CONTACT: 'الاتصال',
+        NOT_MEMBER: 'لست عضوا حتي الان ؟',
+        CONTACT_US: 'اتصل بنا',
+        TERMS: 'الشروط',
+        PLANS: 'الخطط',
+
+      },
+      LOGIN: {
+        TITLE: 'تسجيل الدخول إلى الحساب',
+        BUTTON: 'تسجيل الدخول',
+        BTN1: 'تسجيل الدخول باستخدام جوجل',
+        BTN2: 'تسجيل الدخول باستخدام ابل',
+       REQUIRED_NAME: "الاسم مطلوب",
+       REQUIRED_PASS:'كلمة المرور مطلوبة'
+
+      },
+      FORGOT: {
+        TITLE: 'هل نسيت كلمة المرور؟',
+        DESC: 'أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور',
+        SUCCESS: 'تم إعادة تعيين كلمة المرور بنجاح.'
+      },
+      REGISTER: {
+        TITLE: 'التسجيل',
+        DESC: 'أدخل تفاصيلك للدخول لحسابك',
+        SUCCESS: 'تم تسجيل حسابك بنجاح.'
+      },
+      INPUT: {
+        EMAIL: 'اسم الدخول',
+        FULLNAME: 'الاسم الكامل',
+        PASSWORD: 'كلمة السر',
+        CONFIRM_PASSWORD: 'تأكيد كلمة المرور',
+        USERNAME: 'اسم المستخدم'
+      },
+      VALIDATION: {
+        INVALID: '{{name}} غير صالح',
+        REQUIRED: '{{name}} مطلوب',
+        MIN_LENGTH: 'الحد الأدنى ل{{name}} هو {{min}}',
+        AGREEMENT_REQUIRED: 'مطلوب قبول الشروط والأحكام',
+        NOT_FOUND: '{{name}} المطلوب غير موجود',
+        INVALID_LOGIN: 'تفاصيل تسجيل الدخول غير صحيحة',
+        REQUIRED_FIELD: 'حقل مطلوب',
+        MIN_LENGTH_FIELD: 'الحد الأدنى لطول الحقل:',
+        MAX_LENGTH_FIELD: 'الحد الأقصى لطول الحقل:',
+        INVALID_FIELD: 'الحقل غير صالح',
+      }
+    },
+    ECOMMERCE: {
+      COMMON: {
+        SELECTED_RECORDS_COUNT: 'عدد السجلات المحددة: ',
+        ALL: 'الكل',
+        SUSPENDED: 'معلق',
+        ACTIVE: 'نشط',
+        FILTER: 'تصفية',
+        BY_STATUS: 'حسب الحالة',
+        BY_TYPE: 'حسب النوع',
+        BUSINESS: 'عمل',
+        INDIVIDUAL: 'فرد',
+        SEARCH: 'بحث',
+        IN_ALL_FIELDS: 'في جميع الحقول'
+      },
+      ECOMMERCE: 'التجارة الإلكترونية',
+      CUSTOMERS: {
+        CUSTOMERS: 'العملاء',
+        CUSTOMERS_LIST: 'قائمة العملاء',
+        NEW_CUSTOMER: 'عميل جديد',
+        DELETE_CUSTOMER_SIMPLE: {
+          TITLE: 'حذف العميل',
+          DESCRIPTION: 'هل أنت متأكد من حذف هذا العميل نهائياً؟',
+          WAIT_DESCRIPTION: 'جاري حذف العميل...',
+          MESSAGE: 'تم حذف العميل بنجاح'
+        },
+        DELETE_CUSTOMER_MULTY: {
+          TITLE: 'حذف العملاء',
+          DESCRIPTION: 'هل أنت متأكد من حذف العملاء المحددين نهائياً؟',
+          WAIT_DESCRIPTION: 'جاري حذف العملاء...',
+          MESSAGE: 'تم حذف العملاء المحددين بنجاح'
+        },
+        UPDATE_STATUS: {
+          TITLE: 'تم تحديث حالة العملاء المحددين',
+          MESSAGE: 'تم تحديث حالة العملاء المحددين بنجاح'
+        },
+        EDIT: {
+          UPDATE_MESSAGE: 'تم تحديث العميل',
+          ADD_MESSAGE: 'تم إنشاء العميل'
+        }
+      }
+    },
+
+    INITIALIZATION: {
+      CONTROL_PANAL:{
+        CHARGES:"الشحنات"
+        
+       },
+      POWERS_TEMPLATES: {
+        POWERS_TEMPLATES: 'قوالب الصلاحيات',
+        POWERS:'الصلاحيات',
+        VALIDITY_CODE: 'كود الصلاحية',
+        VALIDITY: 'الصلاحية',
+        CONTROL_BOARD: 'لوحة التحكم',
+        INITIALIZATION: 'التهيئة',
+        STAFF_MANAGEMENT: 'ادارة الموظفين',
+        MANAGEMENT_OF_DELEGATES: 'ادارة المناديب',
+        CUSTOMER_MANAGEMENT: 'ادارة العملاء',
+        CUSTOMER_REQUESTS: 'طلبات العملاء',
+        ACCOUNTS_AND_FINANCE_MANAGEMENT: 'ادارة الحسابات والمالية',
+        MANAGE_EXPENSES: 'ادارة المصروفات',
+        PICKUP: 'بيك اب',
+        ADDING_SHIPMENTS: 'اضافة الشحنات',
+        FOLLOW_UP_SHIPMENTS: 'متابعة الشحنات',
+        MOVEMENT_OF_SHIPMENTS: 'حركة الشحنات',
+        SHIPMENT_MANAGEMENT: 'ادارة الشحنات',
+        BRANCH_TRANSFERS: 'تحويلات الفروع',
+        DELIVERY_MANAGEMENT: 'ادارة التوصيل',
+        PRINTING_POLICIES: 'طباعة البوالص',
+        RETURNS_MANAGEMENT: 'ادارة المرتجعات',
+        REPORTS: 'التقارير',
+        CODE: "كود",
+        VALIDITYNAME: "اسم الصلاحية",
+        OPTIONS: "خيارات",
+        SEARCHPLACEHOLDER: "ابحث هنا ...",
+        GENERALMANAGER:" مدير عام الشركة",
+        VICEPRESIDENT: "نائب المدير",
+        BRANCHMANAGER: "مدير فرع",
+        CUSTOMERSSERVICE: "خدمة العملاء",
+        ACCOUNTANT: "محاسب",
+        STOREKEEPER: "أمين مخزن",
+        CANCELLATION: "إلغاء",
+        ADD:"اضافة مستخدم",
+        NEXT:"التالي",
+        PREVIOUS :"السابق",
+
+
+
+      
+
+    }
+  },
+  REPORTS:{
+    FOLLOW_UP_WITH_CLIENTS: 'متابعة العملاء',
+    FOLLOW_UP_WITH_DELEGATES: 'متابعة المناديب',
+    FOLLOW_UP_ON_SHIPMENTS: 'متابعة الشحنات',
+    FOLLOW_UP_ON_RETURNS: 'متابعة المرتجعات',
+    FOLLOW_UP_ON_ARREARS: 'متابعة المتاخرات',
+    REPRESENTATIVE_ACCOUNT_STATEMENT: 'كشف حساب مندوب',
+    CUSTOMER_ACCOUNT_STATEMENT: 'كشف حساب عميل',
+    BRANCH_COMMISSION_ACCOUNT_STATEMENT: 'كشف حساب عمولة فروع',
+    SHIPMENT_DELIVERY_SHEET: 'شيت توصيل شحنات',
+    RETURNED_DELIVERY_SHEET: 'شيت توصيل مرتجع',
+    BRANCHES_DELIVERY_SHEET: 'شيت توصيل فـــروع',
+    EXPENSES: 'المصروفات',
+    DAILY_FOLLOW_UP: 'متابعة اليومية',
+    FOLLOW_ACCOUNTS: 'متابعة الحسابات',
+    PROFITS_AND_LOSSES: 'الارباح والخسائر'
+  },
+  RETURNS_MANAGEMENT:{
+    RECEIVING_RETURNS: 'استلام المرتجعات',
+    DELIVERY_OF_RETURNS: 'تسليم المرتجعات'
+  },
+  DELIVERY_MANAGEMENT:{
+    DISTRIBUTION_OF_SHIPMENTS_TO_REPRESENTATIVES: 'توزيع الشحنات للمناديب',
+    REPLACEMENT_OF_SHIPMENTS_REPRESENTATIVES: 'استبدال مناديب الشحنات',
+    DISTRIBUTION_OF_RETURNS_TO_REPRESENTATIVES: 'توزيع المرتجع للمناديب',
+    REPLACEMENT_OF_RETURNS_AGENTS: 'استبدال مناديب المرتجعات'
+  },
+  BRANCH_TRANSFERS:{
+    TRANSFERRING_SHIPMENTS_BETWEEN_BRANCHES: 'تحويل شحنات بين الفروع',
+    RECEIVING_SHIPMENTS: 'استلام الشحنات'
+  },
+  SHIPMENT_MANAGEMENT:{
+    WAITING_FOR_APPROVAL: 'بانتظار الموافقة',
+    PENDING_API_APPROVAL: 'بانتظار الموافقة API',
+    DELIVERY_OF_SHIPMENTS: 'تسليم الشحنات',
+    COLLECTION_OF_SHIPMENTS: 'تحصيـل الشحنات'
+  },
+  PICK_UP:{
+    PICKUP_DATA: 'بيانات بيك اب',
+    PICKUP_SUPPORT: 'اسنـاد بيك اب'
+  },
+  EXPENSE_MANAGEMENT:{
+    EXPENSE_DATA: 'Expense data',
+    TYPES_OF_EXPENSES: 'Types of expenses'
+  },
+  ACCOUNTS_AND_FINANCE_MANAGEMENT:{
+    ACCOUNTS_DATA: 'بيانات الحسابات',
+    CUSTOMER_PAYMENT: 'سداد العملاء',
+    CUSTOMER_INVOICES: 'فواتير العملاء',
+    DELEGATE_PAYMENT: 'سداد المناديب',
+    BRANCH_COMMISSION_PAYMENT: 'سداد عمولات الفروع',
+    BRANCH_COMMISSION_INVOICES: 'فواتير عمولات الفروع',
+    TRANSFER_BETWEEN_ACCOUNTS: 'التحويل بين الحسابات',
+    CASH_DISBURSEMENT_PERMISSION: 'اذن صرف نقدية',
+    CASH_RECEIPT_PERMISSION: 'اذن قبض نقدية'
+  },
+  CUSTOMER_REQUESTS:{
+    FLYER_REQUESTS: 'طلبات فلاير',
+    PAYMENT_REQUESTS: 'طلبات السداد'
+  },
+  INITIALIZATION2:{
+    PERMISSION_TEMPLATES: 'قوالب الصلاحيات',
+    USER_TRAFFIC: 'حركة المستخدمين',
+    BRANCHES: 'الفروع',
+    CANCELLATION_AND_POSTPONEMENT_REASONS: 'أسباب الالغاء والتأجيل',
+    CITIES: 'المدن',
+    REGIONS: 'المناطق',
+    PRICE_LISTS: 'قوائم الاسعار'
+  }
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+}
+
+};

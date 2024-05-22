@@ -1,0 +1,100 @@
+//
+// Main
+//
+
+// General mode
+.app-main {
+    display: flex;
+}
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+    // Base
+    .app-main {
+        transition: $app-main-transition;
+
+        padding-inline-start: $app-main-padding-x ;
+        padding-inline-end: $app-main-padding-x ;
+        padding-top: $app-main-padding-y ;
+        padding-bottom: $app-main-padding-y ;
+
+        margin-inline-start: $app-main-margin-x ;
+        margin-inline-end: $app-main-margin-x ;
+        margin-top: $app-main-margin-y ;
+        margin-bottom: $app-main-margin-y ;
+    }
+
+    // Integration
+    .app-main {
+        // Sidebar
+        [data-kt-app-sidebar-sticky="true"] & {
+            margin-inline-start: calc(
+                var(--#{$prefix}app-sidebar-width) +
+                var(--#{$prefix}app-sidebar-gap-start, 0px) +
+                var(--#{$prefix}app-sidebar-gap-end, 0px)
+            );
+        }
+
+        // Sidebar Panel
+        [data-kt-app-sidebar-panel-sticky="true"] & {
+            margin-inline-start: calc(
+                var(--#{$prefix}app-sidebar-width) +
+                var(--#{$prefix}app-sidebar-gap-start, 0px) +
+                var(--#{$prefix}app-sidebar-gap-end, 0px) +
+                var(--#{$prefix}app-sidebar-panel-width) +
+                var(--#{$prefix}app-sidebar-panel-gap-start, 0px) +
+                var(--#{$prefix}app-sidebar-panel-gap-end, 0px)
+            );
+        }
+
+        // Aside
+        [data-kt-app-aside-sticky="true"] & {
+            margin-inline-end: calc(
+                var(--#{$prefix}app-aside-width) +
+                var(--#{$prefix}app-aside-gap-start, 0px) +
+                var(--#{$prefix}app-aside-gap-end, 0px)
+            );
+        }
+    }
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	// Base
+    .app-main {
+        padding-inline-start: $app-main-padding-x-mobile ;
+        padding-inline-end: $app-main-padding-x-mobile ;
+        padding-top: $app-main-padding-y-mobile ;
+        padding-bottom: $app-main-padding-y-mobile ;
+
+        margin-inline-start: $app-main-margin-x-mobile ;
+        margin-inline-end: $app-main-margin-x-mobile ;
+        margin-top: $app-main-margin-y-mobile ;
+        margin-bottom: $app-main-margin-y-mobile ;
+    }
+}
+
+
+.dir-start-100 {
+  inset-inline-start: 100%;
+}
+
+.dir-start-50 {
+  inset-inline-start: 50%;
+}
+
+.dir-start-0 {
+  inset-inline-start: 0;
+}
+
+.dir-end-0 {
+  inset-inline-end: 0;
+}
+
+.dir-translate-middle {
+  transform: translate(-50%, -50%);
+
+  [dir='rtl'] & {
+    transform: translateX(50%);
+  }
+}

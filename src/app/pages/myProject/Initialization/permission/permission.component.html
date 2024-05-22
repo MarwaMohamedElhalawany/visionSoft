@@ -1,0 +1,364 @@
+<div class="container col-md-12 ">
+  <a type="button" class="btn btn-dark font-weight-bold btn-lg" (click)="openModalPermission()">
+    <i class="fas fa-users-cog icon-md p-1"></i>
+    <span translate="INITIALIZATION.POWERS_TEMPLATES.POWERS"></span>
+  </a>
+
+  <hr>
+  <div class="col-md-12 mb-11 mt-10">
+    <p class="bg-dark text-white py-4 px-4" style="border-radius: 5px"
+      translate="INITIALIZATION.POWERS_TEMPLATES.POWERS_TEMPLATES"></p>
+  </div>
+
+  <div class="d-flex ">
+    <div class="col-md-6">
+      <label for="code" translate="INITIALIZATION.POWERS_TEMPLATES.VALIDITY_CODE" class="text-dark"></label>
+      <input name="code" type="text" id="code" class="form-control"
+        [placeholder]="'INITIALIZATION.POWERS_TEMPLATES.VALIDITY_CODE' | translate">
+      <br>
+      <label for="validate" translate="INITIALIZATION.POWERS_TEMPLATES.VALIDITY" class="text-dark"></label>
+      <input name="validate" type="text" id="validate" class="form-control"
+        [placeholder]="'INITIALIZATION.POWERS_TEMPLATES.VALIDITY' | translate">
+
+    </div>
+
+    <div class="col-md-6 ">
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource.gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (1).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.CONTROL_BOARD"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.INITIALIZATION"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (5).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (1).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.STAFF_MANAGEMENT"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (5).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (1).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.MANAGEMENT_OF_DELEGATES"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (5).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (1).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.CUSTOMER_MANAGEMENT"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.CUSTOMER_REQUESTS"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.ACCOUNTS_AND_FINANCE_MANAGEMENT"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.MANAGE_EXPENSES"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.PICKUP"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (5).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (1).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.ADDING_SHIPMENTS"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (5).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (1).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.FOLLOW_UP_SHIPMENTS"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (5).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (1).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.MOVEMENT_OF_SHIPMENTS"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.SHIPMENT_MANAGEMENT"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.BRANCH_TRANSFERS"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.DELIVERY_MANAGEMENT"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (5).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (1).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.PRINTING_POLICIES"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.RETURNS_MANAGEMENT"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="m-2" cellpadding="0" cellspacing="0" style="border-width:0;">
+        <tbody>
+          <tr>
+            <td class="p-1"> <img src="assets/media/initialization/WebResource (7).gif" alt=""> </td>
+            <td class="p-1"><a href=""> <img src="assets/media/initialization/WebResource (6).gif" alt=""></a></td>
+            <td class="p-1">
+              <input class="p-1 form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <a class="p-1" translate="INITIALIZATION.POWERS_TEMPLATES.REPORTS"> </a>
+            </td>
+          </tr>
+          <tr style="height:0px;">
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<app-add-edit-permission #modalPermission [modalConfig]="permissionModalConfig">
+
+</app-add-edit-permission>
+
+
+
+<div class="card flex flex-column align-items-center justify-content-center bg-danger">
+  <p-tree [value]="files" selectionMode="checkbox" class="w-full md:w-30rem"
+    [selection]="selectedFiles ? selectedFiles : []" />
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="col-md-12 col-sm-12 col-xs-12">
+
+  <div class="table-responsive" style="overflow: auto; max-height: 300px; height: 300px; width: 100%">
+    <div>
+<table class="mGrid" cellspacing="0" rules="all" border="1" id="ArMainContent_UcPermissions_GrdRolls" style="width:100%;border-collapse:collapse;">
+<tbody><tr>
+<th scope="col">كود</th><th scope="col" style="width:85%;">اسم الصلاحية</th><th scope="col">خيارات</th>
+</tr><tr>
+<td>1</td><td>مدير عام الشركة</td><td>
+            <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_0" class="btn btn-icon btn-outline-primary btn-sm" href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl02$LnkDsplyRolls','')"><i class="fas fa-user-check "></i></a>
+          </td>
+</tr><tr>
+<td>2</td><td>نائب مدير </td><td>
+            <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_1" class="btn btn-icon btn-outline-primary btn-sm" href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl03$LnkDsplyRolls','')"><i class="fas fa-user-check "></i></a>
+          </td>
+</tr><tr>
+<td>3</td><td>مدير فرع</td><td>
+            <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_2" class="btn btn-icon btn-outline-primary btn-sm" href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl04$LnkDsplyRolls','')"><i class="fas fa-user-check "></i></a>
+          </td>
+</tr><tr>
+<td>4</td><td>خدمة العملاء</td><td>
+            <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_3" class="btn btn-icon btn-outline-primary btn-sm" href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl05$LnkDsplyRolls','')"><i class="fas fa-user-check "></i></a>
+          </td>
+</tr><tr>
+<td>7</td><td>محاسب </td><td>
+            <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_4" class="btn btn-icon btn-outline-primary btn-sm" href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl06$LnkDsplyRolls','')"><i class="fas fa-user-check "></i></a>
+          </td>
+</tr><tr>
+<td>8</td><td>امين مخزن</td><td>
+            <a id="ArMainContent_UcPermissions_GrdRolls_LnkDsplyRolls_5" class="btn btn-icon btn-outline-primary btn-sm" href="javascript:__doPostBack('ctl00$ArMainContent$UcPermissions$GrdRolls$ctl07$LnkDsplyRolls','')"><i class="fas fa-user-check "></i></a>
+          </td>
+</tr>
+</tbody></table>
+</div>
+  </div>
+</div> -->
