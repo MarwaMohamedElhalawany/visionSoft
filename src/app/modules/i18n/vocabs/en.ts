@@ -45,7 +45,8 @@ export const locale = {
         BTN1: 'Sign In with Google',
         BTN2: 'Sign In with Apple',
         REQUIRED_NAME: "User Name IS Required",
-        REQUIRED_PASS:'User Pass IS Required'
+        REQUIRED_PASS:'User Pass IS Required',
+        LOGOUT: 'Logout',
       },
      
       FORGOT: {

@@ -42,7 +42,8 @@ export const locale = {
         BTN1: 'تسجيل الدخول باستخدام جوجل',
         BTN2: 'تسجيل الدخول باستخدام ابل',
        REQUIRED_NAME: "الاسم مطلوب",
-       REQUIRED_PASS:'كلمة المرور مطلوبة'
+       REQUIRED_PASS:'كلمة المرور مطلوبة',
+       LOGOUT: 'تسجيل الخروج',
 
       },
       FORGOT: {

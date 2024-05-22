@@ -95,13 +95,14 @@ end::Header menu toggle -->
 
 
 <div class="app-navbar-item" [ngClass]="itemClass">
-  <div class="cursor-pointer symbol" [ngClass]="userAvatarClass" data-kt-menu-trigger="{default: 'click'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+  <div class="cursor-pointer symbol" [ngClass]="userAvatarClass" data-kt-menu-trigger="{default: 'click'}"
+    data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
     <img src="./assets/media/avatars/300-3.jpg" />
   </div>
   <app-user-inner data-kt-menu='true'></app-user-inner>
 </div>
 <div class="app-navbar-item" [ngClass]="itemClass">
-<!-- <button class="d-flex align-items-center border border-1 border-gray-300 rounded-3 bg-white px-1"
+  <!-- <button class="d-flex align-items-center border border-1 border-gray-300 rounded-3 bg-white px-1"
     style="height: 45px;" (click)="selectLanguage()">
    
     <span  class="fs-1 fw-bold mx-1" style="color: #333;" translate="HEADER.LANG"></span>
@@ -112,5 +113,5 @@ end::Header menu toggle -->
       <label class="form-check-label" for="flexSwitchCheckDefault" style="color: #333;" translate="HEADER.LANG"></label>
     </div>
   </div>
-  
+
 </div>
