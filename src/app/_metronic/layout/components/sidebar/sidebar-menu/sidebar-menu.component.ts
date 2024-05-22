@@ -26,14 +26,6 @@ export class SidebarMenuComponent implements OnInit, OnDestroy {
     return menus.filter(item => item.menu_ParentID === parentID);
   }
 
-  toggleSubmenuVisibility(menuID: number): void {
-    this.submenuVisibility[menuID] = !this.submenuVisibility[menuID];
-  }
-
-  hasSubmenu(menuID: number): boolean {
-    return this.menueList.some((item: any) => item.menu_ParentID === menuID);
-  }
-
   getMenueList() {
     this.authService.currentUserSubject.pipe(takeUntil(this.unsubscribe)).subscribe((response: any) => {
       this.menueList = response.result.user.menus;
