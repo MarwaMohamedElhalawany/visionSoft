@@ -43,8 +43,8 @@ export const locale = {
         BTN2: 'تسجيل الدخول باستخدام ابل',
        REQUIRED_NAME: "الاسم مطلوب",
        REQUIRED_PASS:'كلمة المرور مطلوبة',
+       
        LOGOUT: 'تسجيل الخروج',
-
       },
       FORGOT: {
         TITLE: 'هل نسيت كلمة المرور؟',

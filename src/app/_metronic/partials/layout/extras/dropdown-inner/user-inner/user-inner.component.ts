@@ -1,8 +1,9 @@
+
+import { AuthService } from 'src/app/pages/myProject/auth/Services/auth.service';
 import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { TranslationService } from '../../../../../../modules/i18n';
 import { UserType } from '../../../../../../modules/auth';
-import { AuthService } from 'src/app/pages/myProject/auth/Services/auth.service';
 
 @Component({
   selector: 'app-user-inner',

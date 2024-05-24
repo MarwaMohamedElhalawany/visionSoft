@@ -66,6 +66,7 @@ const Routing: Routes = [
       import('../pages/myProject/Initialization/permission/permission.module').then((m) => m.PermissionModule),
     data: { layout: 'light-sidebar' },
   },
+  
   {
     path: '',
     redirectTo: '/home',
