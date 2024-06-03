@@ -53,13 +53,13 @@ const Routing: Routes = [
     data: { layout: 'light-sidebar' },
   },
   {
-    path: 'permission',
+    path: 'permissions',
     loadChildren: () =>
       import('../pages/myProject/Initialization/permission/permission.module').then((m) => m.PermissionModule),
     data: { layout: 'light-sidebar' },
   },
   {
-    path: 'staff',
+    path: 'employees',
     loadChildren: () =>
       import('../pages/myProject/staff-management/staff-management.module').then((m) => m.StaffManagementModule),
     data: { layout: 'light-sidebar' },
