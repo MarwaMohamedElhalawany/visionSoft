@@ -5,18 +5,19 @@ import { AddEditPermissionComponent } from './add-edit-permission/add-edit-permi
 import { TranslateModule } from '@ngx-translate/core';
 import { AddBranchComponent } from './add-branch/add-branch/add-branch.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ReasonsComponent } from './reasons/reasons/reasons.component';
 import { AddCityComponent } from './add-city/add-city/add-city.component';
 import { AddAreaComponent } from './add-area/add-area/add-area.component';
+import { AddReasonsComponent } from './add-reasons/add-reasons.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 @NgModule({
   declarations: [
     AddEditPermissionComponent,
     AddBranchComponent,
-    ReasonsComponent,
     AddCityComponent,
     AddAreaComponent,
+    AddReasonsComponent,
   ],
   imports: [
     CommonModule,
@@ -27,15 +28,16 @@ import { AddAreaComponent } from './add-area/add-area/add-area.component';
     //  MatSelectModule,
     // MatInputModule,
     // MatFormFieldModule,
-    
+    DropdownModule
 
   ],
   exports:[
     AddEditPermissionComponent,
     AddBranchComponent,
-    ReasonsComponent,
+
     AddCityComponent,
-    AddAreaComponent
+    AddAreaComponent,
+    AddReasonsComponent,
   ]
 })
 export class ModalsModule { }

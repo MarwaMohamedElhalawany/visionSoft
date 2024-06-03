@@ -4,16 +4,14 @@ import { ModalConfig } from 'src/app/_metronic/partials';
 import { TranslationService } from 'src/app/modules/i18n';
 
 @Component({
-  selector: 'app-reasons',
-  templateUrl: './reasons.component.html',
-  styleUrls: ['./reasons.component.scss']
+  selector: 'app-add-reasons',
+  templateUrl: './add-reasons.component.html',
+  styleUrls: ['./add-reasons.component.scss']
 })
-
-export class ReasonsComponent  {
-  
+export class AddReasonsComponent {
 
   @Input() public modalConfig: ModalConfig;
-  @ViewChild('modal') private modalContent: TemplateRef<ReasonsComponent>;
+  @ViewChild('modal') private modalContent: TemplateRef<AddReasonsComponent>;
   private modalRef: NgbModalRef;
 
   constructor(private modalService: NgbModal , 

@@ -12,7 +12,8 @@
             </div>
         </div>
         <div class="modal-header">
-            <h5 id="ArMainContent_UcBranches_modaladd" class="modal-title" translate="INITIALIZATION.REASONS.ADDITION" ></h5>
+            <h5 id="ArMainContent_UcBranches_modaladd" class="modal-title" translate="INITIALIZATION.REASONS.ADDITION">
+            </h5>
             <i class="fa-solid fa-xmark" (click)="dismiss()"></i>
 
         </div>
@@ -27,50 +28,105 @@
                 </div>
             </div>
             <div class="form-group row py-3">
-                 <div class="col-md-12">
+                <div class="col-md-12">
                     <label translate="INITIALIZATION.REASONS.LIST_OF_BRANCHES" class="my-3 text-black"> </label>
 
+                    <div class="card d-flex justify-content-center">
+                        <p-dropdown [options]="branchList" [(ngModel)]="selectedBranch" optionLabel="name"
+                            [style]="{ 'width': '100%'}" [filter]="true" filterBy="name" [showClear]="true"
+                            placeholder="-- اختر --">
+                            <ng-template pTemplate="selectedItem" let-selectedOption>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div>{{ selectedOption.name }}</div>
+                                </div>
+                            </ng-template>
+                            <ng-template let-branch pTemplate="item">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div>{{ branch.name }}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                    </div>
 
-                    <div class="dropdown bootstrap-select form-control">
-                    <select name="ctl00$ArMainContent$UcBranches$DDLPriceList"
-                        id="ArMainContent_UcBranches_DDLPriceList" class="form-control selectpicker" data-size="7"
-                        data-live-search="true">
-                        <option value="-- اختر --" translate="INITIALIZATION.REASONS.CHOOSE" ></option>
-                        <option value="5">فرع جيزة</option>
-                        <option value="6">عمولة فرع رئيسي</option>
-                        <option value="11">333</option>
-                    </select>
-                    <button type="button" tabindex="-1" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
-                        role="combobox" aria-owns="bs-select-3" aria-haspopup="listbox" aria-expanded="false"
-                        data-id="ArMainContent_UcBranches_DDLPriceList" title="-- اختر --">
-                        <div class="filter-option">
-                            <div class="filter-option-inner">
-                                <div class="filter-option-inner-inner">-- اختر --</div>
+
+                    <!-- <div class="dropdown bootstrap-select form-control">
+                        <select name="ctl00$ArMainContent$UcBranches$DDLPriceList"
+                            id="ArMainContent_UcBranches_DDLPriceList" class="form-control selectpicker" data-size="7"
+                            data-live-search="true">
+                            <option value="-- اختر --" translate="INITIALIZATION.REASONS.CHOOSE"></option>
+                            <option value="5">فرع جيزة</option>
+                            <option value="6">عمولة فرع رئيسي</option>
+                            <option value="11">333</option>
+                        </select>
+
+
+                   
+                        <button type="button" tabindex="-1" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                            role="combobox" aria-owns="bs-select-3" aria-haspopup="listbox" aria-expanded="false"
+                            data-id="ArMainContent_UcBranches_DDLPriceList" title="-- اختر --">
+                            <div class="filter-option">
+                                <div class="filter-option-inner">
+                                    <div class="filter-option-inner-inner">-- اختر --</div>
+                                </div>
                             </div>
-                        </div>
-                    </button>
-                     <div class="dropdown-menu ">
+                        </button>
+                        <div class="dropdown-menu ">
                             <div class="bs-searchbox"><input type="search" class="form-control" autocomplete="off"
                                     role="combobox" aria-label="Search" aria-controls="bs-select-3"
                                     aria-autocomplete="list"></div>
                             <div class="inner show" role="listbox" id="bs-select-3" tabindex="-1">
                                 <ul class="dropdown-menu inner show" role="presentation"></ul>
                             </div>
-                        </div> 
+                        </div>
+                    </div> -->
+                    <span id="ArMainContent_UcBranches_RequiredFieldValidator3"
+                        style="color:Red;display:none;">*مطلوب</span>
+                </div>
+                <!-- <div class="col-md-12">
+                    <label>قائمة عمولة الفرع</label>
+                    <div class="dropdown bootstrap-select form-control"><select
+                            name="ctl00$ArMainContent$UcBranches$DDLPriceList"
+                            id="ArMainContent_UcBranches_DDLPriceList" class="form-control selectpicker" data-size="7"
+                            data-live-search="true" tabindex="null">
+                            <option value="-- اختر --">-- اختر --</option>
+                            <option value="5">فرع جيزة</option>
+                            <option value="6">عمولة فرع رئيسي</option>
+                            <option value="11">333</option>
+                        </select><button type="button" tabindex="-1" class="btn dropdown-toggle btn-light"
+                            data-toggle="dropdown" role="combobox" aria-owns="bs-select-3" aria-haspopup="listbox"
+                            aria-expanded="false" data-id="ArMainContent_UcBranches_DDLPriceList" title="-- اختر --">
+                            <div class="filter-option">
+                                <div class="filter-option-inner">
+                                    <div class="filter-option-inner-inner">-- اختر --</div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu" style="overflow: hidden;">
+                            <div class="bs-searchbox"><input type="search" class="form-control" autocomplete="off"
+                                    role="combobox" aria-label="Search" aria-controls="bs-select-3"
+                                    aria-autocomplete="list" aria-activedescendant="bs-select-3-0"></div>
+                            <div class="inner show" role="listbox" id="bs-select-3" tabindex="-1"
+                                style="overflow-y: auto;">
+                                <ul class="dropdown-menu inner show" role="presentation"
+                                    style="margin-top: 0px; margin-bottom: 0px;">
+                                    <li class="selected active"><a role="option" class="dropdown-item active selected"
+                                            id="bs-select-3-0" tabindex="0" aria-setsize="4" aria-posinset="1"
+                                            aria-selected="true"><span class="text">-- اختر --</span></a></li>
+                                    <li><a role="option" class="dropdown-item" id="bs-select-3-1" tabindex="0"
+                                            aria-setsize="4" aria-posinset="2"><span class="text">فرع جيزة</span></a>
+                                    </li>
+                                    <li><a role="option" class="dropdown-item" id="bs-select-3-2" tabindex="0"
+                                            aria-setsize="4" aria-posinset="3"><span class="text">عمولة فرع
+                                                رئيسي</span></a></li>
+                                    <li><a role="option" class="dropdown-item" id="bs-select-3-3" tabindex="0"
+                                            aria-setsize="4" aria-posinset="4"><span class="text">333</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <span id="ArMainContent_UcBranches_RequiredFieldValidator3"
                         style="color:Red;display:none;">*مطلوب</span>
-                </div> 
-                <div class="col-md-12">
-                    <label>قائمة عمولة الفرع</label>
-                    <div class="dropdown bootstrap-select form-control"><select name="ctl00$ArMainContent$UcBranches$DDLPriceList" id="ArMainContent_UcBranches_DDLPriceList" class="form-control selectpicker" data-size="7" data-live-search="true" tabindex="null">
-<option value="-- اختر --">-- اختر --</option>
-<option value="5">فرع جيزة</option>
-<option value="6">عمولة فرع رئيسي</option>
-<option value="11">333</option>
-</select><button type="button" tabindex="-1" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-3" aria-haspopup="listbox" aria-expanded="false" data-id="ArMainContent_UcBranches_DDLPriceList" title="-- اختر --"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">-- اختر --</div></div> </div></button><div class="dropdown-menu" style="overflow: hidden;"><div class="bs-searchbox"><input type="search" class="form-control" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-3" aria-autocomplete="list" aria-activedescendant="bs-select-3-0"></div><div class="inner show" role="listbox" id="bs-select-3" tabindex="-1" style="overflow-y: auto;"><ul class="dropdown-menu inner show" role="presentation" style="margin-top: 0px; margin-bottom: 0px;"><li class="selected active"><a role="option" class="dropdown-item active selected" id="bs-select-3-0" tabindex="0" aria-setsize="4" aria-posinset="1" aria-selected="true"><span class="text">-- اختر --</span></a></li><li><a role="option" class="dropdown-item" id="bs-select-3-1" tabindex="0" aria-setsize="4" aria-posinset="2"><span class="text">فرع جيزة</span></a></li><li><a role="option" class="dropdown-item" id="bs-select-3-2" tabindex="0" aria-setsize="4" aria-posinset="3"><span class="text">عمولة فرع رئيسي</span></a></li><li><a role="option" class="dropdown-item" id="bs-select-3-3" tabindex="0" aria-setsize="4" aria-posinset="4"><span class="text">333</span></a></li></ul></div></div></div>
-                    <span id="ArMainContent_UcBranches_RequiredFieldValidator3" style="color:Red;display:none;">*مطلوب</span>
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-md-12 ">
@@ -122,4 +178,3 @@
         </div>
     </div>
 </ng-template>
-

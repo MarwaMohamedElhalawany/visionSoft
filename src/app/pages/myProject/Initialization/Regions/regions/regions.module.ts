@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegionsComponent } from './regions.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
-import { ModalsModule } from 'src/app/_metronic/partials';
+import { ModalsModule } from '../../../modals/modals.module';
 
 
 

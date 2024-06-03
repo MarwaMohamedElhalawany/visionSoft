@@ -1,6 +1,7 @@
 <div class="card-toolbar">
-    <a id="ArMainContent_UcBranches_LnkAddModal" class="mb-4 btn btn-primary btn-shadow font-weight-bold mr-2" (click)="addCity()"
-        href="javascript:__doPostBack('ctl00$ArMainContent$UcBranches$LnkAddModal','')" translate="INITIALIZATION.BRANCH.ADD">
+    <a id="ArMainContent_UcBranches_LnkAddModal" class="mb-4 btn btn-primary btn-shadow font-weight-bold mr-2"
+        (click)="addCity()" href="javascript:__doPostBack('ctl00$ArMainContent$UcBranches$LnkAddModal','')"
+        translate="INITIALIZATION.BRANCH.ADD">
         <i class="fa-regular fa-square-plus  mx-2 icon-large"></i>
     </a>
 </div>
@@ -19,56 +20,55 @@
         <div class="col-md-12">
             <div class="table-responsive">
                 <div>
-                    <table class="mGrid" cellspacing="0" rules="all"  id="ArMainContent_UcBranches_GrdView"
+                    <table class="mGrid" cellspacing="0" rules="all" id="ArMainContent_UcBranches_GrdView"
                         style="width:100%;border-collapse:collapse;">
                         <tbody class="w-100">
                             <tr class="m-5">
                                 <th scope="col" style="width:2%;" translate="INITIALIZATION.BRANCH.CODE"></th>
-                                   <th scope="col" translate="INITIALIZATION.REASONS.CITY_NAME"></th>
-                                   <th scope="col"  translate="INITIALIZATION.BRANCH.FOREIGN_NAME"></th>
-                                   <th scope="col" translate="INITIALIZATION.BRANCH.OPTIONS"></th>
+                                <th scope="col" translate="INITIALIZATION.REASONS.CITY_NAME"></th>
+                                <th scope="col" translate="INITIALIZATION.BRANCH.FOREIGN_NAME"></th>
+                                <th scope="col" translate="INITIALIZATION.BRANCH.OPTIONS"></th>
                             </tr>
                             <br>
-                            <tr class="m-5" *ngFor="let item of cityData  | paginate: { itemsPerPage: pageSize, currentPage: page, totalItems :totalCount };let i=index ">
-                                <td >
-                                 {{i+1 }} 
+                            <tr class="m-5"
+                                *ngFor="let item of cityData  | paginate: { itemsPerPage: pageSize, currentPage: page, totalItems :totalCount };let i=index ">
+                                <td>
+                                    {{i+1 }}
                                 </td>
                                 <td>
-                                  {{item.city_Ar_Nm}}
+                                    {{item.city_Ar_Nm}}
                                 </td>
-                                <td> 
-                                   {{item.city_En_Nm}}
+                                <td>
+                                    {{item.city_En_Nm}}
                                 </td>
-                                
-                               
-                               
-                                <td >
-                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-action="edit"
-                                      data-id="259">
-                                      <i class="ki-duotone ki-pencil fs-3"><span class="path1"></span><span class="path2"></span></i>
+
+
+
+                                <td>
+                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3"
+                                        data-action="edit" data-id="259">
+                                        <i class="ki-duotone ki-pencil fs-3"><span class="path1"></span><span
+                                                class="path2"></span></i>
                                     </button>
-                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-action="delete"
-                                      data-id="259">
-                                      <i class="ki-duotone ki-trash fs-3">
-                                        <span class="path1"></span><span class="path2"></span>
-                                        <span class="path3"></span><span class="path4"></span><span class="path5"></span>
-                                      </i>
+                                    <button class="btn btn-icon btn-active-light-primary w-30px h-30px"
+                                        data-action="delete" data-id="259">
+                                        <i class="ki-duotone ki-trash fs-3">
+                                            <span class="path1"></span><span class="path2"></span>
+                                            <span class="path3"></span><span class="path4"></span><span
+                                                class="path5"></span>
+                                        </i>
                                     </button>
-                                  </td>
+                                </td>
                             </tr>
-      
+
                         </tbody>
                     </table>
                     <pagination-controls (pageChange)="onChangePage($event)" previousLabel="Previous"
-            nextLabel="Next"></pagination-controls>
+                        nextLabel="Next"></pagination-controls>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- <app-add-city #modalAddCity [modalConfig]="addCityConfig"></app-add-city> -->
-
-
-
-
+<app-add-city #modalAddCity [modalConfig]="addCityConfig"></app-add-city>

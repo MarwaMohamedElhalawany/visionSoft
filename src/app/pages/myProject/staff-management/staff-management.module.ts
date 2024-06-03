@@ -10,7 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
 @NgModule({
   declarations: [
     StaffManagementComponent,
-    NewEmployeeComponent
+    NewEmployeeComponent,
   ],
   imports: [
     CommonModule,

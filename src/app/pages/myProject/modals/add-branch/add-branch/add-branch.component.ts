@@ -10,7 +10,12 @@ import { TranslationService } from 'src/app/modules/i18n';
   styleUrls: ['./add-branch.component.scss']
 })
 export class AddBranchComponent {
-  branchList: string[] = ['فرع جيزة', 'عمولة فرع رئيسي', '333'];
+  branchList: any[] = [
+  { name: 'فرع جيزة' },
+  { name: 'عمولة فرع رئيسي' },
+  { name: '333' },
+  ];
+  selectedBranch: any ;
   filteredBranchList: string[] = this.branchList;
   branchControl = new FormControl('');
 
