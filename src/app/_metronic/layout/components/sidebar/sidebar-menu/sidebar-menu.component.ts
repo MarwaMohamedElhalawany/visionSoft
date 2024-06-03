@@ -45,4 +45,38 @@ export class SidebarMenuComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.unsubscribe.forEach((sb) => sb.unsubscribe());
   }
+  icons: any = {
+    1: 'fa-solid fa-chart-simple',
+    3: 'fa-solid fa-list',
+    4: 'fas fa-users-cog',
+    24: 'fas fa-users-cog',
+    6:'fas fa-cart-plus',  
+   12018:'fa-solid fa-cart-plus',
+    17:'fas fa-users-cog',
+    1201:'fas fa-users-cog',
+    1608:'fas fa-users-cog',
+    16013:'fas fa-users-cog',
+    12:' fas fa-luggage-cart',
+    15:'far fa-money-bill-alt',
+    13:'far fa-money-bill-alt',
+    7:'fab fa-opencart',
+    22:'fa-solid fa-cart-shopping',
+    9:'fa-solid fa-cart-shopping',
+    23:'fas fa-shipping-fast',
+    11:'fas fa-qrcode',
+   19:'fas fa-truck-loading',
+    16:'fas fa-chart-line',
+    5: 'fas fa-users-cog',
+    10:'fas fa-truck-moving',
+    // 1201:'fa-solid fa-cart-shopping',
+    // 1201:'fa-solid fa-cart-shopping',
+    // 1201:'fa-solid fa-cart-shopping',
+    // 1201:'fa-solid fa-cart-shopping',
+    // وهكذا لبقية القوائم
+  };  
+
+getIcon(menuId: number): string {
+    return this.icons[menuId];
+  }
+
 }

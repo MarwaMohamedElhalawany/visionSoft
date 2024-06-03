@@ -21,6 +21,7 @@ import { SharedModule } from "./_metronic/shared/shared.module";
 
 import { ButtonModule } from 'primeng/button'; // Import any required PrimeNG modules
 import { TreeModule } from 'primeng/tree';
+import { ToastrModule } from 'ngx-toastr';
 
 function appInitializer(authService: AuthService) {
   return () => {
@@ -32,7 +33,7 @@ function appInitializer(authService: AuthService) {
 }
 
 @NgModule({
-    declarations: [AppComponent, ComponentnameComponent, MyTestComponent, VisionUsersComponent],
+    declarations: [AppComponent, ComponentnameComponent, MyTestComponent, VisionUsersComponent, ],
     providers: [
         {
             provide: APP_INITIALIZER,
@@ -50,7 +51,10 @@ function appInitializer(authService: AuthService) {
         ClipboardModule,
         ButtonModule,
         TreeModule,
-        // #fake-start#
+        ToastrModule.forRoot({
+          positionClass: 'toast-bottom-center', // تحديد موقع التوستر
+          toastClass: 'ngx-toastr custom-toast', // تعيين فئة CSS مخصصة
+        }), 
         environment.isMockEnabled
             ? HttpClientInMemoryWebApiModule.forRoot(FakeAPIService, {
                 passThruUnknownUrl: true,

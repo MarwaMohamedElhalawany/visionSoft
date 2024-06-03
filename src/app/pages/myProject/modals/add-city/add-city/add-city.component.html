@@ -1,0 +1,71 @@
+<ng-template #modal>
+    <div class="modal-content">
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_UcCities_LoaderProgress" style="display: none;" role="status" aria-hidden="true">
+
+                    <div class="page-loader page-loader-logo">
+                        <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                        <div class="spinner spinner-primary"></div>
+                    </div>
+                
+</div>
+        </div>
+        <div class="modal-header">
+            <h5 id="ArMainContent_UcCities_modaladd" class="modal-title" translate="INITIALIZATION.REASONS.ADDITION" ></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark" (click)="dismiss()"></i>
+            </button>
+        </div>
+
+       
+        <div id="ArMainContent_UcCities_modaladdedit" class="modal-body" style="display:block;">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="form-group">
+                        <label translate="INITIALIZATION.REASONS.CITY_CODE"> </label>
+                        <input name="ctl00$ArMainContent$UcCities$Txt_ID" type="text" id="ArMainContent_UcCities_Txt_ID" class="form-control " disabled="disabled" value="31" placeholder="3">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="form-group">
+                        <label translate="INITIALIZATION.REASONS.CITY_NAME"> </label>
+                        <input name="ctl00$ArMainContent$UcCities$Txt_Ar_Nm" type="text" id="ArMainContent_UcCities_Txt_Ar_Nm" class="form-control " [placeholder]="'INITIALIZATION.REASONS.CITY_NAME' | translate">
+                        <span id="ArMainContent_UcCities_ReqTxt_Ar_Nm" style="color:Red;display:none;">من فضلك ادخل اسـم المدينة</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="form-group">
+                        <label translate="INITIALIZATION.BRANCH.FOREIGN_NAME"> </label>
+                        <input name="ctl00$ArMainContent$UcCities$Txt_En_Nm" type="text" id="ArMainContent_UcCities_Txt_En_Nm" class="form-control " [placeholder]="'INITIALIZATION.BRANCH.FOREIGN_NAME' | translate" >
+                        <span id="ArMainContent_UcCities_ReqTxt_En_Nm" style="color:Red;display:none;">من فضلك ادخل الاســم الاجـنـبـي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ArMainContent_UcCities_modaldelete" class="modal-body" style="display:none;">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="alert alert-custom alert-outline-danger fade show mb-5" role="alert">
+                        <div class="alert-icon"><i class="flaticon-warning"></i></div>
+                        <div id="ArMainContent_UcCities_RemovAlert" class="alert-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ArMainContent_UcBranches_modaladdfotr" class="modal-footer" style="display:block;">
+            <a onclick="BtnClick();" id="ArMainContent_UcBranches_LnkSave" class="btn btn-primary font-weight-bold"
+                href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ArMainContent$UcBranches$LnkSave&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
+                translate="INITIALIZATION.POWERS_TEMPLATES.SAVE"></a>
+            <button type="button" class="btn btn-light-danger font-weight-bold" data-dismiss="modal" (click)="dismiss()"
+                translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION"></button>
+        </div>
+        <div id="ArMainContent_UcCities_modaldeletefotr" class="modal-footer" style="display:none;" dir="ltr">
+            <a id="ArMainContent_UcCities_LnkExecRemov" class="btn btn-primary font-weight-bold" href="javascript:__doPostBack('ctl00$ArMainContent$UcCities$LnkExecRemov','')">نعم</a>
+            <button type="button" class="btn btn-light-danger font-weight-bold" data-dismiss="modal">إلغاء</button>
+        </div>
+    </div>
+    </ng-template>
