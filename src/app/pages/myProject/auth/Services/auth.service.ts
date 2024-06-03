@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, Subscription, catchError, finalize, first, map, of, switchMap } from 'rxjs';
 import { AuthHttpService } from './auth-http.service';
+import Swal from 'sweetalert2';
 @Injectable({
   providedIn: 'root'
 })
@@ -44,6 +45,14 @@ export class AuthService {
       }),
       catchError((err) => {
         console.error('err', err);
+        // const msg = 
+        Swal.fire({
+          icon: 'error',
+          text: err.error.message,
+          showCloseButton: true,
+          focusCancel: false,
+          showConfirmButton: false,
+        });
         return of(undefined);
       }),
       finalize(() => this.isLoadingSubject.next(false))
