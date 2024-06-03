@@ -1,27 +1,19 @@
-import { ControlPanalModule } from './myProject/control-panal/control-panal.module';
 import { Routes } from '@angular/router';
 import { VisionUsersComponent } from './vision-users/vision-users.component';
 
 const Routing: Routes = [
-  {path : 'vision-users', component:VisionUsersComponent},
+  { path: 'vision-users', component: VisionUsersComponent },
   {
     path: 'dashboard',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
     data: { layout: 'light-sidebar' },
-
   },
   {
     path: 'home',
     loadChildren: () =>
       import('./myProject/control-panal/control-panal.module').then((m) => m.ControlPanalModule),
     data: { layout: 'light-sidebar' },
-
-  },
-  {
-    path: 'builder',
-    loadChildren: () =>
-      import('./builder/builder.module').then((m) => m.BuilderModule),
   },
   {
     path: 'builder',
@@ -66,7 +58,36 @@ const Routing: Routes = [
       import('../pages/myProject/Initialization/permission/permission.module').then((m) => m.PermissionModule),
     data: { layout: 'light-sidebar' },
   },
-  
+  {
+    path: 'staff',
+    loadChildren: () =>
+      import('../pages/myProject/staff-management/staff-management.module').then((m) => m.StaffManagementModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'branches',
+    loadChildren: () =>
+      import('../pages/myProject/Initialization/Branches/branches/branches.module').then((m) => m.BranchesModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'cities',
+    loadChildren: () =>
+      import('../pages/myProject/Initialization/Cities/cities/cities.module').then((m) => m.CitiesModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'areas',
+    loadChildren: () =>
+      import('../pages/myProject/Initialization/Regions/regions/regions.module').then((m) => m.RegionsModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'reasons',
+    loadChildren: () =>
+      import('../pages/myProject/Initialization/Reasons/reasons/reasons.module').then((m) => m.ReasonsModule),
+    data: { layout: 'light-sidebar' },
+  },
   {
     path: '',
     redirectTo: '/home',

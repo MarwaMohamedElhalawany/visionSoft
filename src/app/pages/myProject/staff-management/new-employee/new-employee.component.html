@@ -1,0 +1,179 @@
+<div class="container-fluid">
+    <!--begin::Dashboard-->
+    <span id="MasterPanel">
+            <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+            
+<div class="page-loading-enabled page-loading">
+<div id="ArMainContent_LoaderProgress" style="display:none;" role="status" aria-hidden="true">
+
+<div class="page-loader page-loader-logo">
+<img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+<div class="spinner spinner-primary"></div>
+</div>
+
+</div>
+</div>
+
+<div class="card card-custom ">
+<div class="card-header">
+<div class="card-toolbar">
+
+
+
+   
+<a onclick="BtnClick();" id="ArMainContent_UcEmployees_Dtls_LnkSave" class="btn btn-success btn-shadow font-weight-bold mr-2" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ArMainContent$UcEmployees_Dtls$LnkSave&quot;, &quot;&quot;, true, &quot;MainItem&quot;, &quot;&quot;, false, true))" translate="INITIALIZATION.POWERS_TEMPLATES.SAVE"><i class="fa-solid fa-check"></i></a>
+<a id="ArMainContent_UcEmployees_Dtls_LnkCancel" class="btn btn-danger btn-shadow font-weight-bold mr-2" href="javascript:__doPostBack('ctl00$ArMainContent$UcEmployees_Dtls$LnkCancel','')" translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION"><i class="fa-solid fa-xmark"></i> </a>
+</div>
+<div class="card-title">
+<button class="btn font-weight-bold btn-light-success mr-2" translate="STAFF.STAFF_MANAGEMENT.EMPLOYEE_CODE">  <span id="ArMainContent_UcEmployees_Dtls_LblUID" class="label label-danger ml-2">5</span></button>
+</div>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-md-2 col-xs-12">
+<div class="row">
+<div class="col-md-12 ">
+<p class="bg-dark text-white py-3 px-4" style="border-radius:5px" translate="STAFF.STAFF_MANAGEMENT.EMPLOYEE_PHOTO"> </p>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-lg-12 col-xl-12" style="text-align: center">
+<div class="image-input image-input-outline" id="kt_image_1">
+<div id="ArMainContent_UcEmployees_Dtls_divimg" class="image-input-wrapper" style="background-image: url(App_Themes/media/users/blank.png)"></div>
+<a id="ArMainContent_UcEmployees_Dtls_LnkChangeImg" class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" href="javascript:__doPostBack('ctl00$ArMainContent$UcEmployees_Dtls$LnkChangeImg','')"><i class="fa fa-pen icon-sm text-muted"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-10 col-xs-12">
+<div class="row">
+<div class="col-md-8 col-xs-6">
+<p class="bg-dark text-white py-3 px-4" style="border-radius:5px" translate="STAFF.STAFF_MANAGEMENT.DATA"> </p>
+</div>
+<div class="col-md-4 col-xs-6">
+<div class="btn font-weight-bold btn-block btn-light-dark mr-2" style="padding-bottom: unset; padding-top: unset">
+<div class="checkbox-inline" style="margin-top: 5px">
+    <label class="checkbox checkbox-lg">
+        <input name="ctl00$ArMainContent$UcEmployees_Dtls$Chk_Status" type="checkbox" id="ArMainContent_UcEmployees_Dtls_Chk_Status">
+        <span translate="STAFF.STAFF_MANAGEMENT.CLOSE"> </span>  
+    </label>
+</div>
+</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-6 col-xs-12">
+<label for="Txt_L_Nm" translate="STAFF.STAFF_MANAGEMENT.EMPLOYEE_NAME"> </label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_L_Nm" type="text" id="ArMainContent_UcEmployees_Dtls_Txt_L_Nm" class="form-control " placeholder="اســم الموظف">
+<span id="ArMainContent_UcEmployees_Dtls_RequiredTxtOrd_LNm" style="color:Red;display:none;">من فضلك ادخل اسـم الموظف</span>
+</div>
+<div class="col-md-3 col-xs-12">
+<label for="Txt_Phone" translate="STAFF.STAFF_MANAGEMENT.MOB"></label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_Phone" type="text" id="ArMainContent_UcEmployees_Dtls_Txt_Phone" maxlength="11" onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)" class="form-control ">
+<span id="ArMainContent_UcEmployees_Dtls_RequiredFieldValidator2" style="color:Red;display:none;">مطلوب *</span>
+</div>
+<div class="col-md-3 col-xs-12">
+<label for="Txt_National_No" translate="STAFF.STAFF_MANAGEMENT.ID"> </label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_National_No" type="text" id="ArMainContent_UcEmployees_Dtls_Txt_National_No" onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)" class="form-control ">
+<span id="ArMainContent_UcEmployees_Dtls_RequiredTxt_National_No" style="color:Red;display:none;">مطلوب *</span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3 col-xs-12">
+<div class="form-group ">
+<label for="DDLBranch" translate="STAFF.STAFF_MANAGEMENT.BRANCH"> </label>
+<div class="dropdown bootstrap-select form-control"><select name="ctl00$ArMainContent$UcEmployees_Dtls$DDLBranch" id="ArMainContent_UcEmployees_Dtls_DDLBranch" class="form-control selectpicker" data-size="7" data-live-search="true">
+<option value="-- اختر || Chose --">-- اختر || Chose --</option>
+<option value="1">الرئيسي</option>
+<option value="2">فرع الجيزة</option>
+</select><button type="button" tabindex="-1" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" data-id="ArMainContent_UcEmployees_Dtls_DDLBranch" title="-- اختر || Chose --"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">-- اختر || Chose --</div></div> </div></button><div class="dropdown-menu "><div class="bs-searchbox"><input type="search" class="form-control" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-1" aria-autocomplete="list"></div><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+<span id="ArMainContent_UcEmployees_Dtls_RequiredFieldValidator5" style="color:Red;display:none;">مطلوب *</span>
+</div>
+</div>
+<div class="col-md-3 col-xs-12">
+<label for="Txt_User_Login" translate="STAFF.STAFF_MANAGEMENT.SYSTEM">  </label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_User_Login" type="text" id="ArMainContent_UcEmployees_Dtls_Txt_User_Login" class="form-control ">
+<span id="ArMainContent_UcEmployees_Dtls_RequiredFieldValidator1" style="color:Red;display:none;">مطلوب *</span>
+</div>
+<div class="col-md-3 col-xs-12">
+<label for="Txt_User_Pass" translate="STAFF.STAFF_MANAGEMENT.PASS"> </label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_User_Pass" type="text" id="ArMainContent_UcEmployees_Dtls_Txt_User_Pass" class="form-control ">
+<span id="ArMainContent_UcEmployees_Dtls_RequiredPass" style="color:Red;display:none;">مطلوب *</span>
+</div>
+<div class="col-md-3 col-xs-12">
+<label for="DDLPermission" translate="STAFF.STAFF_MANAGEMENT.ACCESS"> </label>
+<div class="dropdown bootstrap-select form-control"><select name="ctl00$ArMainContent$UcEmployees_Dtls$DDLPermission" id="ArMainContent_UcEmployees_Dtls_DDLPermission" class="form-control selectpicker" data-size="7" data-live-search="true">
+<option value="آختر صلاحية الدخول">آختر صلاحية الدخول</option>
+<option value="1">مدير عام الشركة</option>
+<option value="2">نائب مدير </option>
+<option value="3">مدير فرع</option>
+<option value="4">خدمة العملاء</option>
+<option value="7">محاسب </option>
+<option value="8">امين مخزن</option>
+</select><button type="button" tabindex="-1" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" data-id="ArMainContent_UcEmployees_Dtls_DDLPermission" title="آختر صلاحية الدخول"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">آختر صلاحية الدخول</div></div> </div></button><div class="dropdown-menu "><div class="bs-searchbox"><input type="search" class="form-control" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-2" aria-autocomplete="list"></div><div class="inner show" role="listbox" id="bs-select-2" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+<span id="ArMainContent_UcEmployees_Dtls_RequiredFieldValidator33" style="color:Red;display:none;">مطلوب *</span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-2 col-xs-12">
+<div class="form-group ">
+<label for="TxtMail" translate="STAFF.STAFF_MANAGEMENT.EMAIL"> </label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$TxtMail" type="email" id="ArMainContent_UcEmployees_Dtls_TxtMail" class="form-control ">
+</div>
+</div>
+<div class="col-md-2 col-xs-12">
+<div class="form-group ">
+<label for="Txt_Salary" translate="STAFF.STAFF_MANAGEMENT.SALARY"></label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_Salary" type="text" id="ArMainContent_UcEmployees_Dtls_Txt_Salary" onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)" class="form-control ">
+<span id="ArMainContent_UcEmployees_Dtls_RequiredFieldValidator4" style="color:Red;display:none;">مطلوب *</span>
+</div>
+</div>
+<div class="col-md-2 col-xs-12">
+<div class="form-group ">
+<label for="Txt_Date_Strt" translate="STAFF.STAFF_MANAGEMENT.START_DATE">  </label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_Date_Strt" type="text" id="ArMainContent_UcEmployees_Dtls_Txt_Date_Strt" class="form-control datepicker-rtl">
+</div>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="form-group ">
+<label for="Txt_Address" translate="STAFF.STAFF_MANAGEMENT.ADDRESS"></label>
+<input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_Address" type="text" id="ArMainContent_UcEmployees_Dtls_Txt_Address" class="form-control  ">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="myModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">اضافة صورة</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<i aria-hidden="true" class="ki ki-close"></i>
+</button>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<div id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages">
+<div id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_ctl00" class="ajax__fileupload"><div class="ajax__fileupload_dropzone" id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_Html5DropZone" style="width: 100%; height: 60px; visibility: visible;">Drop files here</div><span id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_SelectFileContainer" class="ajax__fileupload_selectFileContainer" style="float:left;"><span id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_SelectFileButton" class="ajax__fileupload_selectFileButton">Select File</span><input name="ctl00$ArMainContent$UcEmployees_Dtls$FileUploadItemImages$ctl04" type="file" id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_Html5InputFile" multiple="multiple" style="opacity: 0; visibility: visible;"><input name="ctl00$ArMainContent$UcEmployees_Dtls$FileUploadItemImages$ctl05" type="file" id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_InputFileElement" style="opacity:0;-moz-opacity:0.0;filter:alpha(opacity=0);display:none;visibility:hidden;"></span><div class="ajax__fileupload_topFileStatus" style="position:relative;"><div id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_FileStatusContainer" style="right: 0px; top: 2px; height: 20px; line-height: 20px; visibility: visible; position: absolute;">Please select file(s) to upload.</div></div><div id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_QueueContainer" class="ajax__fileupload_queueContainer" style="display:none;visibility:hidden;margin-top:28px;"></div><div class="ajax__fileupload_footer" id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_Footer" align="right"><div class="ajax__fileupload_ProgressBarHolder"><div id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_ProgressBarContainer" align="left" style="float:left;width:100%;display:none;visibility:hidden;"><div id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_ProgressBar" class="ajax__fileupload_progressBar" style="width: 100%; display: none; visibility: hidden; overflow:visible;white-space:nowrap; height:20px;"></div></div></div><div id="ArMainContent_UcEmployees_Dtls_FileUploadItemImages_UploadOrCancelButton" class="ajax__fileupload_uploadbutton" style="visibility: hidden;">Upload</div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer" dir="ltr">
+<button class="btn btn-danger btn-circle btn-sm" data-dismiss="modal" aria-hidden="true" translate="STAFF.STAFF_MANAGEMENT.CLOSED" ></button>
+</div>
+</div>
+</div>
+</div>
+
+
+        </span>
+    <!--end::Dashboard-->
+</div>

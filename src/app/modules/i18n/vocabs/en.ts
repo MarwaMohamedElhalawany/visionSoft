@@ -15,7 +15,6 @@ export const locale = {
       APPS: 'Apps',
       DASHBOARD: 'Dashboard',
     },
-
     HEADER: {
       LANG: 'عربي',
     },
@@ -46,8 +45,9 @@ export const locale = {
         BTN2: 'Sign In with Apple',
         REQUIRED_NAME: "User Name IS Required",
         REQUIRED_PASS:'User Pass IS Required',
-        
+        WAIT:'Please Wait ...',
         LOGOUT: 'Logout',
+        ERROR:'Incorrect user data',
       },
      
       FORGOT: {
@@ -123,10 +123,45 @@ export const locale = {
     },
 
     INITIALIZATION: {
-     CONTROL_PANAL:{
-      CHARGES:"Charges"
-      
-     },
+      CONTROL_PANAL:{
+        CHARGES:"Charges"
+        
+       },
+       REASONS:{
+        THE_NAME:"Name",
+        TYPE:"Type",
+        CITY_NAME:'City Name',
+        CITY_CODE:'City Code',
+        CITY:'The City',
+        REGION_NAME:'Region Name',
+        BRANCH_CODE:'Branch Code',
+        CHOOSE:'Choose',
+        LIST_OF_BRANCHES:"Branch commission list",
+        ADDITION:'Addition',
+        CODE:'Code',
+
+       },
+      BRANCH: {
+        CODE:'N',
+        ADD:"Add",
+        LIST: "Branch List",
+        NAME: "Branch Name",
+        FOREIGN_NAME: "Foreign Name",
+        BALANCE: "Balance",
+        PAID_SHIPMENTS: "Paid Shipments",
+        UNPAID_SHIPMENTS: "Unpaid Shipments",
+        OPTIONS: "Options",
+        AREA_NAME:"Area Name",
+        AREA_CODE:"Area Code",
+        THE_CITY:"The City",
+        PRICE:"Standard Pricing",
+        LIST_TYPE:'List Type',
+        PRICE_LIST:'Price List',
+        KILO:'Extra kilogram value/pickup value',
+        SHIPPING:"Shipping value / branch commission / representative commission",
+
+      },
+     
 
       POWERS_TEMPLATES: {
         POWERS_TEMPLATES: 'Powers Templates',
@@ -165,6 +200,7 @@ export const locale = {
         ADD:"Add User",
         NEXT:"Next",
         PREVIOUS :"Previous",
+        SAVE:'Save',
 
       },
       REPORTS:{
@@ -244,7 +280,30 @@ export const locale = {
       
       
     },
-   
+   STAFF:{
+    STAFF_MANAGEMENT:{
+      NEW:'New employee',
+      EMPLOYEE:'Employee',
+      MOB:'Mobile',
+      ACCESS:'Permission to access',
+      STATUS:'Account status',
+      EMPLOYEE_CODE:"Employee Code",
+      EMPLOYEE_PHOTO:"Employee Photo",
+      ID:'National ID',
+      BRANCH:"Affiliated to a branch",
+      SYSTEM:"System login name",
+      PASS:"Password",
+      EMAIL:"E-mail",
+      SALARY:'SALARY',
+      START_DATE:"Work Starting Date",
+      ADDRESS:"The address",
+      DATA:"Employee Data",
+      CLOSE:"Close the account",
+      EMPLOYEE_NAME:'Employee Name',
+      CLOSED:"Close"
+
+    }
+   }
     
 
   }

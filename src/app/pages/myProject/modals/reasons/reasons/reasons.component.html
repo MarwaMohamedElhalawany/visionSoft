@@ -1,0 +1,74 @@
+<ng-template #modal>
+
+ <div class="modal-content">
+    <div class="page-loading-enabled page-loading">
+        <div id="ArMainContent_Uc_Reasons_LoaderProgress" style="display:none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+            
+</div>
+    </div>
+    <div class="modal-header">
+        <h5 id="ArMainContent_Uc_Reasons_modaladd" class="modal-title" translate="INITIALIZATION.REASONS.ADDITION"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark" (click)="dismiss()"></i>
+        </button>
+    </div>
+    <div id="ArMainContent_Uc_Reasons_modaladdedit" class="modal-body" style="display:block;">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="form-group">
+                    <label translate="INITIALIZATION.REASONS.CODE"></label>
+                    <input name="ctl00$ArMainContent$Uc_Reasons$Txt_ID" type="text" id="ArMainContent_Uc_Reasons_Txt_ID" class="form-control " disabled="disabled" value="4">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div class="form-group ">
+                    <label for="DDLReasonType" translate="INITIALIZATION.REASONS.TYPE"></label>
+                    <div class="dropdown bootstrap-select form-control"><select name="ctl00$ArMainContent$Uc_Reasons$DDLReasonType" id="ArMainContent_Uc_Reasons_DDLReasonType" class="form-control selectpicker" data-size="7" data-live-search="true" tabindex="null">
+<option value="اختر نوع السبب">اختر نوع السبب</option>
+<option value="1">الالغاء</option>
+<option value="2">التأجيل</option>
+</select><button type="button" tabindex="-1" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-3" aria-haspopup="listbox" aria-expanded="false" data-id="ArMainContent_Uc_Reasons_DDLReasonType" title="اختر نوع السبب"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">اختر نوع السبب</div></div> </div></button><div class="dropdown-menu" style="overflow: hidden;"><div class="bs-searchbox"><input type="search" class="form-control" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-3" aria-autocomplete="list" aria-activedescendant="bs-select-3-0"></div><div class="inner show" role="listbox" id="bs-select-3" tabindex="-1" style="overflow-y: auto;"><ul class="dropdown-menu inner show" role="presentation" style="margin-top: 0px; margin-bottom: 0px;"><li class="selected active"><a role="option" class="dropdown-item active selected" id="bs-select-3-0" tabindex="0" aria-setsize="3" aria-posinset="1" aria-selected="true"><span class="text">اختر نوع السبب</span></a></li><li><a role="option" class="dropdown-item" id="bs-select-3-1" tabindex="0"><span class="text">الالغاء</span></a></li><li><a role="option" class="dropdown-item" id="bs-select-3-2" tabindex="0"><span class="text">التأجيل</span></a></li></ul></div></div></div>
+                    <span id="ArMainContent_Uc_Reasons_RequiredFieldValidator5" style="color:Red;display:none;">مطلوب *</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="form-group">
+                    <label translate="INITIALIZATION.REASONS.THE_NAME"></label>
+                    <input name="ctl00$ArMainContent$Uc_Reasons$Txt_Ar_Nm" type="text" id="ArMainContent_Uc_Reasons_Txt_Ar_Nm" class="form-control " [placeholder]="'INITIALIZATION.REASONS.THE_NAME' | translate">
+                    <span id="ArMainContent_Uc_Reasons_ReqTxt_Ar_Nm" style="color:Red;display:none;">من فضلك ادخل اسـم الــمـخـزن</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ArMainContent_Uc_Reasons_modaldelete" class="modal-body" style="display:none;">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="alert alert-custom alert-outline-danger fade show mb-5" role="alert">
+                    <div class="alert-icon"><i class="flaticon-warning"></i></div>
+                    <div id="ArMainContent_Uc_Reasons_RemovAlert" class="alert-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ArMainContent_UcBranches_modaladdfotr" class="modal-footer" style="display:block;">
+        <a onclick="BtnClick();" id="ArMainContent_UcBranches_LnkSave" class="btn btn-primary font-weight-bold"
+            href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ArMainContent$UcBranches$LnkSave&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
+            translate="INITIALIZATION.POWERS_TEMPLATES.SAVE"></a>
+        <button type="button" class="btn btn-light-danger font-weight-bold" data-dismiss="modal" (click)="dismiss()"
+            translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION"></button>
+    </div>
+    <div id="ArMainContent_Uc_Reasons_modaldeletefotr" class="modal-footer" style="display:none;" dir="ltr">
+        <a id="ArMainContent_Uc_Reasons_LnkExecRemov" class="btn btn-primary font-weight-bold" href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Reasons$LnkExecRemov','')">نعم</a>
+        <button type="button" class="btn btn-light-danger font-weight-bold" data-dismiss="modal">إلغاء</button>
+    </div>
+</div> 
+</ng-template>

@@ -43,7 +43,9 @@ export const locale = {
         BTN2: 'تسجيل الدخول باستخدام ابل',
        REQUIRED_NAME: "الاسم مطلوب",
        REQUIRED_PASS:'كلمة المرور مطلوبة',
-       
+       WAIT:'من فضلك انتظر ...',
+       ERROR:'بيانات المستخدم غير صحيحة',
+
        LOGOUT: 'تسجيل الخروج',
       },
       FORGOT: {
@@ -123,6 +125,49 @@ export const locale = {
         CHARGES:"الشحنات"
         
        },
+       REASONS:{
+        THE_NAME:"الاسم",
+        TYPE:"النوع",
+        CITY_NAME:'اسم المدينة',
+        CITY_CODE:'كود المدينة',
+
+        CITY:'المدينة',
+        REGION_NAME:'اسم المنطقة',
+        BRANCH_CODE:'كود الفرع',
+        CHOOSE:'اختر',
+        LIST_OF_BRANCHES:"قائمة عمولة الفرع",
+        ADDITION:'اضافة',
+        CODE:'الكود',
+        
+
+
+
+       },
+       BRANCH: {
+        CODE:'م',
+        ADD:"اضافة",
+        LIST: "قائمة الفرع",
+        NAME: "اسم الفرع",
+        FOREIGN_NAME: "الاسم الأجنبي",
+        BALANCE: "الرصيد",
+        PAID_SHIPMENTS: "شحنات مسددة",
+        UNPAID_SHIPMENTS: "شحنات غير مسددة",
+        OPTIONS: "خيارات",
+        AREA_NAME:"اسم المنطقة",
+        AREA_CODE:"كود المنطقة",
+        THE_CITY:"المدينة",
+        PRICE:"تسعيرة موحدة",
+        LIST_TYPE:'نوع القائمة',
+        PRICE_LIST:'قائمة الاسعار',
+        KILO:'قيمة الكيلو الزيادة / قيمة بيك اب',
+        SHIPPING:"Shipping value / branch commission / representative commission",
+
+
+
+
+        
+
+      },
       POWERS_TEMPLATES: {
         POWERS_TEMPLATES: 'قوالب الصلاحيات',
         POWERS:'الصلاحيات',
@@ -160,6 +205,8 @@ export const locale = {
         ADD:"اضافة مستخدم",
         NEXT:"التالي",
         PREVIOUS :"السابق",
+        SAVE:'حفظ',
+
 
 
 
@@ -167,6 +214,47 @@ export const locale = {
 
     }
   },
+
+  STAFF:{
+    STAFF_MANAGEMENT:{
+      NEW:'موظف جديد',
+      EMPLOYEE:'الموظف',
+      MOB:'موبايل',
+      ACCESS:'صلاحية الدخول',
+      STATUS:'حالة الحساب',
+      EMPLOYEE_CODE:"كود الموظف",
+      EMPLOYEE_PHOTO:"صورة الموظف",
+      ID:'الرقم القومي',
+      BRANCH:"تابع لفرع",
+      SYSTEM:"اسم دخول النظام",
+      PASS:"كلمة المرور",
+      EMAIL:"البريد الالكتروني",
+      SALARY:'الراتب',
+      START_DATE:"تاريخ بداية العمل",
+      ADDRESS:"العنوان",
+      DATA:"بيانات الموظف",
+      CLOSE:"ايقاف الحساب",
+      EMPLOYEE_NAME:'اسم الموظف'
+    }
+   },
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   REPORTS:{
     FOLLOW_UP_WITH_CLIENTS: 'متابعة العملاء',
     FOLLOW_UP_WITH_DELEGATES: 'متابعة المناديب',

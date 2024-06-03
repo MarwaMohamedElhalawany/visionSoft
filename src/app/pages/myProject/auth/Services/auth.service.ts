@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, Subscription, catchError, finalize, first, map, of, switchMap } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription, of } from 'rxjs';
+import { catchError, finalize, map } from 'rxjs/operators';
 import { AuthHttpService } from './auth-http.service';
 import Swal from 'sweetalert2';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,31 +15,30 @@ export class AuthService {
   currentUserSubject: BehaviorSubject<any>;
   isLoadingSubject: BehaviorSubject<boolean>;
   authLocalStorageToken: any = 'user';
-  
+
   constructor(private authHTTPService: AuthHttpService, private router: Router) {
     this.isLoadingSubject = new BehaviorSubject<boolean>(false);
     this.currentUserSubject = new BehaviorSubject<any>(undefined);
     this.currentUser$ = this.currentUserSubject.asObservable();
     this.isLoading$ = this.isLoadingSubject.asObservable();
   }
-  
+
   get currentUserValue(): any {
     return this.currentUserSubject.value;
   }
-  
+
   set currentUserValue(user: any) {
     this.currentUserSubject.next(user);
   }
-  
+
   login(userName: string, password: string): Observable<any> {
     this.isLoadingSubject.next(true);
     const userData = {
       user_Name: userName,
       user_Pass: password,
-  
-    }
+    };
+
     return this.authHTTPService.login('https://shippingapi.vision-soft.org/api/Login/userlogin', userData).pipe(
-  
       map((auth: any) => {
         const result = this.setAuthFromLocalStorage(auth);
         this.currentUserSubject.next(auth);
@@ -45,6 +46,13 @@ export class AuthService {
       }),
       catchError((err) => {
         console.error('err', err);
+        Swal.fire({
+          icon: 'error',
+          text: err.error.message ,
+          showCloseButton: true,
+          focusCancel: false,
+          showConfirmButton: false,
+        });
         // const msg = 
         Swal.fire({
           icon: 'error',
@@ -58,33 +66,27 @@ export class AuthService {
       finalize(() => this.isLoadingSubject.next(false))
     );
   }
-  
-  
-  
-  
+
   logout() {
-    // localStorage.clear();
     localStorage.removeItem(this.authLocalStorageToken);
     this.router.navigate(['/auth/login']);
   }
-  
-  
+
   private setAuthFromLocalStorage(auth: any): boolean {
-    // store auth authToken/refreshToken/epiresIn in local storage to keep user logged in between page refreshes
     if (auth) {
       localStorage.setItem(this.authLocalStorageToken, JSON.stringify(auth));
       return true;
     }
     return false;
   }
-  
+
   getAuthFromLocalStorage(): any | undefined {
     try {
       const lsValue = localStorage.getItem(this.authLocalStorageToken);
       if (!lsValue) {
         return undefined;
       }
-  
+
       const authData = JSON.parse(lsValue);
       this.currentUserSubject.next(authData);
       return authData;
@@ -93,13 +95,8 @@ export class AuthService {
       return undefined;
     }
   }
-  
+
   ngOnDestroy() {
     this.unsubscribe.forEach((sb) => sb.unsubscribe());
   }
-  }
-
- 
-
- 
- 
+}
