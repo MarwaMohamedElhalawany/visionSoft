@@ -1,0 +1,107 @@
+ <ng-template #modal>
+
+    <div class="modal-content">
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_Uc_Payment_Permission_LoaderProgress" style="display:none;" role="status" aria-hidden="true">
+
+                    <div class="page-loader page-loader-logo">
+                        <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                        <div class="spinner spinner-primary"></div>
+                    </div>
+                
+</div>
+        </div>
+        <div class="modal-header">
+            <h5 id="ArMainContent_UcBranches_modaladd" class="modal-title" translate="INITIALIZATION.REASONS.ADDITION">
+            </h5>
+           
+            <i class="fa-solid fa-xmark" (click)="dismiss()"></i>
+
+        </div>
+        <div id="ArMainContent_Uc_Payment_Permission_modaladdedit" class="modal-body" style="display:block;">
+            <div class="form-group row">
+                <div class="col-md-6 ">
+                    <div class="">
+                        <label class="text-dark" translate="ACCOUNTS.EXCHANGE_AUTHORIZATION_NUMBER"></label>
+                        <input name="ctl00$ArMainContent$Uc_Payment_Permission$Txt_ID" type="text" id="ArMainContent_Uc_Payment_Permission_Txt_ID" class="form-control " disabled="disabled" value="1">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row my-2">
+                <div class="col-md-12 ">
+                    <label class="text-dark" translate="ACCOUNTS.FROM_ACCOUNT"> </label>
+                    <div class="card d-flex justify-content-center">
+                        <p-dropdown 
+                            [options]="branchList" 
+                            [(ngModel)]="selectedBranch" 
+                            optionLabel="name"
+                            [style]="{ 'width': '100%' }" 
+                            [filter]="true" 
+                            filterBy="name" 
+                            [showClear]="true"
+                            [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                            <ng-template pTemplate="selectedItem" let-selectedOption>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div>{{ selectedOption.name }}</div>
+                                </div>
+                            </ng-template>
+                            <ng-template let-branch pTemplate="item">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div>{{ branch.name }}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                    </div>
+                 <span id="ArMainContent_Uc_Payment_Permission_ReqDDL_From_Acc" style="color:Red;display:none;">من فضلك اختر الحساب</span>
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-md-5">
+                    <label class="text-dark" for="Txt_Perm_Amt" translate="ACCOUNTS.VALUE"></label>
+                    <input name="ctl00$ArMainContent$Uc_Payment_Permission$Txt_Perm_Amt" type="text" id="ArMainContent_Uc_Payment_Permission_Txt_Perm_Amt" onkeypress="return isNumeric(event)" class="form-control " [placeholder]="'ACCOUNTS.VALUE' | translate">
+                    <span id="ArMainContent_Uc_Payment_Permission_RequiredFieldValidator3" style="color:Red;display:none;">مطلوب *</span>
+                </div>
+                <div class="col-md-7">
+                    <label class="text-dark" for="Txt_Perm_Date" translate="ACCOUNTS.DATE_OF_EXCHANGE_AUTHORIZATION">  </label>
+                    <input name="ctl00$ArMainContent$Uc_Payment_Permission$Txt_Perm_Date" type="text" id="ArMainContent_Uc_Payment_Permission_Txt_Perm_Date" class="form-control  datepicker-rtl" [placeholder]="'ACCOUNTS.DATE_OF_EXCHANGE_AUTHORIZATION' | translate" readonly="">
+                    <span id="ArMainContent_Uc_Payment_Permission_RequiredFieldValidator2" style="color:Red;display:none;">مطلوب *</span>
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <div class="col-md-12">
+                    <label class="text-dark" for="Txt_Perm_Title" translate="ACCOUNTS.ADDRESS_OF_EXCHANGE_PERMIT">  </label>
+                    <input name="ctl00$ArMainContent$Uc_Payment_Permission$Txt_Perm_Title" type="text" id="ArMainContent_Uc_Payment_Permission_Txt_Perm_Title" class="form-control " [placeholder]="'ACCOUNTS.ADDRESS_OF_EXCHANGE_PERMIT' | translate">
+                    <span id="ArMainContent_Uc_Payment_Permission_RequiredPerm_Title" style="color:Red;display:none;">مطلوب *</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label class="text-dark" for="Txt_Perm_Desc" translate="ACCOUNTS.DESCRIPTION_OF_EXCHANGE_PERMIT">  </label>
+                    <textarea name="ctl00$ArMainContent$Uc_Payment_Permission$Txt_Perm_Desc" id="ArMainContent_Uc_Payment_Permission_Txt_Perm_Desc" rows="3" class="form-control " [placeholder]="'ACCOUNTS.DESCRIPTION_OF_EXCHANGE_PERMIT' | translate"></textarea>
+                </div>
+            </div>
+        </div>
+        <div id="ArMainContent_Uc_Payment_Permission_modaldelete" class="modal-body" style="display:none;">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="alert alert-custom alert-outline-danger fade show mb-5" role="alert">
+                        <div class="alert-icon"><i class="flaticon-warning"></i></div>
+                        <div id="ArMainContent_Uc_Payment_Permission_RemovAlert" class="alert-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ArMainContent_UcBranches_modaladdfotr" class="modal-footer" style="display:block;">
+            <a onclick="BtnClick();" id="ArMainContent_UcBranches_LnkSave" class="btn btn-primary font-weight-bold"
+                href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ArMainContent$UcBranches$LnkSave&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"
+                translate="INITIALIZATION.POWERS_TEMPLATES.SAVE"></a>
+            <button type="button" class="btn btn-light-danger font-weight-bold" data-dismiss="modal" (click)="dismiss()"
+                translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION"></button>
+        </div>
+        <div id="ArMainContent_Uc_Payment_Permission_modaldeletefotr" class="modal-footer" style="display:none;" dir="ltr">
+            <a id="ArMainContent_Uc_Payment_Permission_LnkExecRemov" class="btn btn-primary font-weight-bold" href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Payment_Permission$LnkExecRemov','')">نعم</a>
+            <button type="button" class="btn btn-light-danger font-weight-bold" data-dismiss="modal">إلغاء</button>
+        </div>
+    </div>
+    
+    </ng-template> 

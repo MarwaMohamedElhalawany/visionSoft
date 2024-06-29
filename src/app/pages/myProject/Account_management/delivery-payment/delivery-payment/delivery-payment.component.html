@@ -1,0 +1,173 @@
+<div class="container-fluid">
+    <!--begin::Dashboard-->
+    <span id="MasterPanel">
+        <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_LoaderProgress" style="display:none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="card card-custom ">
+            <div class="card-header">
+                <div class="card-toolbar">
+                    <a id="ArMainContent_UcDeliveryPayment_LnkPopDelivery" translate="ACCOUNTS.WITH_OUT"
+                        class="btn btn-info btn-shadow font-weight-bold mr-2"
+                        href="javascript:__doPostBack('ctl00$ArMainContent$UcDeliveryPayment$LnkPopDelivery','')"><i
+                            class="fas fa-users icon-md mx-2"></i> </a>
+                </div>
+                <div class="card-title">
+                    <span id="ArMainContent_UcDeliveryPayment_idkeygrid" style="display: none">0</span>
+                    <span id="ArMainContent_UcDeliveryPayment_lbldelivery" style="display: none">1</span>
+                    <span id="ArMainContent_UcDeliveryPayment_idkeypaymentgrid" style="display: none">0</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <input name="ctl00$ArMainContent$UcDeliveryPayment$TxtSearch" type="search"
+                            id="ArMainContent_UcDeliveryPayment_TxtSearch" class="form-control spinner input-circle "
+                            onkeyup="Search_Gridprod(this,'TxtSearch','GrdView')" [placeholder]="'INITIALIZATION.POWERS_TEMPLATES.SEARCHPLACEHOLDER' | translate">
+                    </div>
+                </div>
+                <div class="form-group row mt-10">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <div>
+                                <table class="mGrid" cellspacing="0" rules="all" id="ArMainContent_UcBranches_GrdView"
+                                    style="width:100%;border-collapse:collapse;">
+                                    <tbody>
+                                        <tr class="m-5">
+                                            <th scope="col" translate="ACCOUNTS.CODE"></th>
+                                            <th scope="col" translate="ACCOUNTS.THE_DELEGATE"></th>
+                                            <th scope="col" translate="STAFF.STAFF_MANAGEMENT.MOB"></th>
+                                            <th scope="col" translate="INITIALIZATION.BRANCH.BALANCE"></th>
+                                            <th scope="col" translate="ACCOUNTS.PAYMENT_OF_AMOUNTS_OWED"></th>
+                                            <th scope="col" translate="ACCOUNTS.PAYMENT_RECORDS"></th>
+                                        </tr>
+                                        <br>
+                                        <tr>
+                                            <td align="center">2</td>
+                                            <td>
+                                                <div class="d-flex align-items-center" style="width: max-content">
+                                                    <div class="ml-3">
+                                                        <span
+                                                            class="text-dark-75 font-weight-bold line-height-sm d-block pb-2">
+                                                            مندوب
+                                                            تجربة الرئيسي </span>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>01060050309</td>
+                                            <td align="center">
+                                                <span class="label label-lg label-light-primary label-inline ">135.00
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <a id="ArMainContent_UcDeliveryPayment_GrdView_LnkPopBalance_0"
+                                                        translate="ACCOUNTS.PAYMENT_OF_AMOUNTS_OWED"
+                                                        class="btn btn-light-warning btn-block "
+                                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcDeliveryPayment$GrdView$ctl02$LnkPopBalance','')"><i
+                                                            class="fa fa-money"></i> </a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <a id="ArMainContent_UcDeliveryPayment_GrdView_LnkRecords_0"
+                                                        translate="ACCOUNTS.PAYMENT_RECORDS" routerLink="/deliverypayment/record"
+                                                        class="btn btn-light-info btn-block mr-2" href="records?id=2"
+                                                        target="_blank"><i class="far fa-money-bill-alt icon-lg"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </span>
+</div>
+
+
+<!-- <div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive"
+            style="overflow: auto; max-height: 700px; height: 700px; width: 100%" id="divid">
+            <div>
+                <table class="mGrid" cellspacing="0" rules="all" border="1"
+                    id="ArMainContent_UcDeliveryPayment_GrdView"
+                    style="width:100%;border-collapse:collapse;">
+                    <tbody>
+                        <tr>
+                            <th scope="col"><a
+                                    href="javascript:__doPostBack('ctl00$ArMainContent$UcDeliveryPayment$GrdView','Sort$EmployeeUID')">كود</a>
+                            </th>
+                            <th scope="col">الــمــنــدوب</th>
+                            <th scope="col"><a
+                                    href="javascript:__doPostBack('ctl00$ArMainContent$UcDeliveryPayment$GrdView','Sort$Phone_No')">موبايل</a>
+                            </th>
+                            <th scope="col"><a
+                                    href="javascript:__doPostBack('ctl00$ArMainContent$UcDeliveryPayment$GrdView','Sort$Client_AccBalance')">الرصيد</a>
+                            </th>
+                            <th scope="col">سداد المبالغ المستحقة</th>
+                            <th scope="col">سجلات السداد</th>
+                        </tr>
+                        <tr>
+                            <td align="center">2</td>
+                            <td>
+                                <div class="d-flex align-items-center" style="width: max-content">
+                                    <div class="ml-3">
+                                        <span
+                                            class="text-dark-75 font-weight-bold line-height-sm d-block pb-2">مندوب
+                                            تجربة </span>
+                                        <a href="javascript:;"
+                                            class="text-dark text-hover-primary">الرئيسي</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>01060050309</td>
+                            <td align="center">
+                                <span class="label label-lg label-light-primary label-inline ">135.00
+                                </span>
+                            </td>
+                            <td>
+                                <div style="text-align: center">
+                                    <a id="ArMainContent_UcDeliveryPayment_GrdView_LnkPopBalance_0"
+                                        class="btn btn-light-warning btn-block mr-2"
+                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcDeliveryPayment$GrdView$ctl02$LnkPopBalance','')"><i
+                                            class="fa fa-money" style="margin-right:5px"></i> سداد
+                                        المبالغ المستحقة </a>
+                                </div>
+                            </td>
+                            <td>
+                                <div style="text-align: center">
+                                    <a id="ArMainContent_UcDeliveryPayment_GrdView_LnkRecords_0"
+                                        class="btn btn-light-info btn-block mr-2" href="records?id=2"
+                                        target="_blank"><i class="far fa-money-bill-alt icon-lg"></i>
+                                        سجلات السداد </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,123 @@
+<div class="container-fluid">
+    <!--begin::Dashboard-->
+    <span id="MasterPanel">
+        <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_LoaderProgress" style="display:none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-custom ">
+            <div class="card-header">
+                <div class="card-toolbar ">
+                    <a onclick="BtnClick();" id="ArMainContent_UcEmployees_Dtls_LnkSave"
+                        class="btn btn-success btn-shadow font-weight-bold mx-2"
+                        href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ArMainContent$UcEmployees_Dtls$LnkSave&quot;, &quot;&quot;, true, &quot;MainItem&quot;, &quot;&quot;, false, true))"
+                        translate="INITIALIZATION.POWERS_TEMPLATES.SAVE">
+                        <i class="fa-solid fa-check mx-2"></i>
+                    </a>
+                    <a id="ArMainContent_UcEmployees_Dtls_LnkCancel"
+                        class="btn btn-danger btn-shadow font-weight-bold mx-2"
+                        href="javascript:__doPostBack('ctl00$ArMainContent$UcEmployees_Dtls$LnkCancel','')"
+                        translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION">
+                        <i class="fa-solid fa-xmark mx-2" ></i>
+                    
+                    </a>
+                </div>
+                <div class="card-title">
+                    <button class="btn font-weight-bold btn-light-success mr-2" translate="ACCOUNTS.CODE_TRANSFER" > <span
+                            id="ArMainContent_Uc_Exchange_Acc_Dtls_LblUID"
+                            class="label label-danger ml-2">1</span></button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="bg-dark text-white py-3 px-4" style="border-radius:5px" translate="ACCOUNTS.DATA"> 
+                            </p>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3 col-xs-12">
+                        <label class="text-dark" translate="ACCOUNTS.FROM"> </label>
+                        <div class="card d-flex justify-content-center">
+                            <p-dropdown [options]="branchList" [(ngModel)]="selectedBranch" optionLabel="name"
+                                [style]="{ 'width': '100%'}" [filter]="true" filterBy="name" [showClear]="true"
+                                [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                <ng-template pTemplate="selectedItem" let-selectedOption>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ selectedOption.name }}</div>
+                                    </div>
+                                </ng-template>
+                                <ng-template let-branch pTemplate="item">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ branch.name }}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                        </div>
+                        <span id="ArMainContent_Uc_Exchange_Acc_Dtls_ReqDDL_From_Acc" style="color:Red;display:none;">من
+                            فضلك اختر الحساب</span>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <label class="text-dark" translate="ACCOUNTS.TO"> </label>
+                        <div class="card d-flex justify-content-center">
+                            <p-dropdown [options]="branchList" [(ngModel)]="selectedBranch" optionLabel="name"
+                                [style]="{ 'width': '100%'}" [filter]="true" filterBy="name" [showClear]="true"
+                                [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                <ng-template pTemplate="selectedItem" let-selectedOption>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ selectedOption.name }}</div>
+                                    </div>
+                                </ng-template>
+                                <ng-template let-branch pTemplate="item">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ branch.name }}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                        </div>
+                        <span id="ArMainContent_Uc_Exchange_Acc_Dtls_ReqDDL_To_Acc" style="color:Red;display:none;">من
+                            فضلك اختر الحساب</span>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <label class="text-dark" for="Txt_Exchange_Acc_Date" translate="ACCOUNTS.DATE_TRANSFER"> </label>
+                        <input name="ctl00$ArMainContent$Uc_Exchange_Acc_Dtls$Txt_Exchange_Acc_Date" type="text"
+                            id="ArMainContent_Uc_Exchange_Acc_Dtls_Txt_Exchange_Acc_Date"
+                            class="form-control  datepicker-rtl" [placeholder]="'ACCOUNTS.DATE_TRANSFER' | translate" readonly="">
+                        <span id="ArMainContent_Uc_Exchange_Acc_Dtls_ReqTxt_Exchange_Acc_Date"
+                            style="color:Red;display:none;">من فضلك ادخل اسـم الــمــتــجــر</span>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <label class="text-dark"  for="Txt_Exchange_Acc_Amt" translate="ACCOUNTS.VALUE"> </label>
+                        <input name="ctl00$ArMainContent$Uc_Exchange_Acc_Dtls$Txt_Exchange_Acc_Amt" type="text"
+                            id="ArMainContent_Uc_Exchange_Acc_Dtls_Txt_Exchange_Acc_Amt"
+                            class="form-control only-number" [placeholder]="'ACCOUNTS.VALUE' | translate">
+                        <span id="ArMainContent_Uc_Exchange_Acc_Dtls_ReqTxt_Exchange_Acc_Amt"
+                            style="color:Red;display:none;">مطلوب *</span>
+                    </div>
+                </div>
+                <div class="form-group row mt-8">
+                    <div class="col-md-12">
+                        <label class="text-dark" for="Txt_Exchange_Acc_Desc" translate="ACCOUNTS.REASON_FOR_TRANSFER"> </label>
+                        <textarea name="ctl00$ArMainContent$Uc_Exchange_Acc_Dtls$Txt_Exchange_Acc_Desc"
+                            id="ArMainContent_Uc_Exchange_Acc_Dtls_Txt_Exchange_Acc_Desc" rows="3" class="form-control "
+                            [placeholder]="'ACCOUNTS.REASON_FOR_TRANSFER' | translate"></textarea>
+                        <span id="ArMainContent_Uc_Exchange_Acc_Dtls_ReqTxt_Exchange_Acc_Desc"
+                            style="color:Red;display:none;">مطلوب *</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </span>
+    <!--end::Dashboard-->
+</div>

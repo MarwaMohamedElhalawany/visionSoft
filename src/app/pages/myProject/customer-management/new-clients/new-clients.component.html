@@ -1,0 +1,356 @@
+<div class="container-fluid">
+
+    <span id="MasterPanel">
+        <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_LoaderProgress" style="display: none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-custom ">
+            <div class="card-header mt-0">
+                <div class="card-toolbar ">
+                    <a onclick="BtnClick();" id="ArMainContent_UcEmployees_Dtls_LnkSave"
+                        class="btn btn-success btn-shadow font-weight-bold mx-2"
+                        href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ArMainContent$UcEmployees_Dtls$LnkSave&quot;, &quot;&quot;, true, &quot;MainItem&quot;, &quot;&quot;, false, true))"
+                        translate="INITIALIZATION.POWERS_TEMPLATES.SAVE">
+                        <i class="fa-solid fa-check mx-2"></i>
+                    </a>
+                    <a id="ArMainContent_UcEmployees_Dtls_LnkCancel"
+                        class="btn btn-danger btn-shadow font-weight-bold mx-2"
+                        href="javascript:__doPostBack('ctl00$ArMainContent$UcEmployees_Dtls$LnkCancel','')"
+                        translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION">
+                        <i class="fa-solid fa-xmark mx-2" ></i>
+                    
+                    </a>
+                </div>
+                <div class="card-title">
+                    <button class="btn font-weight-bold btn-light-success mr-2"
+                    translate="STAFF.MANAGEMENT_OF_DELEGATES.CLIENT_CODE"> <span
+                            id="ArMainContent_UcEmployees_Dtls_LblUID" class="label label-danger ml-2  mx-2">2</span></button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <p class="bg-dark text-white py-3 px-4" style="border-radius: 5px" translate="STAFF.MANAGEMENT_OF_DELEGATES.CLIENT_PHOTO"> 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-12 col-xl-12" style="text-align: center">
+                                <div class="image-input image-input-outline" id="kt_image_1">
+                                    <div id="ArMainContent_UcClients_Dtls_divimg" class="image-input-wrapper"
+                                        style="background-image: url(App_Themes/media/users/blank.png)"></div>
+                                    <a id="ArMainContent_UcClients_Dtls_LnkChangeImg"
+                                        class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
+                                        data-action="change"
+                                        href="javascript:__doPostBack('ctl00$ArMainContent$UcClients_Dtls$LnkChangeImg','')"><i
+                                            class="fa fa-pen icon-sm text-muted"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-8 col-xs-6">
+                                <p class="bg-dark text-white py-3 px-4" style="border-radius: 5px" translate="STAFF.MANAGEMENT_OF_DELEGATES.CLIENT_DATA">
+                                    </p>
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <div class="btn font-weight-bold btn-block btn-light-dark mr-2"
+                                    style="padding-bottom: unset; padding-top: unset">
+                                    <div class="checkbox-inline" style="margin-top: 5px">
+                                        <label class="checkbox checkbox-lg m-2">
+                                            <input name="ctl00$ArMainContent$Uc_Delivery_Dtls$Chk_Status" type="checkbox" id="ArMainContent_Uc_Delivery_Dtls_Chk_Status" >
+                                            <span translate="STAFF.MANAGEMENT_OF_DELEGATES.STOP" class="m-4 my-2"></span>  
+                                       
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3 col-xs-12">
+                                <label for="Txt_L_Nm" translate="STAFF.MANAGEMENT_OF_DELEGATES.CLIENT_NAME"> </label>
+                                <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_L_Nm" type="text"
+                                    id="ArMainContent_UcClients_Dtls_Txt_L_Nm" class="form-control "
+                                    [placeholder]="'STAFF.MANAGEMENT_OF_DELEGATES.CLIENT_NAME' | translate">
+                                <span id="ArMainContent_UcClients_Dtls_RequiredTxtOrd_LNm"
+                                    style="color:Red;display:none;">من فضلك ادخل اسـم الــعــمــيــل</span>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <label for="Txt_Client_Store_Nm" translate="STAFF.MANAGEMENT_OF_DELEGATES.MARKET"> </label>
+                                <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_Client_Store_Nm" type="text"
+                                    id="ArMainContent_UcClients_Dtls_Txt_Client_Store_Nm" class="form-control "
+                                    [placeholder]="'STAFF.MANAGEMENT_OF_DELEGATES.MARKET' | translate">
+                                <span id="ArMainContent_UcClients_Dtls_RequiredFieldValidator4"
+                                    style="color:Red;display:none;">من فضلك ادخل اسـم الــمــتــجــر</span>
+                            </div>
+                            <div class="col-md-2 col-xs-12">
+                                <label for="Txt_Phone" translate="STAFF.STAFF_MANAGEMENT.MOB"></label>
+                                <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_Phone" type="text"
+                                    id="ArMainContent_UcClients_Dtls_Txt_Phone" maxlength="11"
+                                    onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)"
+                                    class="form-control ">
+                                <span id="ArMainContent_UcClients_Dtls_RequiredFieldValidator2"
+                                    style="color:Red;display:none;">مطلوب *</span>
+                            </div>
+                            <div class="col-md-3 col-xs-12">
+                                <div class="btn font-weight-bold btn-block btn-light-dark mr-2"
+                                    style="padding-bottom: unset; padding-top: unset; margin-top: 27px; background-color: #D1D3E0">
+                                    <div class="checkbox-inline my-2" style="margin-top: 5px">
+                                        <label class="checkbox checkbox-lg">
+                                            <input id="ArMainContent_UcClients_Dtls_Chk_Is_Client_Have_System"
+                                                type="checkbox"
+                                                name="ctl00$ArMainContent$UcClients_Dtls$Chk_Is_Client_Have_System"
+                                                onclick="javascript:setTimeout('__doPostBack(\'ctl00$ArMainContent$UcClients_Dtls$Chk_Is_Client_Have_System\',\'\')', 0)">
+                                            <span translate="STAFF.MANAGEMENT_OF_DELEGATES.COPY"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ArMainContent_UcClients_Dtls_DivHavSys" class="form-group row" style="display: none">
+                            <div class="col-md-12 col-xs-12">
+                                <div class="form-group row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="Txt_Client_System_Url">رابط نسخة العميل</label>
+                                        <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_Client_System_Url"
+                                            type="text" id="ArMainContent_UcClients_Dtls_Txt_Client_System_Url"
+                                            class="form-control " placeholder="رابط نسخة العميل">
+                                        <span id="ArMainContent_UcClients_Dtls_ReqTxt_Client_System_Url"
+                                            style="color:Red;display:none;">مطلوب *</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-12">
+                                        <label for="Txt_Client_Sys_User_Nm">اسم الدخول الخاص بك</label>
+                                        <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_Client_Sys_User_Nm"
+                                            type="text" id="ArMainContent_UcClients_Dtls_Txt_Client_Sys_User_Nm"
+                                            class="form-control " placeholder="اسم الدخول الخاص بك">
+                                        <span id="ArMainContent_UcClients_Dtls_ReqTxt_Client_Sys_User_Nm"
+                                            style="color:Red;display:none;">مطلوب *</span>
+                                    </div>
+                                    <div class="col-md-3 col-xs-12">
+                                        <label for="Txt_Client_Sys_User_Pass" translate="STAFF.STAFF_MANAGEMENT.PASS">كلمة المرور الخاصة بك</label>
+                                        <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_Client_Sys_User_Pass"
+                                            type="text" id="ArMainContent_UcClients_Dtls_Txt_Client_Sys_User_Pass"
+                                            class="form-control " placeholder="كلمة المرور الخاصة بك">
+                                        <span id="ArMainContent_UcClients_Dtls_ReqTxt_Client_Sys_User_Pass"
+                                            style="color:Red;display:none;">مطلوب *</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-2 col-xs-12">
+                                <label for="DDLBranch" translate="STAFF.STAFF_MANAGEMENT.BRA"> </label>
+                                <div class="card d-flex justify-content-center">
+                                    <p-dropdown 
+                                        [options]="branchList" 
+                                        [(ngModel)]="selectedBranch" 
+                                        optionLabel="name"
+                                        [style]="{ 'width': '100%' }" 
+                                        [filter]="true" 
+                                        filterBy="name" 
+                                        [showClear]="true"
+                                        [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                        <ng-template pTemplate="selectedItem" let-selectedOption>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>{{ selectedOption.name }}</div>
+                                            </div>
+                                        </ng-template>
+                                        <ng-template let-branch pTemplate="item">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>{{ branch.name }}</div>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-12">
+                                <label for="DDLPriceList" translate="STAFF.MANAGEMENT_OF_DELEGATES.DELIVERY_PRICE">  </label>
+                                <div class="card d-flex justify-content-center">
+                                    <p-dropdown 
+                                        [options]="branchList" 
+                                        [(ngModel)]="selectedBranch" 
+                                        optionLabel="name"
+                                        [style]="{ 'width': '100%' }" 
+                                        [filter]="true" 
+                                        filterBy="name" 
+                                        [showClear]="true"
+                                        [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                        <ng-template pTemplate="selectedItem" let-selectedOption>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>{{ selectedOption.name }}</div>
+                                            </div>
+                                        </ng-template>
+                                        <ng-template let-branch pTemplate="item">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>{{ branch.name }}</div>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-2 col-xs-12">
+                                <label for="Txt_User_Login" translate="STAFF.STAFF_MANAGEMENT.SYSTEM"></label>
+                                <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_User_Login" type="text"
+                                    id="ArMainContent_UcClients_Dtls_Txt_User_Login" class="form-control ">
+                                <span id="ArMainContent_UcClients_Dtls_RequiredFieldValidator1"
+                                    style="color:Red;display:none;">مطلوب *</span>
+                            </div>
+                            <div class="col-md-2 col-xs-12">
+                                <label for="Txt_User_Pass" translate="STAFF.STAFF_MANAGEMENT.PASS"> </label>
+                                <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_User_Pass" type="text"
+                                    id="ArMainContent_UcClients_Dtls_Txt_User_Pass" class="form-control ">
+                                <span id="ArMainContent_UcClients_Dtls_RequiredPass"
+                                    style="color:Red;display:none;">مطلوب *</span>
+                            </div>
+                            <div class="col-md-3 col-xs-12">
+                                <div class="btn font-weight-bold btn-block btn-light-dark mr-2"
+                                    style="padding-bottom: unset; padding-top: unset; margin-top: 15px; background-color: #D1D3E0">
+                                    <div class="checkbox-inline" style="margin-top: 5px">
+                                        <label class="checkbox checkbox-lg">
+                                            <input id="ArMainContent_UcClients_Dtls_Chk_Open_Shippment" type="checkbox"
+                                                name="ctl00$ArMainContent$UcClients_Dtls$Chk_Open_Shippment">
+                                            <span translate="STAFF.MANAGEMENT_OF_DELEGATES.ALLOW"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group row">
+                            <div class="col-md-4 col-xs-12 my-10">
+                                <div class="btn font-weight-bold btn-block btn-light-dark mr-2"
+                                    style="padding-bottom: unset; padding-top: unset; margin-top: 27px; background-color: #D1D3E0">
+                                    <div class="checkbox-inline" style="margin-top: 5px">
+                                        <label class="checkbox checkbox-lg">
+                                            <input id="ArMainContent_UcClients_Dtls_Chk_Returned_Fixed" type="checkbox"
+                                                name="ctl00$ArMainContent$UcClients_Dtls$Chk_Returned_Fixed"
+                                                onclick="javascript:setTimeout('__doPostBack(\'ctl00$ArMainContent$UcClients_Dtls$Chk_Returned_Fixed\',\'\')', 0)">
+                                            <span translate="STAFF.MANAGEMENT_OF_DELEGATES.ESTABLISH" class="px-2"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="ArMainContent_UcClients_Dtls_DivFixed_Amt" class="col-md-3 col-xs-12"
+                                style="display: none">
+                                <label>ادخل القيمة</label>
+                                <input name="ctl00$ArMainContent$UcClients_Dtls$Txt_Returned_Fixed_Amt" type="text"
+                                    id="ArMainContent_UcClients_Dtls_Txt_Returned_Fixed_Amt"
+                                    onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)"
+                                    class="form-control " placeholder="قيمة شحن لشحنات المرتجع" value="0">
+                                <span id="ArMainContent_UcClients_Dtls_ReqTxt_Returned_Fixed_Amt"
+                                    style="color:Red;display:none;">مطلوب *</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="table-responsive" style="overflow: auto; min-height: 650px; max-height: 650px; width: 100%" id="divid">
+                            <div>
+                                <table class="mGrid" cellspacing="0" rules="all" id="ArMainContent_UcClients_Dtls_GrdSubServices"
+                                    style="width:100%;border-collapse:collapse;">
+                                    <thead>
+                                        <tr class="m-5">
+                                            <th scope="col" translate="STAFF.MANAGEMENT_OF_DELEGATES.CITY"></th>
+                                            <th scope="col" translate="STAFF.MANAGEMENT_OF_DELEGATES.AREA"></th>
+                                            <th scope="col" translate="STAFF.MANAGEMENT_OF_DELEGATES.ADRESS"></th>
+                                            <th scope="col"><i class="fa-regular fa-square-plus mx-2" (click)="addRow()"></i></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngIf="rows.length === 0" class="no-data">
+                                            <td colspan="4" class="text-center">لا توجد بيانات</td>
+                                        </tr>
+                                        <tr *ngFor="let row of rows; let i = index">
+                                            <td>
+                                                <div class="card d-flex justify-content-center w-100">
+                                                    <p-dropdown 
+                                                        [options]="branchList" 
+                                                        [(ngModel)]="row.selectedBranch" 
+                                                        optionLabel="name"
+                                                        [style]="{ 'width': '100%' }" 
+                                                        [filter]="true" 
+                                                        filterBy="name" 
+                                                        [showClear]="true"
+                                                        [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                                        <ng-template pTemplate="selectedItem" let-selectedOption>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <div>{{ selectedOption.name }}</div>
+                                                            </div>
+                                                        </ng-template>
+                                                        <ng-template let-branch pTemplate="item">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <div>{{ branch.name }}</div>
+                                                            </div>
+                                                        </ng-template>
+                                                    </p-dropdown>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" [(ngModel)]="row.area" >
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" [(ngModel)]="row.address" >
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-danger" (click)="deleteRow(i)"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                
+            
+                
+            </div>
+        </div>
+      
+
+
+    </span>
+    <!--end::Dashboard-->
+</div>
+
+<!-- <div class="form-group row mt-10">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <div>
+                <table class="mGrid" cellspacing="0" rules="all" id="ArMainContent_UcBranches_GrdView"
+                    style="width:100%;border-collapse:collapse;">
+                    <tbody>
+                        <tr class="m-5">
+                            <th scope="col" translate="STAFF.MANAGEMENT_OF_DELEGATES.CITY"></th>
+                            <th scope="col" translate="STAFF.MANAGEMENT_OF_DELEGATES.AREA"></th>
+                            <th scope="col" translate="STAFF.MANAGEMENT_OF_DELEGATES.ADRESS"></th>
+                            <th scope="col" ><i class="fa-regular fa-square-plus mx-2"></i> </th>    
+                        </tr>
+
+                        <br>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->

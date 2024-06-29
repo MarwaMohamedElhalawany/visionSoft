@@ -9,6 +9,9 @@ import { AddCityComponent } from './add-city/add-city/add-city.component';
 import { AddAreaComponent } from './add-area/add-area/add-area.component';
 import { AddReasonsComponent } from './add-reasons/add-reasons.component';
 import { DropdownModule } from 'primeng/dropdown';
+import { AddAcountComponent } from './add-acount/add-acount/add-acount.component';
+import { AddExchangePermitComponent } from './add-exchange-permit/add-exchange-permit.component';
+import { AddReceiptComponent } from './add-receipt/add-receipt.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { DropdownModule } from 'primeng/dropdown';
     AddCityComponent,
     AddAreaComponent,
     AddReasonsComponent,
+    AddAcountComponent,
+    AddExchangePermitComponent,
+    AddReceiptComponent,
   ],
   imports: [
     CommonModule,
@@ -25,19 +31,19 @@ import { DropdownModule } from 'primeng/dropdown';
     TranslateModule,
     ReactiveFormsModule,
     FormsModule,
-    //  MatSelectModule,
-    // MatInputModule,
-    // MatFormFieldModule,
+    
     DropdownModule
 
   ],
   exports:[
     AddEditPermissionComponent,
     AddBranchComponent,
-
+AddAcountComponent,
     AddCityComponent,
     AddAreaComponent,
     AddReasonsComponent,
+    AddExchangePermitComponent,
+    AddReceiptComponent,
   ]
 })
 export class ModalsModule { }

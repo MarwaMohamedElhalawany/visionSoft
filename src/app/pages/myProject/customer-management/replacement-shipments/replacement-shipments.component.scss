@@ -1,0 +1,20 @@
+
+
+.mGrid {
+    width: 100%;
+    table-layout: fixed; /* يحدد عرض الجدول بناءً على عرض الأعمدة المحدد */
+}
+
+.mGrid th, .mGrid td {
+    white-space: wrap; /* يمنع التفاف النص */
+}
+
+.mGrid th, .mGrid td {
+    padding: 8px 10px; /* مسافات داخلية للخلايا */
+    text-align: center; /* محاذاة النص للوسط */
+}
+.mGrid th {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }

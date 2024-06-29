@@ -1,4 +1,4 @@
-import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
+import { Component, Input, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NgbModalRef, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl } from '@angular/forms';
 import { ModalConfig } from 'src/app/_metronic/partials';
@@ -7,7 +7,8 @@ import { TranslationService } from 'src/app/modules/i18n';
 @Component({
   selector: 'app-add-branch',
   templateUrl: './add-branch.component.html',
-  styleUrls: ['./add-branch.component.scss']
+  styleUrls: ['./add-branch.component.scss'],
+  // encapsulation: ViewEncapsulation.None
 })
 export class AddBranchComponent {
   branchList: any[] = [

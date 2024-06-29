@@ -1,3 +1,7 @@
+import { RecivepermissionModule } from './myProject/Account_management/recivepermission/recivepermission.module';
+import { DeliveryPaymentModule } from './myProject/Account_management/delivery-payment/delivery-payment.module';
+import { CustomerManagementModule } from './myProject/customer-management/customer-management.module';
+import { ManagementOfDelegatesModule } from './myProject/management-of-delegates/management-of-delegates.module';
 import { Routes } from '@angular/router';
 import { VisionUsersComponent } from './vision-users/vision-users.component';
 
@@ -65,15 +69,85 @@ const Routing: Routes = [
     data: { layout: 'light-sidebar' },
   },
   {
+    path: 'deliveries',
+    loadChildren: () =>
+      import('../pages/myProject/management-of-delegates/management-of-delegates.module').then((m) => m.ManagementOfDelegatesModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'clients',
+    loadChildren: () =>
+      import('../pages/myProject/customer-management/customer-management.module').then((m) => m.CustomerManagementModule),
+    data: { layout: 'light-sidebar' },
+  },
+  
+  {
+    path: 'flyerrequests',
+    loadChildren: () =>
+      import('../pages/myProject/Clients-requestes/flyer-requests/flyer-requests.module').then((m) => m.FlyerRequestsModule),
+    data: { layout: 'light-sidebar' },
+  },
+  
+  {
+    path: 'paymentrequests',
+    loadChildren: () =>
+      import('../pages/myProject/Clients-requestes/payment-requests/payment-requests.module').then((m) => m.PaymentRequestsModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
     path: 'branches',
     loadChildren: () =>
       import('../pages/myProject/Initialization/Branches/branches/branches.module').then((m) => m.BranchesModule),
     data: { layout: 'light-sidebar' },
   },
   {
+    path: 'clientinvoices',
+    loadChildren: () =>
+      import('../pages/myProject/Account_management/customer-invoices/customer-invoices.module').then((m) => m.CustomerInvoicesModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'clientspayment',
+    loadChildren: () =>
+      import('../pages/myProject/Account_management/customer-payment/customer-payment.module').then((m) => m.CustomerPaymentModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'treasuryacc',
+    loadChildren: () =>
+      import('../pages/myProject/Account_management/accounts-data/accounts-data.module').then((m) => m.AccountsDataModule),
+    data: { layout: 'light-sidebar' },
+  },
+  
+  {
+    path: 'paymentpermission',
+    loadChildren: () =>
+      import('../pages/myProject/Account_management/paymentpermission/paymentpermission.module').then((m) => m.PaymentpermissionModule),
+    data: { layout: 'light-sidebar' },
+  }
+  ,
+  {
+    path: 'recivepermission',
+    loadChildren: () =>
+      import('../pages/myProject/Account_management/recivepermission/recivepermission.module').then((m) => m.RecivepermissionModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'deliverypayment',
+    loadChildren: () =>
+      import('../pages/myProject/Account_management/delivery-payment/delivery-payment.module').then((m) => m.DeliveryPaymentModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
     path: 'cities',
     loadChildren: () =>
       import('../pages/myProject/Initialization/Cities/cities/cities.module').then((m) => m.CitiesModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'exchangeacc',
+    loadChildren: () =>
+      import('../pages/myProject/Account_management/exchangeacc/exchangeacc.module').then((m) => m.ExchangeaccModule),
     data: { layout: 'light-sidebar' },
   },
   {

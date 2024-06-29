@@ -1,0 +1,182 @@
+<div class="container-fluid">
+    <!--begin::Dashboard-->
+    <span id="MasterPanel">
+        <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_LoaderProgress" style="display: none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-custom ">
+            <div class="card-header">
+                <div class="card-toolbar">
+                    <a href="AllClients" class="btn btn-info btn-shadow font-weight-bold mr-2" routerLink="/clients/" 
+                    translate="CLIENTS.MOVE_TO_CUSTOMERS">
+                        <i class="flaticon2-arrow icon-md"></i>   </a>
+                </div>
+                <div class="card-title">
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-3 col-xs-12">
+                        <label for="DDLClientfrom" translate="CLIENTS.FROM_THE_CLIENT"> </label>
+                        <div class="card d-flex justify-content-center">
+                            <p-dropdown 
+                                [options]="branchList" 
+                                [(ngModel)]="selectedBranch" 
+                                optionLabel="name"
+                                [style]="{ 'width': '100%' }" 
+                                [filter]="true" 
+                                filterBy="name" 
+                                [showClear]="true"
+                                [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                <ng-template pTemplate="selectedItem" let-selectedOption>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ selectedOption.name }}</div>
+                                    </div>
+                                </ng-template>
+                                <ng-template let-branch pTemplate="item">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ branch.name }}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <label for="DDLStatus" translate="CLIENTS.CHOOSE_THE_STATUS"></label>
+                        <div class="card d-flex justify-content-center">
+                            <p-dropdown 
+                                [options]="branchList" 
+                                [(ngModel)]="selectedBranch" 
+                                optionLabel="name"
+                                [style]="{ 'width': '100%' }" 
+                                [filter]="true" 
+                                filterBy="name" 
+                                [showClear]="true"
+                                [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                <ng-template pTemplate="selectedItem" let-selectedOption>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ selectedOption.name }}</div>
+                                    </div>
+                                </ng-template>
+                                <ng-template let-branch pTemplate="item">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ branch.name }}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <label for="DDLClientto" translate="CLIENTS.TO_THE_CLIENT"> </label>
+                        <div class="card d-flex justify-content-center">
+                            <p-dropdown 
+                                [options]="branchList" 
+                                [(ngModel)]="selectedBranch" 
+                                optionLabel="name"
+                                [style]="{ 'width': '100%' }" 
+                                [filter]="true" 
+                                filterBy="name" 
+                                [showClear]="true"
+                                [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                <ng-template pTemplate="selectedItem" let-selectedOption>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ selectedOption.name }}</div>
+                                    </div>
+                                </ng-template>
+                                <ng-template let-branch pTemplate="item">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div>{{ branch.name }}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2" style="margin-top: 15px">
+                        <a id="ArMainContent_Uc_Exchange_Clients_LnkExecChange"
+                            class="btn btn-success btn-shadow font-weight-bold mr-2 btn-block"
+                            href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Exchange_Clients$LnkExecChange','')" translate="INITIALIZATION.POWERS_TEMPLATES.SAVE">
+                            <i class="fa-solid fa-check mx-2"></i> </a>
+                    </div>
+                </div>
+                <hr style="margin-top: 7px">
+                <div class="form-group row my-10">
+                    <div class="col-md-12">
+                        <input name="ctl00$ArMainContent$Uc_Exchange_Clients$TxtSearch" type="search"
+                            id="ArMainContent_Uc_Exchange_Clients_TxtSearch" class="form-control spinner input-circle"
+                            (keyup)="onSearch($event)" placeholder="{{ 'INITIALIZATION.POWERS_TEMPLATES.SEARCHPLACEHOLDER' | translate }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="mGrid" cellspacing="0" rules="all" border="1"
+                                id="ArMainContent_Uc_Exchange_Clients_GrdViewDtls"
+                                style="width:100%;border-collapse:collapse;">
+                                <thead border="1">
+                                    <tr>
+                                        <th scope="col" style="width:2%;" translate="INITIALIZATION.BRANCH.CODE"></th>
+                                        <th class="hedalign" scope="col">
+                                            <div class="checkbox-inline" style="margin-top: unset">
+                                                <label class="checkbox checkbox-lg" >
+                                                    <input id="ArMainContent_Uc_Exchange_Clients_GrdViewDtls_ChkAll" type="checkbox" name="ctl00$ArMainContent$Uc_Exchange_Clients$GrdViewDtls$ctl01$ChkAll" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ArMainContent$Uc_Exchange_Clients$GrdViewDtls$ctl01$ChkAll\',\'\')', 0)">
+                                                    <span translate="CLIENTS.POLICY_NUMBER"> </span> 
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <th scope="col">{{ 'CLIENTS.MERCHANT_CODE' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.DATE_OF_ENTRY' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.THE_SENDER' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.THE_RECIPIENT' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.THE_ADDRESS' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.SHIPMENT_CONTENT' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.COMMENTS' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.SHIPPING_ON' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.TOTAL_SHIPMENT' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.SHIPPING_VALUE' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.DUE_TO_THE_CUSTOMER' | translate }}</th>
+                                        <th scope="col">{{ 'CLIENTS.SHIPMENT_STATUS' | translate }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngIf="data.length === 0">
+                                        <td colspan="13" class="text-center">{{ 'CLIENTS.NO_DATA' | translate }}</td>
+                                    </tr>
+                                    <tr *ngFor="let item of data">
+                                        <td>{{ item.policyNumber }}</td>
+                                        <td>{{ item.merchantCode }}</td>
+                                        <td>{{ item.dateOfEntry }}</td>
+                                        <td>{{ item.sender }}</td>
+                                        <td>{{ item.recipient }}</td>
+                                        <td>{{ item.address }}</td>
+                                        <td>{{ item.shipmentContent }}</td>
+                                        <td>{{ item.comments }}</td>
+                                        <td>{{ item.shippingOn }}</td>
+                                        <td>{{ item.totalShipment }}</td>
+                                        <td>{{ item.shippingValue }}</td>
+                                        <td>{{ item.dueToCustomer }}</td>
+                                        <td>{{ item.shipmentStatus }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+    </span>
+    <!--end::Dashboard-->
+</div>

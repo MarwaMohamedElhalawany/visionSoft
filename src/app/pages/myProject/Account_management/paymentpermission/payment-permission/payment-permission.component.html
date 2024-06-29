@@ -1,0 +1,139 @@
+<div class="container-fluid">
+    <!--begin::Dashboard-->
+    <span id="MasterPanel">
+        <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_LoaderProgress" style="display: none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-custom ">
+            <div class="card-header">
+                <div class="card-toolbar">
+                    <a id="ArMainContent_Uc_Payment_Permission_LnkAddModal" translate="INITIALIZATION.REASONS.ADDITION" (click)="addExchange()"
+                        class="btn btn-primary btn-shadow font-weight-bold mr-2"
+                        href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Payment_Permission$LnkAddModal','')"><i class="fa-regular fa-square-plus mx-1"></i></a>
+                </div>
+                <div class="card-title">
+                    <span id="ArMainContent_Uc_Payment_Permission_idkeygrid" style="display: none"></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <input name="ctl00$ArMainContent$UcBranches$TxtSearch" type="search" id="ArMainContent_UcBranches_TxtSearch"
+                            class="form-control spinner input-circle " onkeyup="Search_Gridprod(this,'TxtSearch','GrdView')"
+                            [placeholder]="'INITIALIZATION.POWERS_TEMPLATES.SEARCHPLACEHOLDER' | translate">
+                    </div>
+                </div>
+                <div class="form-group row mt-10">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <div>
+                                <table class="mGrid" cellspacing="0" rules="all" 
+                                id="ArMainContent_Uc_Create_Payment_Invoice_GrdViewDtls"
+                                style="width:100%;border-collapse:collapse;">
+                                    <tbody>
+                                        <tr class="m-5">
+                                           
+                                            <th scope="col" translate="ACCOUNTS.EXCHANGE_AUTHORIZATION_NUMBER"></th>
+                                            <th scope="col" translate="ACCOUNTS.FROM_ACCOUNT"></th>
+                                            <th scope="col" translate="ACCOUNTS.ADDRESS_OF_EXCHANGE_PERMIT"></th>
+                                            <th scope="col" translate="ACCOUNTS.DESCRIPTION_OF_EXCHANGE_PERMIT"></th>
+                                            <th scope="col" translate="ACCOUNTS.DATE_OF_EXCHANGE_AUTHORIZATION"></th>
+                                            <th scope="col" translate="ACCOUNTS.VALUE"></th>
+                                            <th scope="col" translate="INITIALIZATION.BRANCH.OPTIONS"></th>
+                                        </tr>
+                                        <br>
+                                        <tr class="m-5">
+                                           
+
+
+                                            <td translate="CLIENTS.NO_DATA">
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+
+                                            <td>
+
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+       
+
+
+    </span>
+</div>
+
+<app-add-exchange-permit #modalAddExchange [modalConfig]="addExchangeConfig"></app-add-exchange-permit>
+
+
+
+
+
+
+<!-- <div class="form-group row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <div>
+                <table class="mGrid" cellspacing="0" rules="all" border="1"
+                    id="ArMainContent_Uc_Payment_Permission_GrdView"
+                    style="width:100%;border-collapse:collapse;">
+                    <tbody>
+                        <tr>
+                            <th scope="col"><a
+                                    href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Payment_Permission$GrdView','Sort$PermAccUID')">رقـم
+                                    اذن الصرف</a></th>
+                            <th scope="col"><a
+                                    href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Payment_Permission$GrdView','Sort$Acc_Dsply_Nm')">مــن
+                                    حــســاب</a></th>
+                            <th scope="col">عــنــوان اذن الــصــرف</th>
+                            <th scope="col">وصـــف اذن الــصــرف</th>
+                            <th scope="col"><a
+                                    href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Payment_Permission$GrdView','Sort$Perm_Acc_Date')">تــاريــخ
+                                    اذن الــصــرف</a></th>
+                            <th scope="col">الـقـيــمـة</th>
+                            <th scope="col">خيارات</th>
+                        </tr>
+                        <tr>
+                            <td colspan="7">لا يوجد بيانات ... </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->

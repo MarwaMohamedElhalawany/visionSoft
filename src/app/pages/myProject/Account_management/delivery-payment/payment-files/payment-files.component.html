@@ -1,0 +1,189 @@
+<div class="container-fluid">
+    <!--begin::Dashboard-->
+    <span id="MasterPanel">
+        <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_LoaderProgress" style="display:none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-custom ">
+            <div class="card-header">
+                <div class="card-toolbar">
+                    <a id="ArMainContent_Uc_Delivery_Records_Lnkpayment" translate="ACCOUNTS.RETURN_TO_PAY_THE_DELEGATES"
+                        class="btn btn-dark btn-shadow font-weight-bold mr-2" href="DeliveryPayment"><i
+                            class="flaticon2-arrow icon-md"></i>  </a>
+                </div>
+                <div class="card-title">
+                    <button class="btn font-weight-bold btn-light-success mr-2" translate="ACCOUNTS.EXPERIENCE_REPRESENTATIVE"> </button>
+                    <span id="ArMainContent_Uc_Delivery_Records_idkeygrid" style="display: none">0</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <input name="ctl00$ArMainContent$Uc_Delivery_Records$TxtSearch" type="search"
+                            onchange="javascript:setTimeout('__doPostBack(\'ctl00$ArMainContent$Uc_Delivery_Records$TxtSearch\',\'\')', 0)"
+                            onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;"
+                            id="ArMainContent_Uc_Delivery_Records_TxtSearch" [placeholder]="'ACCOUNTS.SEARCH' | translate"
+                            class="form-control datepicker-rtl">
+                    </div>
+                </div>
+                <div class="form-group row mt-10">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <div>
+                                <table class="mGrid" cellspacing="0" rules="all" id="ArMainContent_UcBranches_GrdView"
+                                    style="width:100%;border-collapse:collapse;">
+                                    <tbody>
+                                        <tr class="m-5">
+                                            <th scope="col" translate="ACCOUNTS.CODE"></th>
+                                            <th scope="col" translate="ACCOUNTS.PAYMENT_DATE"></th>
+                                            <th scope="col" translate="ACCOUNTS.PAYMENT_FROM"></th>
+                                            <th scope="col" translate="ACCOUNTS.PAYMENT_TO"></th>
+                                            <th scope="col" translate="ACCOUNTS.PAYMENT_VALUE"></th>
+                                            <th scope="col" translate="ACCOUNTS.COMMENT"></th>
+                                            <th scope="col" translate="ACCOUNTS.DELETE"></th>
+                                        </tr>
+                                        <br>
+                                        <tr >
+                                            <td align="center">2</td>
+                                            <td align="center">24/02/2024</td>
+                                            <td align="center">
+                                                <span class="label label-lg label-light-primary label-inline ">من
+                                                    المندوب</span>
+                                            </td>
+                                            <td align="center">
+                                                <span
+                                                    class="label label-lg label-light-primary label-inline ">للشركة</span>
+                                            </td>
+                                            <td align="center">
+                                                <span
+                                                    class="label label-lg label-light-info label-inline">1,500.00</span>
+                                            </td>
+                                            <td>رد قيمة تحصيل شحنة بوليصة رقم ( 06 ) </td>
+                                            <td>
+                                                <div >
+                                                    <a id="ArMainContent_Uc_Delivery_Records_GrdView_LnkPaymentRecordsRemov_0" translate="ACCOUNTS.DELETE"
+                                                        class="btn btn-light-danger btn-block mr-2"
+                                                        href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Delivery_Records$GrdView$ctl02$LnkPaymentRecordsRemov','')"><i
+                                                         class="fa-solid fa-trash mx-1"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="alt">
+                                            <td align="center">1</td>
+                                            <td align="center">28/01/2024</td>
+                                            <td align="center">
+                                                <span class="label label-lg label-light-success label-inline ">من
+                                                    الشركة</span>
+                                            </td>
+                                            <td align="center">
+                                                <span
+                                                    class="label label-lg label-light-success label-inline ">للمندوب</span>
+                                            </td>
+                                            <td align="center">
+                                                <span
+                                                    class="label label-lg label-light-info label-inline">1,500.00</span>
+                                            </td>
+                                            <td> مديونية تحصيل شحنات من وكيل / مندوب لـ ( 2 ) شحنة</td>
+                                            <td>
+                                                <div style="text-align: center">
+                
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+      
+
+
+    </span>
+</div>
+
+
+<!-- <div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <div>
+                <table class="mGrid" cellspacing="0" rules="all" border="1"
+                    id="ArMainContent_Uc_Delivery_Records_GrdView"
+                    style="width:100%;border-collapse:collapse;">
+                    <tbody>
+                        <tr>
+                            <th scope="col">كود</th>
+                            <th scope="col">تاريخ السداد</th>
+                            <th scope="col">سداد من</th>
+                            <th scope="col">سداد الي</th>
+                            <th scope="col">قيمة السداد</th>
+                            <th scope="col">ملاحظة</th>
+                            <th scope="col">حذف</th>
+                        </tr>
+                        <tr>
+                            <td align="center">2</td>
+                            <td align="center">24/02/2024</td>
+                            <td align="center">
+                                <span class="label label-lg label-light-primary label-inline ">من
+                                    المندوب</span>
+                            </td>
+                            <td align="center">
+                                <span
+                                    class="label label-lg label-light-primary label-inline ">للشركة</span>
+                            </td>
+                            <td align="center">
+                                <span
+                                    class="label label-lg label-light-info label-inline">1,500.00</span>
+                            </td>
+                            <td>رد قيمة تحصيل شحنة بوليصة رقم ( 06 ) </td>
+                            <td>
+                                <div style="text-align: center">
+                                    <a id="ArMainContent_Uc_Delivery_Records_GrdView_LnkPaymentRecordsRemov_0"
+                                        class="btn btn-light-danger btn-block mr-2"
+                                        href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Delivery_Records$GrdView$ctl02$LnkPaymentRecordsRemov','')"><i
+                                            class="flaticon-delete-1 icon-lg"></i>حــــذف</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="alt">
+                            <td align="center">1</td>
+                            <td align="center">28/01/2024</td>
+                            <td align="center">
+                                <span class="label label-lg label-light-success label-inline ">من
+                                    الشركة</span>
+                            </td>
+                            <td align="center">
+                                <span
+                                    class="label label-lg label-light-success label-inline ">للمندوب</span>
+                            </td>
+                            <td align="center">
+                                <span
+                                    class="label label-lg label-light-info label-inline">1,500.00</span>
+                            </td>
+                            <td> مديونية تحصيل شحنات من وكيل / مندوب لـ ( 2 ) شحنة</td>
+                            <td>
+                                <div style="text-align: center">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->

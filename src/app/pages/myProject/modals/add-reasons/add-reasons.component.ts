@@ -9,7 +9,13 @@ import { TranslationService } from 'src/app/modules/i18n';
   styleUrls: ['./add-reasons.component.scss']
 })
 export class AddReasonsComponent {
-
+  branchList: any[] = [
+    { name: 'فرع جيزة' },
+    { name: 'عمولة فرع رئيسي' },
+    { name: '333' },
+    ];
+    selectedBranch: any ;
+    filteredBranchList: string[] = this.branchList;
   @Input() public modalConfig: ModalConfig;
   @ViewChild('modal') private modalContent: TemplateRef<AddReasonsComponent>;
   private modalRef: NgbModalRef;

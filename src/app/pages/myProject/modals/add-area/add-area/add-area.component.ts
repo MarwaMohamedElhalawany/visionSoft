@@ -9,8 +9,12 @@ import { TranslationService } from 'src/app/modules/i18n';
   styleUrls: ['./add-area.component.scss']
 })
 export class AddAreaComponent {
-
-  branchList: string[] = ['فرع جيزة', 'عمولة فرع رئيسي', '333'];
+  branchList: any[] = [
+    { name: 'فرع جيزة' },
+    { name: 'عمولة فرع رئيسي' },
+    { name: '333' },
+    ];
+    selectedBranch: any ;
   filteredBranchList: string[] = this.branchList;
   branchControl = new FormControl('');
 
@@ -44,7 +48,7 @@ export class AddAreaComponent {
 
   open(): Promise<boolean> {
     return new Promise<boolean>((resolve) => {
-      this.modalRef = this.modalService.open(this.modalContent, { centered: true, backdrop: 'static', scrollable: true });
+      this.modalRef = this.modalService.open(this.modalContent, { centered: true, backdrop: 'static', scrollable: true , size:'xl' });
       this.modalRef.result.then(resolve, resolve);
     });
   }

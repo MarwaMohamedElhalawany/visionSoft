@@ -1,38 +1,37 @@
 <div class="d-flex flex-column flex-lg-row flex-column-fluid">
- 
-  <div class="one d-flex flex-column flex-lg-row-fluid w-lg-50  order-2 order-lg-1 p-20">
-    <div class="lang border border-gray rounded-2 p-1" style="width: 80px;" (click)="selectLanguage()">
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault" style="color: #333;" translate="HEADER.LANG"></label>
+  <div class="one d-flex flex-column flex-lg-row-fluid w-lg-50 order-2 order-lg-1 p-20">
+      <div class="lang border border-gray rounded-2 p-1" style="width: 80px;" (click)="selectLanguage()">
+          <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault" style="color: #333;" translate="HEADER.LANG"></label>
+          </div>
       </div>
-    </div>
-        <div class="text-center mb-8">
-          <h1 class="text-dark fw-bolder mb-3"  translate="AUTH.LOGIN.BUTTON">
-          </h1>
-        </div>
-        <app-login-form></app-login-form>
-    <div class="d-flex flex-center flex-wrap py-15  px-5">
-      <div class="d-flex fw-semibold text-primary fs-base">
-        <a href="#" class="px-5" target="_blank" translate="AUTH.GENERAL.TERMS"></a>
-        <a href="#" class="px-5" target="_blank" translate="AUTH.GENERAL.CONTACT_US"></a>
+      <div class="text-center mb-8">
+          <h1 class="text-dark fw-bolder mb-3" translate="AUTH.LOGIN.BUTTON"></h1>
       </div>
-    </div>
+      <app-login-form></app-login-form>
+      <div class="d-flex flex-center flex-wrap py-10 px-5">
+          <div class="d-flex fw-semibold text-primary fs-base">
+              <a href="#" class="px-5" target="_blank" translate="AUTH.GENERAL.TERMS"></a>
+              <a href="#" class="px-5" target="_blank" translate="AUTH.GENERAL.CONTACT_US"></a>
+          </div>
+      </div>
   </div>
 
-  <div class="two m-auto  d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1" style="display: flex; flex-direction: column; align-items: center;">
-    <div class="logo d-flex flex-column flex-center  px-5 px-md-15 ">
-      <img src="./assets/media/initialization/syslogo.png" alt="">
-    </div> 
-    <div class="image ">
-      <img src="./assets/media/initialization/data-points.svg" alt="logo">
-    </div>
-    <div class="d-flex flex-column flex-center  px-5 px-md-15 w-100" style="flex-grow: 1;">
-      <h1 class="text-dark fs-2qx fw-bolder text-center mb-7">
-        Vision Soft
-      </h1>
-      <div class="text-dark fs-base text-center fw-bolder" translate="AUTH.GENERAL.LOGO">
+  <div class="two d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1">
+      <div class="logo d-flex flex-column flex-center px-5 px-md-15">
+          <img src="./assets/media/initialization/syslogo.png" alt="">
+      </div> 
+     
+      <div class="d-flex flex-column flex-center px-5 px-md-15 w-100" style="flex-grow: 1;">
+          <h1 class="text-dark fs-2qx fw-bolder text-center">Vision Soft</h1>
+          <div class="text-dark fs-base text-center fw-bolder" translate="AUTH.GENERAL.LOGO"></div>
       </div>
-    </div>
   </div> 
- </div> 
+</div>
+
+
+
+ <!-- <div class="image ">
+      <img src="./assets/media/initialization/data-points.svg" alt="logo">
+    </div> -->

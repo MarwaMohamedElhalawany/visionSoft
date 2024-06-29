@@ -1,5 +1,5 @@
 <ng-template #modal>
-    <div class="modal-content">
+    <div class="modal-content w-100">
         <div class="page-loading-enabled page-loading">
             <div id="ArMainContent_UcAreas_LoaderProgress" style="display:none;" role="status" aria-hidden="true">
 
@@ -13,19 +13,17 @@
         <div class="modal-header">
             <h5 id="ArMainContent_UcAreas_modaladd" class="modal-title" translate="INITIALIZATION.REASONS.ADDITION">
             </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <i class="fa-solid fa-xmark" (click)="dismiss()"></i>
-            </button>
         </div>
 
 
         <div id="ArMainContent_UcAreas_modaladdedit" class="modal-body" style="display:block;">
-            <div class="row">
+            <div class="row ">
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-md-4 ">
-                            <div class="form-group">
-                                <label translate="INITIALIZATION.BRANCH.AREA_CODE"> </label>
+                            <div class="form-group my-2">
+                                <label translate="INITIALIZATION.BRANCH.AREA_CODE" class="text-dark my-1"> </label>
                                 <input name="ctl00$ArMainContent$UcAreas$Txt_ID" type="text"
                                     id="ArMainContent_UcAreas_Txt_ID" class="form-control " disabled="disabled"
                                     value="1419">
@@ -33,59 +31,24 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 col-xs-12">
+                        <div class="col-md-12 col-xs-12 my-2">
                             <div class="form-group ">
-                                <label for="DDLCity" translate="INITIALIZATION.BRANCH.THE_CITY"></label>
-                                <div class="dropdown bootstrap-select form-control"><select
-                                        name="ctl00$ArMainContent$UcAreas$DDLCity" id="ArMainContent_UcAreas_DDLCity"
-                                        class="form-control selectpicker" data-size="7" data-live-search="true">
-                                        <option value="-- اختر || Chose --">-- اختر || Chose --</option>
-                                        <option value="1">القاهرة</option>
-                                        <option value="2">الجيزة</option>
-                                        <option value="3">اطراف القاهرة و الجيزة</option>
-                                        <option value="4">الاسكندرية</option>
-                                        <option value="5">اسوان</option>
-                                        <option value="6">اسيوط</option>
-                                        <option value="7">الاسماعيلية</option>
-                                        <option value="8">الاقصر</option>
-                                        <option value="9">البحر الاحمر</option>
-                                        <option value="10">الدقهليه</option>
-                                        <option value="11">السويس</option>
-                                        <option value="12">الشرقية</option>
-                                        <option value="13">الغربية</option>
-                                        <option value="14">الفيوم</option>
-                                        <option value="15">القليوبية</option>
-                                        <option value="16">المنوفية</option>
-                                        <option value="17">المنيا</option>
-                                        <option value="18">بنى سويف</option>
-                                        <option value="19">سوهاج</option>
-                                        <option value="20"> بورسعيد</option>
-                                        <option value="21">دمياط</option>
-                                        <option value="23">قنا</option>
-                                        <option value="24">كفر الشيخ</option>
-                                        <option value="25">مطروح</option>
-                                        <option value="26">جنوب سيناء</option>
-                                        <option value="27">الوادي الجديد</option>
-                                        <option value="29">شمال سيناء</option>
-                                        <option value="30">البحيره</option>
-                                    </select><button type="button" tabindex="-1" class="btn dropdown-toggle btn-light"
-                                        data-toggle="dropdown" role="combobox" aria-owns="bs-select-3"
-                                        aria-haspopup="listbox" aria-expanded="false"
-                                        data-id="ArMainContent_UcAreas_DDLCity" title="-- اختر || Chose --">
-                                        <div class="filter-option">
-                                            <div class="filter-option-inner">
-                                                <div class="filter-option-inner-inner">-- اختر || Chose --</div>
+                                <label for="DDLCity" translate="INITIALIZATION.BRANCH.THE_CITY" class="text-dark my-1"></label>
+                                <div class="card d-flex justify-content-center">
+                                    <p-dropdown [options]="branchList" [(ngModel)]="selectedBranch" optionLabel="name"
+                                        [style]="{ 'width': '100%'}" [filter]="true" filterBy="name" [showClear]="true"
+                                        placeholder="-- اختر --">
+                                        <ng-template pTemplate="selectedItem" let-selectedOption>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>{{ selectedOption.name }}</div>
                                             </div>
-                                        </div>
-                                    </button>
-                                    <div class="dropdown-menu ">
-                                        <div class="bs-searchbox"><input type="search" class="form-control"
-                                                autocomplete="off" role="combobox" aria-label="Search"
-                                                aria-controls="bs-select-3" aria-autocomplete="list"></div>
-                                        <div class="inner show" role="listbox" id="bs-select-3" tabindex="-1">
-                                            <ul class="dropdown-menu inner show" role="presentation"></ul>
-                                        </div>
-                                    </div>
+                                        </ng-template>
+                                        <ng-template let-branch pTemplate="item">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>{{ branch.name }}</div>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
                                 </div>
                                 <span id="ArMainContent_UcAreas_ReqDDLCity" style="color:Red;display:none;">من فضلك اختر
                                     المدينة</span>
@@ -93,9 +56,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 ">
+                        <div class="col-md-12 my-2">
                             <div class="form-group">
-                                <label translate="INITIALIZATION.BRANCH.AREA_NAME"> </label>
+                                <label translate="INITIALIZATION.BRANCH.AREA_NAME" class="text-dark my-2"> </label>
                                 <input name="ctl00$ArMainContent$UcAreas$Txt_Ar_Nm" type="text"
                                     id="ArMainContent_UcAreas_Txt_Ar_Nm" class="form-control "
                                     [placeholder]="'INITIALIZATION.BRANCH.AREA_NAME' | translate">
@@ -105,9 +68,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 ">
+                        <div class="col-md-12 my-2">
                             <div class="form-group">
-                                <label translate="INITIALIZATION.BRANCH.FOREIGN_NAME"> </label>
+                                <label translate="INITIALIZATION.BRANCH.FOREIGN_NAME" class="text-dark my-2"> </label>
                                 <input name="ctl00$ArMainContent$UcAreas$Txt_En_Nm" type="text"
                                     id="ArMainContent_UcAreas_Txt_En_Nm" class="form-control "
                                     [placeholder]="'INITIALIZATION.BRANCH.FOREIGN_NAME' | translate">
@@ -119,22 +82,22 @@
                     <div id="ArMainContent_UcAreas_DivShippFixed" class="form-group row" style="display:block;">
                         <div class="col-md-12">
                             <div class="btn font-weight-bold btn-block btn-light-dark mr-2"
-                                style="padding-bottom: unset; padding-top: unset; margin-top: 27px; background-color: #D1D3E0">
-                                <div class="checkbox-inline" style="margin-top: 5px">
-                                    <label class="checkbox checkbox-lg">
+                                style="padding-bottom: unset; padding-top: unset; margin-top: 27px; ">
+                                <div class="checkbox-inline m-2" style="margin-top: 5px">
+                                    <label class="checkbox checkbox-lg px-1">
                                         <input id="ArMainContent_UcAreas_Chk_Shipp_Fixed" type="checkbox"
                                             name="ctl00$ArMainContent$UcAreas$Chk_Shipp_Fixed"
-                                            onclick="javascript:setTimeout('__doPostBack(\'ctl00$ArMainContent$UcAreas$Chk_Shipp_Fixed\',\'\')', 0)">
-                                        <span translate="INITIALIZATION.BRANCH.PRICE"></span>
+                                            >
+                                        <span translate="INITIALIZATION.BRANCH.PRICE" class="px-2"></span>
                                     </label>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+<div class="col-md-1" ></div>
 
-
-                <div class="col-md-8">
+                <div class="col-md-7 "  >
                     <div class="table-responsive">
                         <div>
                             <table class="mGrid" cellspacing="0" rules="all"  id="ArMainContent_UcBranches_GrdView"
@@ -185,23 +148,3 @@
 
 
 
-<div class="form-group row mt-10">
-    <div class="col-md-8">
-        <div class="table-responsive">
-            <div>
-                <table class="mGrid" cellspacing="0" rules="all"  id="ArMainContent_UcBranches_GrdView"
-                    style="width:100%;border-collapse:collapse;">
-                    <tbody>
-                        <tr class="m-5">
-                            <th scope="col" style="width:2%;" translate="INITIALIZATION.BRANCH.CODE"></th>
-                            <th scope="col" translate="INITIALIZATION.BRANCH.LIST_TYPE"></th>
-                            <th scope="col" translate="INITIALIZATION.BRANCH.PRICE_LIST"></th>
-                            <th scope="col" translate="INITIALIZATION.BRANCH.KILO"></th>
-                            <th scope="col" translate="INITIALIZATION.BRANCH.SHIPPING"></th>                 
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>

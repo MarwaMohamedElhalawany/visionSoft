@@ -20,7 +20,7 @@ export const locale = {
     },
     AUTH: {
       GENERAL: {
-        LOGO:'For Shipping and Delivery Services',
+        LOGO: 'For Shipping and Delivery Services',
         OR: 'Or with email',
         SUBMIT_BUTTON: 'Submit',
         NO_ACCOUNT: 'Don\'t have an account?',
@@ -44,12 +44,12 @@ export const locale = {
         BTN1: 'Sign In with Google',
         BTN2: 'Sign In with Apple',
         REQUIRED_NAME: "User Name IS Required",
-        REQUIRED_PASS:'User Pass IS Required',
-        WAIT:'Please Wait ...',
+        REQUIRED_PASS: 'User Pass IS Required',
+        WAIT: 'Please Wait ...',
         LOGOUT: 'Logout',
-        ERROR:'Incorrect user data',
+        ERROR: 'Incorrect user data',
       },
-     
+
       FORGOT: {
         TITLE: 'Forgotten Password?',
         DESC: 'Enter your email to reset your password',
@@ -123,27 +123,27 @@ export const locale = {
     },
 
     INITIALIZATION: {
-      CONTROL_PANAL:{
-        CHARGES:"Charges"
-        
-       },
-       REASONS:{
-        THE_NAME:"Name",
-        TYPE:"Type",
-        CITY_NAME:'City Name',
-        CITY_CODE:'City Code',
-        CITY:'The City',
-        REGION_NAME:'Region Name',
-        BRANCH_CODE:'Branch Code',
-        CHOOSE:'Choose',
-        LIST_OF_BRANCHES:"Branch commission list",
-        ADDITION:'Addition',
-        CODE:'Code',
+      CONTROL_PANAL: {
+        CHARGES: "Charges"
 
-       },
+      },
+      REASONS: {
+        THE_NAME: "Name",
+        TYPE: "Type",
+        CITY_NAME: 'City Name',
+        CITY_CODE: 'City Code',
+        CITY: 'The City',
+        REGION_NAME: 'Region Name',
+        BRANCH_CODE: 'Branch Code',
+        CHOOSE: 'Choose',
+        LIST_OF_BRANCHES: "Branch commission list",
+        ADDITION: 'Addition',
+        CODE: 'Code',
+
+      },
       BRANCH: {
-        CODE:'N',
-        ADD:"Add",
+        CODE: 'N',
+        ADD: "Add",
         LIST: "Branch List",
         NAME: "Branch Name",
         FOREIGN_NAME: "Foreign Name",
@@ -151,17 +151,17 @@ export const locale = {
         PAID_SHIPMENTS: "Paid Shipments",
         UNPAID_SHIPMENTS: "Unpaid Shipments",
         OPTIONS: "Options",
-        AREA_NAME:"Area Name",
-        AREA_CODE:"Area Code",
-        THE_CITY:"The City",
-        PRICE:"Standard Pricing",
-        LIST_TYPE:'List Type',
-        PRICE_LIST:'Price List',
-        KILO:'Extra kilogram value/pickup value',
-        SHIPPING:"Shipping value / branch commission / representative commission",
+        AREA_NAME: "Area Name",
+        AREA_CODE: "Area Code",
+        THE_CITY: "The City",
+        PRICE: "Standard Pricing",
+        LIST_TYPE: 'List Type',
+        PRICE_LIST: 'Price List',
+        KILO: 'Extra kilogram value/pickup value',
+        SHIPPING: "Shipping value / branch commission / representative commission",
 
       },
-     
+
 
       POWERS_TEMPLATES: {
         POWERS_TEMPLATES: 'Powers Templates',
@@ -197,13 +197,14 @@ export const locale = {
         ACCOUNTANT: "Accountant",
         STOREKEEPER: "Store Keeper",
         CANCELLATION: "Cancel",
-        ADD:"Add User",
-        NEXT:"Next",
-        PREVIOUS :"Previous",
-        SAVE:'Save',
+        ADD: "Add User",
+        NEXT: "Next",
+        PREVIOUS: "Previous",
+        SAVE: 'Save',
 
       },
-      REPORTS:{
+
+      REPORTS: {
         FOLLOW_UP_WITH_CLIENTS: 'Follow up with clients',
         FOLLOW_UP_WITH_DELEGATES: 'Follow up with delegates',
         FOLLOW_UP_ON_SHIPMENTS: 'Follow up on shipments',
@@ -220,35 +221,35 @@ export const locale = {
         FOLLOW_ACCOUNTS: 'Follow accounts',
         PROFITS_AND_LOSSES: 'Profits and losses'
       },
-      RETURNS_MANAGEMENT:{
+      RETURNS_MANAGEMENT: {
         RECEIVING_RETURNS: 'Receiving returns',
         DELIVERY_OF_RETURNS: 'Delivery of returns'
       },
-      DELIVERY_MANAGEMENT:{
+      DELIVERY_MANAGEMENT: {
         DISTRIBUTION_OF_SHIPMENTS_TO_REPRESENTATIVES: 'Distribution of shipments to representatives',
         REPLACEMENT_OF_SHIPMENTS_REPRESENTATIVES: 'Replacement of shipments representatives',
         DISTRIBUTION_OF_RETURNS_TO_REPRESENTATIVES: 'Distributing returns to representatives',
         REPLACEMENT_OF_RETURNS_AGENTS: 'Replacement of returns agents'
       },
-      BRANCH_TRANSFERS:{
+      BRANCH_TRANSFERS: {
         TRANSFERRING_SHIPMENTS_BETWEEN_BRANCHES: 'Transferring shipments between branches',
         RECEIVING_SHIPMENTS: 'Receiving shipments'
       },
-      SHIPMENT_MANAGEMENT:{
+      SHIPMENT_MANAGEMENT: {
         WAITING_FOR_APPROVAL: 'Waiting for approval',
         PENDING_API_APPROVAL: 'Pending API approval',
         DELIVERY_OF_SHIPMENTS: 'Delivery of shipments',
         COLLECTION_OF_SHIPMENTS: 'Collection of shipments'
       },
-      PICK_UP:{
+      PICK_UP: {
         PICKUP_DATA: 'Pickup data',
         PICKUP_SUPPORT: 'Pickup support'
       },
-      EXPENSE_MANAGEMENT:{
+      EXPENSE_MANAGEMENT: {
         EXPENSE_DATA: 'Expense data',
         TYPES_OF_EXPENSES: 'Types of expenses'
       },
-      ACCOUNTS_AND_FINANCE_MANAGEMENT:{
+      ACCOUNTS_AND_FINANCE_MANAGEMENT: {
         ACCOUNTS_DATA: 'Accounts data',
         CUSTOMER_PAYMENT: 'Customer payment',
         CUSTOMER_INVOICES: 'Customer invoices',
@@ -259,11 +260,11 @@ export const locale = {
         CASH_DISBURSEMENT_PERMISSION: 'Cash disbursement permission',
         CASH_RECEIPT_PERMISSION: 'Cash receipt permission'
       },
-      CUSTOMER_REQUESTS:{
+      CUSTOMER_REQUESTS: {
         FLYER_REQUESTS: 'Flyer requests',
         PAYMENT_REQUESTS: 'Payment requests'
       },
-      INITIALIZATION2:{
+      INITIALIZATION2: {
         PERMISSION_TEMPLATES: 'Permission templates',
         USER_TRAFFIC: 'User traffic',
         BRANCHES: 'Branches',
@@ -272,39 +273,211 @@ export const locale = {
         REGIONS: 'Regions',
         PRICE_LISTS: 'Price lists'
       }
-      
-      
-      
-      
-    
-      
-      
+
+
+
+
+
+
+
     },
-   STAFF:{
-    STAFF_MANAGEMENT:{
-      NEW:'New employee',
-      EMPLOYEE:'Employee',
-      MOB:'Mobile',
-      ACCESS:'Permission to access',
-      STATUS:'Account status',
-      EMPLOYEE_CODE:"Employee Code",
-      EMPLOYEE_PHOTO:"Employee Photo",
-      ID:'National ID',
-      BRANCH:"Affiliated to a branch",
-      SYSTEM:"System login name",
-      PASS:"Password",
-      EMAIL:"E-mail",
-      SALARY:'SALARY',
-      START_DATE:"Work Starting Date",
-      ADDRESS:"The address",
-      DATA:"Employee Data",
-      CLOSE:"Close the account",
-      EMPLOYEE_NAME:'Employee Name',
-      CLOSED:"Close"
+    STAFF: {
+      STAFF_MANAGEMENT: {
+        NEW: 'New employee',
+        EMPLOYEE: 'Employee',
+        MOB: 'Mobile',
+        ACCESS: 'Permission to access',
+        STATUS: 'Account status',
+        EMPLOYEE_CODE: "Employee Code",
+        EMPLOYEE_PHOTO: "Employee Photo",
+        ID: 'National ID',
+        BRANCH: "Affiliated to a branch",
+        BRA: "Branch",
+        SYSTEM: "System login name",
+        PASS: "Password",
+        EMAIL: "E-mail",
+        SALARY: 'SALARY',
+        START_DATE: "Work Starting Date",
+        ADDRESS: "The address",
+        DATA: "Employee Data",
+        CLOSE: "Close the account",
+        EMPLOYEE_NAME: 'Employee Name',
+        CLOSED: "Close"
+
+      },
+      MANAGEMENT_OF_DELEGATES: {
+        NEW: 'New delegate',
+        DELEGATE: "  The Delegate ",
+        PRICE: "Delivery commission price list",
+        BALANCE: "Balance",
+        EXTERNAL: 'External Delegate',
+        COPY: ' has a copy of the program',
+        ALLOW: 'Allow the program to open',
+        STATUS: 'Account status',
+        DELEGATE_CODE: 'Delegate Code',
+        DELEGATE_PHOTO: 'Delegate Photo',
+        DELEGATE_DATA: 'Delegate Data',
+        DELEGATE_NAME: 'Delegate Name',
+        ENTYRY_NAME: 'User Name',
+        AGENT: 'The agent has a copy of the software',
+        STOP: 'Account suspension',
+        // MAX:'The maximum amount of debt',
+        MAX: ' max of debt',
+        CLIENT: 'Client',
+        CLIENT_PRICE: 'Price List',
+        BRANCH: 'Branch',
+        NEW_CLIENT: 'New Client',
+        REPLACE: "Replace customer shipments",
+        EXCEL: "Export customer data to Excel",
+        CLIENT_CODE: 'Client Code',
+        CLIENT_NAME: 'Client Name',
+        CLIENT_PHOTO: 'Client Photo',
+        CLIENT_DATA: 'Client Data',
+        MARKET: 'Market Name',
+        DELIVERY_PRICE: 'Delivery price list',
+        CITY: "The City",
+        AREA: "The Area",
+        ADRESS: "The Adress",
+        ESTABLISH: "Establish a shipping value for return shipments"
+
+
+      }
+    },
+    DROPDOWN: {
+      CHOOSE: "-- Select --"
+    },
+    BRANCHES: {
+      GIZA: "Giza Branch",
+      MAIN: "Main Branch",
+      THREE: "Branch 333"
+    },
+    CLIENTS: {
+      MOVE_TO_CUSTOMERS: "Move to customers",
+      FROM_THE_CLIENT: "From the client",
+      TO_THE_CLIENT: "To the client",
+      CHOOSE_THE_STATUS: "Choose the status",
+      POLICY_NUMBER: "Policy number",
+      MERCHANT_CODE: "Merchant code",
+      DATE_OF_ENTRY: "Date of entry",
+      THE_SENDER: "The sender",
+      THE_RECIPIENT: "The recipient",
+      THE_ADDRESS: "The address",
+      SHIPMENT_CONTENT: "Shipment content",
+      COMMENTS: "Comments",
+      SHIPPING_ON: "Shipping on",
+      TOTAL_SHIPMENT: "Total shipment",
+      SHIPPING_VALUE: "Shipping value",
+      DUE_TO_THE_CUSTOMER: "Due to the customer",
+      SHIPMENT_STATUS: "Shipment status",
+      NO_DATA: 'There are no data ....',
+      ORDER_NUMBER: "Order number",
+      DATE_OF_APPLICATION: "The date of application",
+      CLIENT: "Client",
+      ORDER_RECEIVING_EMPLOYEE: "Order receiving employee",
+      QUANTITY: "Quantity",
+      ORDER_STATUS: "Order status",
+      OPTIONS: "Options",
+      AMOUNT_TO_BE_PAID: "The amount to be paid"
+
+    },
+    ACCOUNTS: {
+      ALL_ACCOUNTS: "All Accounts",
+      STORAGE: "Storages",
+      BANKS: "Banks",
+      ELECTRONIC_WALLETS: " Electronic Wallets",
+      ACCOUNT_TYPE: "Account Type",
+      BRANCH: "Branch",
+      ACCOUNT_NAME: "Account Name",
+      ACCOUNT_NUMBER: "Account Number",
+      ACCOUNT_BALANCE: "Account Balance",
+      BASIC_ACCOUNT: "Basic Account",
+      BILLS: "Mismatched invoices ",
+      PAYMENT_OF_AMOUNTS_OWED: "Payment of amounts owed",
+      CUSTOMER_INVOICES: 'Customer invoices  ',
+      BACK_TO_CUSTOMER: 'Return to paying customers',
+      BACK_TO_BILLS: "Return to customer invoices",
+      DATE: "Search by invoice date",
+      STORE: 'Experience store',
+      INVOICE_CODE: "Invoice code",
+      BY: "by",
+      THE_ACCOUNT: "the account",
+      INVOICE_DATE: "Invoice date",
+      PAYMENT_FROM: "Payment from",
+      PAYMENT_TO_ME: "Payment to ",
+      INVOICE_VALUE: "Invoice value",
+      NOTE: "note",
+      VIEW_THE_INVOICE: "Print the invoice",
+      PRINT_PAYMENT_VOUCHER: "Print payment voucher",
+      DELETE_INVOICE: "Delete invoice",
+      BACK: 'Back',
+      PAYMENT_SPECIFIED: "Payment specified",
+      TOTAL_NUMBER: "Total number",
+      TOTAL_PAYMENT_AMOUNTS: "Total payment amounts",
+      PAYMENT_NOTE: "Payment note",
+      SHOW_ALL: "Show all",
+      SEARCH_BY_COLLECTION_DATE_OR_ENTRY_DATE: "Search by collection date or entry date",
+      SEARCH_ON_THE_LEVEL_OF_DISPLAYED_SHIPMENTS: "Search on the level of displayed shipments",
+      DATE_OF_ENTRY_OF_THE_SHIPMENT: "Date of entry of the shipment",
+      HISTORY_OF_THE_MOVEMENT: "History of the movement",
+      MERCHANT_CODE: "Merchant code",
+      POLICY: "Policy",
+      THE_RECIPIENT: "The recipient",
+      CITY_REGION: "City/region",
+      SHIPPING_ON: "Shipping on",
+      SHIPMENT_STATUS: "Shipment status",
+      TOTAL_SHIPMENT: "Total shipment",
+      SHIPPING_VALUE: "Shipping value",
+      PICKUP_VOUCHER_NUMBER: "Pickup voucher number",
+      COMMENTS: "comments",
+      DETAILS: "details",
+      FOR_HIM: "for him",
+      ON_HIM: "on him",
+      WITH_OUT: 'Representatives without credit',
+      THE_DELEGATE: "The delegate",
+      PAYMENT_RECORDS: "Payment records",
+      CODE: 'Code',
+      RETURN_TO_PAY_THE_DELEGATES: "Back to pay the delegates",
+      EXPERIENCE_REPRESENTATIVE: "Experience representative",
+      SEARCH: "Search by invoice date ...",
+      DELETE: 'Delete',
+
+      PAYMENT_DATE: 'Payment date',
+      PAYMENT_TO: 'payment to',
+      PAYMENT_VALUE: 'payment value',
+      COMMENT:"Comment",
+      PRIMARY:'Set as primary account',
+      EXCHANGE_AUTHORIZATION_NUMBER: "Exchange authorization number",
+      FROM_ACCOUNT: "from account",
+      ADDRESS_OF_EXCHANGE_PERMIT: "Address of exchange permit",
+      DESCRIPTION_OF_EXCHANGE_PERMIT: "Description of the exchange permit",
+      DATE_OF_EXCHANGE_AUTHORIZATION: "Date of exchange authorization",
+      VALUE:"The Value",
+      ARREST_PERMIT_NUMBER: "Arrest permit number",
+      TO_ACCOUNT: "to account",
+      ARREST_WARRANT_ADDRESS: "Arrest warrant address",
+      DESCRIPTION_OF_ARREST_WARRANT: "Description of arrest warrant",
+      DATE_OF_ARREST_WARRANT: "Date of arrest warrant",
+      TRANSFER_AUTHORIZATION_NUMBER: "Transfer authorization number",
+    BY_EMPLOYEE: "By the employee",
+    DATE_OF_TRANSFER_AUTHORIZATION: "Date of transfer authorization",
+    TRANSFER_FROM_ACCOUNT: "Transfer from account",
+    TRANSFER_TO_ACCOUNT: "Transfer to an account",
+    PINNACLE_OF_CONVERSION: "The pinnacle of conversion",
+    REASON_FOR_TRANSFER: "Value of transfer",
+    NEW_TRANSFER_PERMISSION: "New transfer permission",
+    CODE_TRANSFER:'Transfer authorization code',
+   DATA:"Transfer authorization data",
+   FROM:'From Account',
+   TO:'To Account ',
+   DATE_TRANSFER:' Transfer date ',
+
+
 
     }
-   }
-    
 
-  }
+  },
+
+
+
+
 };

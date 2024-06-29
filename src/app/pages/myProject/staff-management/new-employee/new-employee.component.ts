@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-employee.component.scss']
 })
 export class NewEmployeeComponent {
-
+    branchList: any[] = [
+  { name: 'فرع جيزة' },
+  { name: 'عمولة فرع رئيسي' },
+  { name: '333' },
+  ];
+  selectedBranch: any ;
+  filteredBranchList: string[] = this.branchList;
 }

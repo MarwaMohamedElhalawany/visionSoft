@@ -5,6 +5,8 @@ import { StaffManagementRoutingModule } from './staff-management-routing.module'
 import { StaffManagementComponent } from './staff-management/staff-management.component';
 import { NewEmployeeComponent } from './new-employee/new-employee.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     StaffManagementRoutingModule,
     TranslateModule,
+    DropdownModule,
+    FormsModule
 
   ]
 })

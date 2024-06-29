@@ -98,7 +98,7 @@
   </div>
 
   <div class="d-grid mb-10 mt-10">
-    <button type="submit" id="kt_sign_in_submit" class="btn btn-dark" translate="AUTH.LOGIN.TITLE">
+    <button type="submit" id="kt_sign_in_submit" class="btn btn-dark" translate="AUTH.LOGIN.TITLE" [disabled]="loginForm.invalid">
       <ng-container *ngIf="isLoading$ | async">
         <span class="indicator-progress" [style.display]="'block'" translate="AUTH.LOGIN.WAIT">
           <span class="spinner-border spinner-border-sm align-middle ms-2"></span>

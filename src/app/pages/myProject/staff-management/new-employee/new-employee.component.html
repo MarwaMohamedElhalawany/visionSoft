@@ -15,29 +15,34 @@
         </div>
 
         <div class="card card-custom ">
-            <div class="card-header">
-                <div class="card-toolbar">
+            <div class="card-header mt-0">
+                <div class="card-toolbar ">
 
 
 
 
                     <a onclick="BtnClick();" id="ArMainContent_UcEmployees_Dtls_LnkSave"
-                        class="btn btn-success btn-shadow font-weight-bold mr-2"
+                        class="btn btn-success btn-shadow font-weight-bold mx-2"
                         href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ArMainContent$UcEmployees_Dtls$LnkSave&quot;, &quot;&quot;, true, &quot;MainItem&quot;, &quot;&quot;, false, true))"
-                        translate="INITIALIZATION.POWERS_TEMPLATES.SAVE"><i class="fa-solid fa-check"></i></a>
+                        translate="INITIALIZATION.POWERS_TEMPLATES.SAVE">
+                        <i class="fa-solid fa-check mx-2"></i>
+                    </a>
                     <a id="ArMainContent_UcEmployees_Dtls_LnkCancel"
-                        class="btn btn-danger btn-shadow font-weight-bold mx-4"
+                        class="btn btn-danger btn-shadow font-weight-bold mx-2"
                         href="javascript:__doPostBack('ctl00$ArMainContent$UcEmployees_Dtls$LnkCancel','')"
-                        translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION"><i class="fa-solid fa-xmark"></i> </a>
+                        translate="INITIALIZATION.POWERS_TEMPLATES.CANCELLATION">
+                        <i class="fa-solid fa-xmark mx-2" ></i>
+                    
+                    </a>
                 </div>
                 <div class="card-title">
                     <button class="btn font-weight-bold btn-light-success mr-2"
                         translate="STAFF.STAFF_MANAGEMENT.EMPLOYEE_CODE"> <span
-                            id="ArMainContent_UcEmployees_Dtls_LblUID" class="label label-danger ml-2">5</span></button>
+                            id="ArMainContent_UcEmployees_Dtls_LblUID" class="label label-danger ml-2  mx-2">5</span></button>
                 </div>
             </div>
             <div class="card-body">
-                <div class="row">
+                <div class="row ">
                     <div class="col-md-2 col-xs-12">
                         <div class="row">
                             <div class="col-md-12 ">
@@ -69,26 +74,26 @@
                                 <div class="btn font-weight-bold btn-block btn-light-dark mr-2"
                                     style="padding-bottom: unset; padding-top: unset">
                                     <div class="checkbox-inline" style="margin-top: 5px">
-                                        <label class="checkbox checkbox-lg">
+                                        <label class="checkbox checkbox-lg m-2">
                                             <input name="ctl00$ArMainContent$UcEmployees_Dtls$Chk_Status"
                                                 type="checkbox" id="ArMainContent_UcEmployees_Dtls_Chk_Status">
-                                            <span translate="STAFF.STAFF_MANAGEMENT.CLOSE"> </span>
+                                            <span translate="STAFF.STAFF_MANAGEMENT.CLOSE" class="px-1"> </span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="form-group row ">
                             <div class="col-md-6 col-xs-12">
-                                <label for="Txt_L_Nm" translate="STAFF.STAFF_MANAGEMENT.EMPLOYEE_NAME"> </label>
+                                <label for="Txt_L_Nm" translate="STAFF.STAFF_MANAGEMENT.EMPLOYEE_NAME" class="text-dark"> </label>
                                 <input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_L_Nm" type="text"
                                     id="ArMainContent_UcEmployees_Dtls_Txt_L_Nm" class="form-control "
-                                    placeholder="اســم الموظف">
+                                    >
                                 <span id="ArMainContent_UcEmployees_Dtls_RequiredTxtOrd_LNm"
                                     style="color:Red;display:none;">من فضلك ادخل اسـم الموظف</span>
                             </div>
                             <div class="col-md-3 col-xs-12">
-                                <label for="Txt_Phone" translate="STAFF.STAFF_MANAGEMENT.MOB"></label>
+                                <label for="Txt_Phone" translate="STAFF.STAFF_MANAGEMENT.MOB" class="text-dark"></label>
                                 <input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_Phone" type="text"
                                     id="ArMainContent_UcEmployees_Dtls_Txt_Phone" maxlength="11"
                                     onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)"
@@ -97,7 +102,7 @@
                                     style="color:Red;display:none;">مطلوب *</span>
                             </div>
                             <div class="col-md-3 col-xs-12">
-                                <label for="Txt_National_No" translate="STAFF.STAFF_MANAGEMENT.ID"> </label>
+                                <label for="Txt_National_No" translate="STAFF.STAFF_MANAGEMENT.ID" class="text-dark"> </label>
                                 <input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_National_No" type="text"
                                     id="ArMainContent_UcEmployees_Dtls_Txt_National_No"
                                     onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)"
@@ -106,87 +111,73 @@
                                     style="color:Red;display:none;">مطلوب *</span>
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="form-group row mt-10">
                             <div class="col-md-3 col-xs-12">
                                 <div class="form-group ">
-                                    <label for="DDLBranch" translate="STAFF.STAFF_MANAGEMENT.BRANCH"> </label>
-                                    <div class="dropdown bootstrap-select form-control"><select
-                                            name="ctl00$ArMainContent$UcEmployees_Dtls$DDLBranch"
-                                            id="ArMainContent_UcEmployees_Dtls_DDLBranch"
-                                            class="form-control selectpicker" data-size="7" data-live-search="true">
-                                            <option value="-- اختر || Chose --">-- اختر || Chose --</option>
-                                            <option value="1">الرئيسي</option>
-                                            <option value="2">فرع الجيزة</option>
-                                        </select><button type="button" tabindex="-1"
-                                            class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox"
-                                            aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false"
-                                            data-id="ArMainContent_UcEmployees_Dtls_DDLBranch"
-                                            title="-- اختر || Chose --">
-                                            <div class="filter-option">
-                                                <div class="filter-option-inner">
-                                                    <div class="filter-option-inner-inner">-- اختر || Chose --</div>
+                                    <label for="DDLBranch" translate="STAFF.STAFF_MANAGEMENT.BRANCH" class="text-dark"> </label>
+                                    <div class="card d-flex justify-content-center">
+                                        <p-dropdown 
+                                            [options]="branchList" 
+                                            [(ngModel)]="selectedBranch" 
+                                            optionLabel="name"
+                                            [style]="{ 'width': '100%' }" 
+                                            [filter]="true" 
+                                            filterBy="name" 
+                                            [showClear]="true"
+                                            [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                            <ng-template pTemplate="selectedItem" let-selectedOption>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div>{{ selectedOption.name }}</div>
                                                 </div>
-                                            </div>
-                                        </button>
-                                        <div class="dropdown-menu ">
-                                            <div class="bs-searchbox"><input type="search" class="form-control"
-                                                    autocomplete="off" role="combobox" aria-label="Search"
-                                                    aria-controls="bs-select-1" aria-autocomplete="list"></div>
-                                            <div class="inner show" role="listbox" id="bs-select-1" tabindex="-1">
-                                                <ul class="dropdown-menu inner show" role="presentation"></ul>
-                                            </div>
-                                        </div>
+                                            </ng-template>
+                                            <ng-template let-branch pTemplate="item">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div>{{ branch.name }}</div>
+                                                </div>
+                                            </ng-template>
+                                        </p-dropdown>
                                     </div>
                                     <span id="ArMainContent_UcEmployees_Dtls_RequiredFieldValidator5"
                                         style="color:Red;display:none;">مطلوب *</span>
                                 </div>
                             </div>
                             <div class="col-md-3 col-xs-12">
-                                <label for="Txt_User_Login" translate="STAFF.STAFF_MANAGEMENT.SYSTEM"> </label>
+                                <label for="Txt_User_Login" translate="STAFF.STAFF_MANAGEMENT.SYSTEM" class="text-dark"> </label>
                                 <input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_User_Login" type="text"
                                     id="ArMainContent_UcEmployees_Dtls_Txt_User_Login" class="form-control ">
                                 <span id="ArMainContent_UcEmployees_Dtls_RequiredFieldValidator1"
                                     style="color:Red;display:none;">مطلوب *</span>
                             </div>
                             <div class="col-md-3 col-xs-12">
-                                <label for="Txt_User_Pass" translate="STAFF.STAFF_MANAGEMENT.PASS"> </label>
+                                <label for="Txt_User_Pass" translate="STAFF.STAFF_MANAGEMENT.PASS" class="text-dark"> </label>
                                 <input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_User_Pass" type="text"
                                     id="ArMainContent_UcEmployees_Dtls_Txt_User_Pass" class="form-control ">
                                 <span id="ArMainContent_UcEmployees_Dtls_RequiredPass"
                                     style="color:Red;display:none;">مطلوب *</span>
                             </div>
                             <div class="col-md-3 col-xs-12">
-                                <label for="DDLPermission" translate="STAFF.STAFF_MANAGEMENT.ACCESS"> </label>
-                                <div class="dropdown bootstrap-select form-control"><select
-                                        name="ctl00$ArMainContent$UcEmployees_Dtls$DDLPermission"
-                                        id="ArMainContent_UcEmployees_Dtls_DDLPermission"
-                                        class="form-control selectpicker" data-size="7" data-live-search="true">
-                                        <option value="آختر صلاحية الدخول">آختر صلاحية الدخول</option>
-                                        <option value="1">مدير عام الشركة</option>
-                                        <option value="2">نائب مدير </option>
-                                        <option value="3">مدير فرع</option>
-                                        <option value="4">خدمة العملاء</option>
-                                        <option value="7">محاسب </option>
-                                        <option value="8">امين مخزن</option>
-                                    </select><button type="button" tabindex="-1" class="btn dropdown-toggle btn-light"
-                                        data-toggle="dropdown" role="combobox" aria-owns="bs-select-2"
-                                        aria-haspopup="listbox" aria-expanded="false"
-                                        data-id="ArMainContent_UcEmployees_Dtls_DDLPermission"
-                                        title="آختر صلاحية الدخول">
-                                        <div class="filter-option">
-                                            <div class="filter-option-inner">
-                                                <div class="filter-option-inner-inner">آختر صلاحية الدخول</div>
+                                <label for="DDLPermission" translate="STAFF.STAFF_MANAGEMENT.ACCESS" class="text-dark"> </label>
+                                <div class="card d-flex justify-content-center">
+                                    <p-dropdown 
+                                        [options]="branchList" 
+                                        [(ngModel)]="selectedBranch" 
+                                        optionLabel="name"
+                                        [style]="{ 'width': '100%' }" 
+                                        [filter]="true" 
+                                        filterBy="name" 
+                                        [showClear]="true"
+                                        [placeholder]="'DROPDOWN.CHOOSE' | translate">
+                                        <ng-template pTemplate="selectedItem" let-selectedOption>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>{{ selectedOption.name }}</div>
                                             </div>
-                                        </div>
-                                    </button>
-                                    <div class="dropdown-menu ">
-                                        <div class="bs-searchbox"><input type="search" class="form-control"
-                                                autocomplete="off" role="combobox" aria-label="Search"
-                                                aria-controls="bs-select-2" aria-autocomplete="list"></div>
-                                        <div class="inner show" role="listbox" id="bs-select-2" tabindex="-1">
-                                            <ul class="dropdown-menu inner show" role="presentation"></ul>
-                                        </div>
-                                    </div>
+                                        </ng-template>
+                                        <ng-template let-branch pTemplate="item">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <div>{{ branch.name }}</div>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
                                 </div>
                                 <span id="ArMainContent_UcEmployees_Dtls_RequiredFieldValidator33"
                                     style="color:Red;display:none;">مطلوب *</span>
@@ -194,17 +185,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row my-10">
                     <div class="col-md-2 col-xs-12">
                         <div class="form-group ">
-                            <label for="TxtMail" translate="STAFF.STAFF_MANAGEMENT.EMAIL"> </label>
+                            <label for="TxtMail" translate="STAFF.STAFF_MANAGEMENT.EMAIL" class="text-dark"> </label>
                             <input name="ctl00$ArMainContent$UcEmployees_Dtls$TxtMail" type="email"
                                 id="ArMainContent_UcEmployees_Dtls_TxtMail" class="form-control ">
                         </div>
                     </div>
                     <div class="col-md-2 col-xs-12">
                         <div class="form-group ">
-                            <label for="Txt_Salary" translate="STAFF.STAFF_MANAGEMENT.SALARY"></label>
+                            <label for="Txt_Salary" translate="STAFF.STAFF_MANAGEMENT.SALARY" class="text-dark"></label>
                             <input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_Salary" type="text"
                                 id="ArMainContent_UcEmployees_Dtls_Txt_Salary"
                                 onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)"
@@ -215,14 +206,14 @@
                     </div>
                     <div class="col-md-2 col-xs-12">
                         <div class="form-group ">
-                            <label for="Txt_Date_Strt" translate="STAFF.STAFF_MANAGEMENT.START_DATE"> </label>
+                            <label for="Txt_Date_Strt" translate="STAFF.STAFF_MANAGEMENT.START_DATE" class="text-dark"> </label>
                             <input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_Date_Strt" type="text"
                                 id="ArMainContent_UcEmployees_Dtls_Txt_Date_Strt" class="form-control datepicker-rtl">
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-12">
                         <div class="form-group ">
-                            <label for="Txt_Address" translate="STAFF.STAFF_MANAGEMENT.ADDRESS"></label>
+                            <label for="Txt_Address" translate="STAFF.STAFF_MANAGEMENT.ADDRESS" class="text-dark"></label>
                             <input name="ctl00$ArMainContent$UcEmployees_Dtls$Txt_Address" type="text"
                                 id="ArMainContent_UcEmployees_Dtls_Txt_Address" class="form-control  ">
 

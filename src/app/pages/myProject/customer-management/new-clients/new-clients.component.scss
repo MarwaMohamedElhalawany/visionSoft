@@ -1,0 +1,45 @@
+.table-responsive {
+    overflow: auto;
+    min-height: 650px;
+    max-height: 650px;
+    width: 100%;
+  }
+  
+  .mGrid th, .mGrid td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .no-data {
+    text-align: center;
+  }
+  
+  .mGrid th {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .mGrid td {
+    text-align: center;
+  }
+  
+  .btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+  
+  .fa-square-plus {
+    cursor: pointer;
+  }
+  
+  .fa-trash {
+    cursor: pointer;
+  }
+  

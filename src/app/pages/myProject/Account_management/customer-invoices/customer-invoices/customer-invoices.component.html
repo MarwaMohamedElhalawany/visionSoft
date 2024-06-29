@@ -1,0 +1,93 @@
+<div class="container-fluid">
+    <!--begin::Dashboard-->
+    <span id="MasterPanel">
+        <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_LoaderProgress" style="display: none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-custom ">
+            <div class="card-header">
+                <div class="card-toolbar">
+                    <a id="ArMainContent_UcClientsPayment_Lnkback" translate="ACCOUNTS.BILLS"
+                        class="btn btn-danger btn-shadow font-weight-bold mr-2" href="errorinvoice"><i
+                            class="fas fa-file-invoice icon-md mx-2"></i> </a>
+                </div>
+                <div class="card-title">
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <input name="ctl00$ArMainContent$UcBranches$TxtSearch" type="search"
+                            id="ArMainContent_UcBranches_TxtSearch" class="form-control spinner input-circle "
+                            onkeyup="Search_Gridprod(this,'TxtSearch','GrdView')"
+                            [placeholder]="'INITIALIZATION.POWERS_TEMPLATES.SEARCHPLACEHOLDER' | translate">
+                    </div>
+                </div>
+                <div class="form-group row mt-10">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <div>
+                                <table class="mGrid" cellspacing="0" rules="all" id="ArMainContent_UcBranches_GrdView"
+                                    style="width:100%;border-collapse:collapse;">
+                                    <tbody>
+                                        <tr class="m-5">
+                                            <th scope="col" style="width:2%;" translate="INITIALIZATION.BRANCH.CODE">
+                                            </th>
+                                            <th scope="col" translate="CLIENTS.CLIENT"></th>
+                                            <th scope="col" translate="STAFF.MANAGEMENT_OF_DELEGATES.BRANCH"></th>
+                                            <th scope="col" translate="STAFF.STAFF_MANAGEMENT.MOB"></th>
+                                            <th scope="col" translate="INITIALIZATION.BRANCH.PRICE_LIST"></th>
+                                            <th scope="col" translate="INITIALIZATION.BRANCH.BALANCE"></th>
+                                            <th scope="col" translate="INITIALIZATION.BRANCH.PAID_SHIPMENTS"> </th>
+                                            <th scope="col" translate="INITIALIZATION.BRANCH.UNPAID_SHIPMENTS"> </th>
+                                            <th scope="col" translate="ACCOUNTS.CUSTOMER_INVOICES"></th>
+                                        </tr>
+                                        <br>
+
+                                         <tr class="m-5">
+                                            <td align="center">
+                                                <span id="ArMainContent_UcBranches_GrdView_GrdSerial_0">1</span>
+                                            </td>
+                                            <td>
+                                                عميل تجربة ( متجر تجربة )
+                                            </td>
+                                            <td>الرئيسي</td>
+                                            <td>01060050309	</td>
+                                            <td>افتراضية	</td>
+                                            <td>1,330.00</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            
+
+                                            <td>
+                                                <button class="btn btn-icon btn-light-primary w-100" routerLink="/clientspayment/invoices"
+                                                    data-action="edit" data-id="259" translate="ACCOUNTS.CUSTOMER_INVOICES"> 
+                                                   
+                                                </button>
+                                               
+                                            </td>
+                                        </tr> 
+                                       
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </span>
+</div>

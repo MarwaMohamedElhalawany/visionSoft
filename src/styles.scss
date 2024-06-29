@@ -66,3 +66,63 @@ tr .userimage
   left: 0 !important;
   position: absolute !important;
 }
+.p-dropdown, .p-dropdown-panel {
+    font-family: 'Tajawal', sans-serif;
+}
+.ui-dropdown-label.ui-dropdown-label-empty {
+    font-family: 'Tajawal', sans-serif !important;
+
+
+}
+.p-inputtext {
+    font-family: 'Tajawal', sans-serif !important;
+
+}
+
+
+/* Add this CSS to your global styles.css or styles.scss file */
+
+.p-dropdown .p-dropdown-clear-icon {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.p-dropdown .p-dropdown-filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.p-dropdown .p-dropdown-filter-container .p-inputtext {
+    flex-grow: 1;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+/* Add this CSS to your global styles.css or styles.scss file */
+
+.p-dropdown .p-dropdown-clear-icon {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.p-dropdown .p-dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.p-dropdown .p-dropdown-item .p-dropdown-clear-icon {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+/* Add this CSS to your global styles.css or styles.scss file */
+
+.p-dropdown .p-dropdown-label-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.p-dropdown .p-dropdown-label-container .p-dropdown-clear-icon {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+/* Add this CSS to your global styles.css or styles.scss file */
+
+.p-dropdown .p-dropdown-clear-icon {
+    display: none !important;
+}

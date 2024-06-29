@@ -1,0 +1,244 @@
+<div class="container-fluid">
+    <!--begin::Dashboard-->
+    <span id="MasterPanel">
+        <span id="TimrNoti" style="visibility:hidden;display:none;"></span>
+
+        <div class="page-loading-enabled page-loading">
+            <div id="ArMainContent_LoaderProgress" style="display:none;" role="status" aria-hidden="true">
+
+                <div class="page-loader page-loader-logo">
+                    <img alt="Logo" class="max-h-75px" src="App_Themes/syslogo.png">
+                    <div class="spinner spinner-primary"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card card-custom ">
+            <div class="card-header">
+                <div class="card-toolbar gap-2">
+                    <a id="ArMainContent_Uc_Create_Payment_Invoice_LnkCLose" translate="ACCOUNTS.BACK" routerLink="/clientspayment"
+                        class="btn btn-warning btn-shadow font-weight-bold mr-2" href="Payment">
+                        </a>
+                    <a onclick="BtnClick();" id="ArMainContent_Uc_Create_Payment_Invoice_LnkPopPayment" translate="ACCOUNTS.PAYMENT_SPECIFIED"
+                        class="btn btn-info btn-shadow font-weight-bold mr-2"
+                        href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ArMainContent$Uc_Create_Payment_Invoice$LnkPopPayment&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><i
+                            class="far fa-money-bill-alt icon-lg mx-1"></i>  </a>
+                    <a href="Invoices?id=1" class="btn btn-dark btn-shadow font-weight-bold mr-2" routerLink="/clientinvoices" translate="ACCOUNTS.CUSTOMER_INVOICES"><i
+                            class="far fa-money-bill-alt icon-lg"></i>  </a>
+                </div>
+                <div class="card-title">
+                    <span id="ArMainContent_Uc_Create_Payment_Invoice_idkeypaymentgrid" style="display: none">0</span>
+                    <span id="ArMainContent_Uc_Create_Payment_Invoice_LblClient" style="display: none">عميل تجربة</span>
+                    <span id="ArMainContent_Uc_Create_Payment_Invoice_LblStore" style="display: none">متجر تجربة</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-3 col-xs-12">
+                        <label class="text-dark"  for="Txt_Store_Nm"  translate="CLIENTS.CLIENT"></label>
+                        <input name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$Txt_Store_Nm" type="text"
+                            id="ArMainContent_Uc_Create_Payment_Invoice_Txt_Store_Nm" class="form-control " readonly=""
+                            >
+                    </div>
+                    <div class="col-md-1 col-xs-12">
+                        <label class="text-dark" for="Txt_Client_AccBalance" translate="INITIALIZATION.BRANCH.BALANCE"></label>
+                        <input name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$Txt_Client_AccBalance" type="text"
+                            id="ArMainContent_Uc_Create_Payment_Invoice_Txt_Client_AccBalance" class="form-control "
+                            readonly="" >
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <label class="text-dark" for="Txt_Pay_No" translate="ACCOUNTS.TOTAL_NUMBER"> </label>
+                        <input name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$Txt_Pay_No" type="text"
+                            id="ArMainContent_Uc_Create_Payment_Invoice_Txt_Pay_No" class="form-control " readonly="">
+                        <span id="ArMainContent_Uc_Create_Payment_Invoice_RequiredFieldValidator2"
+                            style="color:Red;display:none;">مطلوب *</span>
+                    </div>
+                    <div class="col-md-2 col-xs-12">
+                        <label class="text-dark" for="Txt_Pay_Amt" translate="ACCOUNTS.TOTAL_PAYMENT_AMOUNTS">  </label>
+                        <input name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$Txt_Pay_Amt" type="text"
+                            id="ArMainContent_Uc_Create_Payment_Invoice_Txt_Pay_Amt" class="form-control " readonly="">
+                        <span id="ArMainContent_Uc_Create_Payment_Invoice_RequiredFieldValidator1"
+                            style="color:Red;display:none;">مطلوب *</span>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <label class="text-dark" for="Txt_Payment_Note" translate="ACCOUNTS.PAYMENT_NOTE"> </label>
+                        <input name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$Txt_Payment_Note" type="text"
+                            id="ArMainContent_Uc_Create_Payment_Invoice_Txt_Payment_Note" class="form-control ">
+                        <span id="ArMainContent_Uc_Create_Payment_Invoice_RequiredFieldValidator3"
+                            style="color:Red;display:none;">مطلوب *</span>
+                    </div>
+                </div>
+                <div class="form-group row mt-6">
+                    <div class="col-md-2 col-xs-12">
+                        <div id="ArMainContent_Uc_Create_Payment_Invoice_Panel1"
+                            onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ArMainContent_Uc_Create_Payment_Invoice_LnkDsply')">
+
+                            <label class="text-dark" translate="ACCOUNTS.SHOW_ALL"> </label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <a id="ArMainContent_Uc_Create_Payment_Invoice_LnkDsply"
+                                        class="btn btn-warning font-weight-bold"
+                                        href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Create_Payment_Invoice$LnkDsply','')"><i
+                                            class="fas fa-search icon-md"></i> </a>
+                                </div>
+                                <input name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$Txt_Dsply_No" type="number"
+                                    id="ArMainContent_Uc_Create_Payment_Invoice_Txt_Dsply_No" 
+                                    onclick="this.select();"
+                                    onkeypress="return CheckNumericKeyInfo(event.keyCode, event.which)"
+                                    class="form-control" >
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div id="ArMainContent_Uc_Create_Payment_Invoice_PanelSearch"
+                            onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ArMainContent_Uc_Create_Payment_Invoice_LnkSetSearch')">
+
+                            <label class="text-dark" translate="ACCOUNTS.SEARCH_BY_COLLECTION_DATE_OR_ENTRY_DATE"></label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <a id="ArMainContent_Uc_Create_Payment_Invoice_LnkSetSearch"
+                                        class="btn btn-warning font-weight-bold"
+                                        href="javascript:__doPostBack('ctl00$ArMainContent$Uc_Create_Payment_Invoice$LnkSetSearch','')"><i
+                                            class="fas fa-search icon-md"></i> </a>
+                                </div>
+                                <input name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$TxtSearch" type="search"
+                                    id="ArMainContent_Uc_Create_Payment_Invoice_TxtSearch"
+                                    class="form-control datepicker-rtl" onclick="this.select();"
+                                    [placeholder]="'ACCOUNTS.SEARCH_BY_COLLECTION_DATE_OR_ENTRY_DATE' | translate">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <label class="text-dark" translate="ACCOUNTS.SEARCH_ON_THE_LEVEL_OF_DISPLAYED_SHIPMENTS">  </label>
+                        <input name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$TxtLiveSearch" type="search"
+                            id="ArMainContent_Uc_Create_Payment_Invoice_TxtLiveSearch"
+                            class="form-control spinner input-circle " onclick="this.select();"
+                            onkeyup="Search_Gridprod(this,'TxtLiveSearch','GrdViewDtls')"
+                            [placeholder]="'ACCOUNTS.SEARCH_ON_THE_LEVEL_OF_DISPLAYED_SHIPMENTS' | translate">
+                    </div>
+                </div>
+                <div class="form-group row mt-8">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <div>
+                                <hr>
+                                <table class="mGrid" cellspacing="0" rules="all" 
+                                    id="ArMainContent_Uc_Create_Payment_Invoice_GrdViewDtls"
+                                    style="width:100%;border-collapse:collapse;">
+                                    <tbody>
+                                        <tr >
+                                            <th scope="col" style="width:2%;" translate="INITIALIZATION.BRANCH.CODE"></th>
+                                            <th class="hedalign" scope="col" style="font-size:Small;">
+                                                <div class="checkbox-inline" style="margin-top: unset">
+                                                    <label class="text-dark" class="checkbox checkbox-lg" style="margin-right: 8px;">
+                                                        <input
+                                                            id="ArMainContent_Uc_Create_Payment_Invoice_GrdViewDtls_ChkAll"
+                                                            type="checkbox"
+                                                            name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$GrdViewDtls$ctl01$ChkAll"
+                                                            onclick="javascript:setTimeout('__doPostBack(\'ctl00$ArMainContent$Uc_Create_Payment_Invoice$GrdViewDtls$ctl01$ChkAll\',\'\')', 0)">
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                            </th>
+                                            <th scope="col" translate="ACCOUNTS.DATE_OF_ENTRY_OF_THE_SHIPMENT"></th>
+                                            <th scope="col" translate="ACCOUNTS.HISTORY_OF_THE_MOVEMENT"></th>
+                                            <th scope="col" translate="ACCOUNTS.MERCHANT_CODE"></th>
+                                            <th scope="col" translate="ACCOUNTS.POLICY"></th>
+                                            <th scope="col" translate="ACCOUNTS.THE_RECIPIENT"></th>
+                                            <th scope="col" translate="ACCOUNTS.CITY_REGION"></th>
+                                            <th scope="col" translate="ACCOUNTS.SHIPPING_ON"></th>
+                                            <th scope="col" translate="ACCOUNTS.SHIPMENT_STATUS"></th>
+                                            <th scope="col" translate="ACCOUNTS.TOTAL_SHIPMENT"></th>
+                                            <th scope="col" translate="ACCOUNTS.SHIPPING_VALUE"></th>
+                                            <th scope="col" translate="ACCOUNTS.PICKUP_VOUCHER_NUMBER"></th>
+                                            <th scope="col" translate="ACCOUNTS.COMMENTS"></th>
+                                            <th scope="col" translate="ACCOUNTS.DETAILS"></th>
+                                            <th scope="col" translate="ACCOUNTS.FOR_HIM"></th>
+                                            <th scope="col" translate="ACCOUNTS.ON_HIM"></th>
+                                           
+                                        </tr>
+                                        <!-- <tr>
+                                            <td align="center">
+                                                <span
+                                                    id="ArMainContent_Uc_Create_Payment_Invoice_GrdViewDtls_GrdSerial_0">1</span>
+
+
+
+
+
+
+
+                                            </td>
+                                            <td>
+                                                <div class="checkbox-inline" style="margin-top: unset">
+                                                    <label class="text-dark" class="checkbox checkbox-lg" style="margin-right: 8px;">
+                                                        <input
+                                                            id="ArMainContent_Uc_Create_Payment_Invoice_GrdViewDtls_Chk_Row_0"
+                                                            type="checkbox"
+                                                            name="ctl00$ArMainContent$Uc_Create_Payment_Invoice$GrdViewDtls$ctl02$Chk_Row"
+                                                            onclick="javascript:setTimeout('__doPostBack(\'ctl00$ArMainContent$Uc_Create_Payment_Invoice$GrdViewDtls$ctl02$Chk_Row\',\'\')', 0)">
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td align="center">19/01/2024</td>
+                                            <td align="center">28/01/2024</td>
+                                            <td align="center"></td>
+                                            <td align="center">05</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="ml-3">
+                                                        <span class="text-dark">احمد</span>
+                                                        <a href="javascript:;"
+                                                            class="text-dark text-hover-primary">01060050309</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="ml-3">
+                                                        <span class="text-dark">العجوزه</span>
+                                                        <a href="javascript:;"
+                                                            class="text-dark text-hover-primary">الجيزة</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td align="center">على الراسل</td>
+                                            <td align="center">مرتجع</td>
+                                            <td align="center">0.00</td>
+                                            <td align="center">35.00</td>
+                                            <td align="center"></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="ml-3">
+                                                        <span class="text-dark">تم إلغاء الشحنة</span>
+                                                        <a href="javascript:;" class="text-dark text-hover-primary"></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                    <br>
+
+                                                
+                                            </td>
+                                            <td align="center"></td>
+                                            <td align="center">35.00</td>
+                                        </tr> -->
+                                     
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+
+    </span>
+    <!--end::Dashboard-->
+</div>
