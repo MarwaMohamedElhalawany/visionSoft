@@ -1,20 +1,16 @@
-/* تخصيص خلفية التوستر */
 
   
-  /* تخصيص النص */
   .toast-error .toast-message {
     color: #ffffff; /* نص أبيض */
-    font-size: 16px; /* حجم النص */
+    font-size: 16px; 
   }
   
-  /* تخصيص زر الإغلاق */
   .toast-close-button {
-    color: #d11212 !important; /* لون زر الإغلاق */
+    color: #d11212 !important;
   }
   
-  /* تخصيص شريط التقدم */
   .toast-progress {
-    background: #ffffff !important; /* لون شريط التقدم */
+    background: #ffffff !important; 
   }
   .toastr-notifications {
     background-color: red !important;
